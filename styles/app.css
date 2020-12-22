@@ -211,7 +211,7 @@ body {
   background-color: rgba(0, 0, 0, 0.32);
 }
 
-.drawer-scrim--active {
+.appbar-scrim--active {
   opacity: 1;
 }
 
