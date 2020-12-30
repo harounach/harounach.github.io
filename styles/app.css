@@ -6,6 +6,33 @@
 
 :root {
   --primary-color: #02ee85;
+
+  --html-fg-color: #ffffff;
+  --html-bg-color: #f16529;
+
+  --css-fg-color: #ffffff;
+  --css-bg-color: #2965f1;
+
+  --js-fg-color: #323330;
+  --js-bg-color: #f0db4f;
+
+  --react-fg-color: #61dafb;
+  --react-bg-color: #282c34;
+
+  --node-fg-color: #ffffff;
+  --node-bg-color: #3c873a;
+
+  --python-fg-color: #306998;
+  --python-bg-color: #ffd43b;
+
+  --git-fg-color: #ffffff;
+  --git-bg-color: #f34f29;
+
+  --github-fg-color: #ffffff;
+  --github-bg-color: #211f1f;
+
+  --mongodb-fg-color: #ffffff;
+  --mongodb-bg-color: #4db33d;
 }
 
 /* MOBILE */
@@ -285,6 +312,72 @@ body {
 .profile__text {
   color: rgba(0, 0, 0, 0.87);
   font-size: 1rem;
+}
+
+/* Skills section */
+.skills {
+  display: grid;
+  gap: 1rem;
+}
+
+.skills__card {
+  max-height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  box-shadow: 1px 2px 8px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+}
+
+.skills__card--color-html {
+  color: var(--html-fg-color);
+  background-color: var(--html-bg-color);
+}
+
+.skills__card--color-css {
+  color: var(--css-fg-color);
+  background-color: var(--css-bg-color);
+}
+
+.skills__card--color-js {
+  color: var(--js-fg-color);
+  background-color: var(--js-bg-color);
+}
+
+.skills__card--color-react {
+  color: var(--react-fg-color);
+  background-color: var(--react-bg-color);
+}
+
+.skills__card--color-node {
+  color: var(--node-fg-color);
+  background-color: var(--node-bg-color);
+}
+
+.skills__card--color-python {
+  color: var(--python-fg-color);
+  background-color: var(--python-bg-color);
+}
+
+.skills__card--color-git {
+  color: var(--git-fg-color);
+  background-color: var(--git-bg-color);
+}
+
+.skills__card--color-github {
+  color: var(--github-fg-color);
+  background-color: var(--github-bg-color);
+}
+
+.skills__card--color-mongodb {
+  color: var(--mongodb-fg-color);
+  background-color: var(--mongodb-bg-color);
+}
+
+.skills__card__text {
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 .profile .footer {
