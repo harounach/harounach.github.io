@@ -33,6 +33,9 @@
 
   --mongodb-fg-color: #ffffff;
   --mongodb-bg-color: #4db33d;
+
+  --xd-fg-color: #ff61f6;
+  --xd-bg-color: #470137;
 }
 
 /* MOBILE */
@@ -373,6 +376,11 @@ body {
 .skills__card--color-mongodb {
   color: var(--mongodb-fg-color);
   background-color: var(--mongodb-bg-color);
+}
+
+.skills__card--color-xd {
+  color: var(--xd-fg-color);
+  background-color: var(--xd-bg-color);
 }
 
 .skills__card__text {
