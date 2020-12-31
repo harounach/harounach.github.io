@@ -7,6 +7,10 @@
 :root {
   --primary-color: #02ee85;
 
+  --high-text-color: rgba(0, 0, 0, 0.87);
+  --medium-text-color: rgba(0, 0, 0, 0.75);
+  --low-text-color: rgba(0, 0, 0, 0.5);
+
   --html-fg-color: #ffffff;
   --html-bg-color: #f16529;
 
@@ -246,12 +250,23 @@ body {
 }
 
 .main {
-  margin-top: 3.5rem;
+  margin-top: 4.5rem;
 }
 
 .title {
-  padding-top: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
   text-align: center;
+  margin: 1rem 0;
+  color: var(--high-text-color);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 1rem 0;
+  color: var(--high-text-color);
 }
 
 .section {
@@ -260,7 +275,7 @@ body {
 
 .section-title {
   font-size: 1.125rem;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--low-text-color);
   text-transform: uppercase;
   font-weight: 500;
 }
@@ -273,6 +288,8 @@ body {
 }
 
 .description__text {
+  font-size: 1rem;
+  color: var(--medium-text-color);
 }
 
 .profile {
@@ -386,6 +403,44 @@ body {
 .skills__card__text {
   font-size: 1rem;
   text-transform: uppercase;
+}
+
+.cert-section {
+}
+
+.cert-title {
+}
+
+.cert-content {
+}
+
+.cert-card {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #000000;
+  border-radius: 0.25rem;
+  position: relative;
+}
+
+.cert-card::after {
+  content: "🥇";
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+}
+
+.cert-card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  min-height: 3rem;
+}
+
+.cert-card__text {
 }
 
 .profile .footer {
