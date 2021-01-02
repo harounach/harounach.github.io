@@ -38,8 +38,8 @@
   --mongodb-fg-color: #ffffff;
   --mongodb-bg-color: #4db33d;
 
-  --xd-fg-color: #ff61f6;
-  --xd-bg-color: #470137;
+  --figma-fg-color: #ffffff;
+  --figma-bg-color: #ff2020;
 }
 
 /* MOBILE */
@@ -395,9 +395,9 @@ body {
   background-color: var(--mongodb-bg-color);
 }
 
-.skills__card--color-xd {
-  color: var(--xd-fg-color);
-  background-color: var(--xd-bg-color);
+.skills__card--color-figma {
+  color: var(--figma-fg-color);
+  background-color: var(--figma-bg-color);
 }
 
 .skills__card__text {
