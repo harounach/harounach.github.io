@@ -5,7 +5,8 @@
 }
 
 :root {
-  --primary-color: #02ee85;
+  --primary-color: #16e2bd;
+  --on-primary-color: #000000;
 
   --high-text-color: rgba(0, 0, 0, 0.87);
   --medium-text-color: rgba(0, 0, 0, 0.75);
@@ -72,7 +73,7 @@ body {
   position: fixed;
   top: 0;
   z-index: 10;
-  background-color: #ffffff;
+  background-color: var(--primary-color);
 }
 
 .menu-btn {
@@ -122,7 +123,7 @@ body {
 .appbar__menu__icon__bottom-line {
   width: 100%;
   height: 0.25rem;
-  background-color: #02ee85;
+  background-color: var(--on-primary-color);
   -webkit-transition: -webkit-transform 0.3s
     cubic-bezier(0.465, 0.183, 0.153, 0.946);
   transition: -webkit-transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
@@ -180,7 +181,7 @@ body {
   position: absolute;
   top: 3.5rem;
   z-index: 16;
-  background-color: #ffffff;
+  background-color: var(--primary-color);
   box-shadow: -1px 0 1px 1px rgba(0, 0, 0, 0.1);
   -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
@@ -291,15 +292,8 @@ body {
 }
 
 /* About section */
+
 .about-section {
-}
-
-.description {
-}
-
-.description__text {
-  font-size: 1rem;
-  color: var(--medium-text-color);
 }
 
 .profile {
@@ -311,7 +305,7 @@ body {
   overflow: hidden;
   margin: auto;
   padding: 0;
-  border-radius: 0.25rem;
+  border-radius: 50%;
   margin-bottom: 1rem;
 }
 
@@ -323,12 +317,37 @@ body {
   padding: 0;
 }
 
-.profile__content {
-  display: flex;
-  flex-direction: column;
+.description {
 }
 
-.profile__text-row {
+.description__text {
+  font-size: 1rem;
+  color: var(--medium-text-color);
+}
+
+.profile-links {
+}
+
+.download-resume-btn {
+  height: 2.25rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--on-primary-color);
+  background-color: var(--primary-color);
+  box-shadow: 0px 1px 8px 2px rgba(0, 0, 0, 0.1);
+}
+
+.profile-social {
+}
+
+.profile-social__link {
 }
 
 .overline {
