@@ -284,7 +284,7 @@ body {
 .divider {
   width: 80%;
   height: 0.125rem;
-  margin: 0 auto;
+  margin: 1.5rem auto;
   padding: 0;
   border: 0;
   border-radius: 0.25rem;
@@ -384,72 +384,53 @@ body {
 .skills {
   display: grid;
   gap: 1rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 .skills__card {
-  max-height: 5rem;
+  min-height: 5rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 0 1rem;
   box-shadow: 1px 2px 8px 1px rgba(0, 0, 0, 0.1);
   border-radius: 0.25rem;
 }
 
-.skills__card--color-html {
-  color: var(--html-fg-color);
-  background-color: var(--html-bg-color);
+.skills__card__graphic {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  color: var(--primary-color);
+  background-color: #ffffff;
 }
 
-.skills__card--color-css {
-  color: var(--css-fg-color);
-  background-color: var(--css-bg-color);
-}
-
-.skills__card--color-js {
-  color: var(--js-fg-color);
-  background-color: var(--js-bg-color);
-}
-
-.skills__card--color-react {
-  color: var(--react-fg-color);
-  background-color: var(--react-bg-color);
-}
-
-.skills__card--color-node {
-  color: var(--node-fg-color);
-  background-color: var(--node-bg-color);
-}
-
-.skills__card--color-python {
-  color: var(--python-fg-color);
-  background-color: var(--python-bg-color);
-}
-
-.skills__card--color-git {
-  color: var(--git-fg-color);
-  background-color: var(--git-bg-color);
-}
-
-.skills__card--color-github {
-  color: var(--github-fg-color);
-  background-color: var(--github-bg-color);
-}
-
-.skills__card--color-mongodb {
-  color: var(--mongodb-fg-color);
-  background-color: var(--mongodb-bg-color);
-}
-
-.skills__card--color-figma {
-  color: var(--figma-fg-color);
-  background-color: var(--figma-bg-color);
+.skills__card__icon {
+  font-size: 1.5rem;
 }
 
 .skills__card__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.skills__card__text__title {
   font-size: 1rem;
+  font-weight: 500;
   text-transform: uppercase;
+  margin: 0 0 1rem 0;
+  color: var(--high-text-color);
+}
+
+.skills__card__text__desc {
+  font-size: 10px;
+  margin: 0;
+  color: var(--low-text-color);
 }
 
 /* Education section */
