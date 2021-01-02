@@ -338,6 +338,7 @@ body {
 .skills {
   display: grid;
   gap: 1rem;
+  grid-template-columns: 1fr 1fr;
 }
 
 .skills__card {
@@ -429,21 +430,18 @@ body {
 }
 
 .cert-section {
-}
-
-.cert-title {
-}
-
-.cert-content {
+  display: grid;
+  gap: 1rem;
 }
 
 .cert-card {
   display: block;
   text-decoration: none;
-  color: #ffffff;
-  background-color: #000000;
+  color: #000000;
+  background-color: #ffffff;
   border-radius: 0.25rem;
   position: relative;
+  box-shadow: 1px 2px 8px 1px rgba(0, 0, 0, 0.1);
 }
 
 .cert-card::after {
@@ -464,6 +462,14 @@ body {
 }
 
 .cert-card__text {
+  margin: 1rem 0 0.5rem;
+}
+
+.cert-card__info {
+}
+
+.cert-card__info__date {
+  margin: 0.75rem;
 }
 
 .profile .footer {
