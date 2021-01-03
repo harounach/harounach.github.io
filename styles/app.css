@@ -429,7 +429,7 @@ body {
 }
 
 .skills__card__text__desc {
-  font-size: 10px;
+  font-size: 0.75rem;
   margin: 0;
   color: var(--low-text-color);
 }
@@ -457,47 +457,51 @@ body {
   color: var(--high-text-color);
 }
 
+/* Certifications section */
+
 .cert-section {
   display: grid;
   gap: 1rem;
 }
 
 .cert-card {
-  display: block;
+  min-height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   text-decoration: none;
   color: #000000;
   background-color: #ffffff;
   border-radius: 0.25rem;
-  position: relative;
   box-shadow: 1px 2px 8px 1px rgba(0, 0, 0, 0.1);
+  padding: 0 1rem;
 }
 
-.cert-card::after {
-  content: "🥇";
-  position: absolute;
-  top: 0.25rem;
-  left: 0.25rem;
+.cert-card__graphic {
+  width: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--primary-color);
+  margin-right: 1rem;
+}
+
+.cert-card__icon {
+  font-size: 1.5rem;
 }
 
 .cert-card__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  min-height: 3rem;
 }
 
 .cert-card__text {
-  margin: 1rem 0 0.5rem;
+  color: var(--high-text-color);
+  margin: 0 0 1rem 0;
 }
 
 .cert-card__info {
-}
-
-.cert-card__info__date {
-  margin: 0.75rem;
+  color: var(--low-text-color);
+  margin: 0;
 }
 
 .profile .footer {
