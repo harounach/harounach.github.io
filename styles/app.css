@@ -8,6 +8,9 @@
   --primary-color: #16e2bd;
   --on-primary-color: #000000;
 
+  --secondary-color: #a102ee;
+  --on-secondary-color: #ffffff;
+
   --high-text-color: rgba(0, 0, 0, 0.87);
   --medium-text-color: rgba(0, 0, 0, 0.75);
   --low-text-color: rgba(0, 0, 0, 0.5);
@@ -502,6 +505,70 @@ body {
 .cert-card__info {
   color: var(--low-text-color);
   margin: 0;
+}
+
+/* Projects */
+
+.projects-section {
+  display: grid;
+  gap: 1rem;
+}
+
+.projects-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: #000000;
+  background-color: #ffffff;
+  border-radius: 0.25rem;
+  box-shadow: 1px 2px 8px 1px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.projects-card__fig {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.projects-card__thumbnail {
+  display: block;
+  max-width: 100%;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+
+.projects-card__info {
+  padding-left: 1rem;
+}
+
+.projects-card__title {
+  font-size: 1.125rem;
+  margin: 0.5rem 0;
+  font-weight: 400;
+  color: var(--high-text-color);
+}
+
+.projects-card__desc {
+  font-size: 0.875rem;
+  font-weight: 300;
+  margin: 1rem 0;
+  color: var(--medium-text-color);
+}
+
+.projects-card__tag {
+  color: var(--on-secondary-color);
+  background-color: var(--secondary-color);
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  display: block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
 }
 
 .profile .footer {
