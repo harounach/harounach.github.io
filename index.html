@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Haroun Ach Portfolio</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -13,741 +14,890 @@
       src="https://kit.fontawesome.com/db5fbb90a7.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./styles/app.css" />
+    <link rel="stylesheet" href="./css/app.css" />
   </head>
-  <body>
-    <header class="header">
-      <nav class="nav">
-        <button class="menu-btn">
-          <div class="appbar__menu__icon">
-            <div class="appbar__menu__icon__top-line"></div>
-            <div class="appbar__menu__icon__middle-line"></div>
-            <div class="appbar__menu__icon__bottom-line"></div>
+  <body class="page">
+    <header class="page__header appbar">
+      <!-- menu -->
+      <div class="appbar__section">
+        <button class="appbar__menu">
+          <div class="appbar__icon">
+            <span class="appbar__bar appbar__bar--top"></span>
+            <span class="appbar__bar appbar__bar--middle"></span>
+            <span class="appbar__bar appbar__bar--bottom"></span>
           </div>
         </button>
-        <span class="appbar-title">Haroun Ach Portfolio</span>
-        <ul class="appbar">
-          <li class="appbar__item appbar__item--active">
-            <a href="#About" class="appbar__link appbar__link--active">About</a>
-          </li>
-          <li class="appbar__item">
-            <a href="#Skills" class="appbar__link">Skills</a>
-          </li>
-          <li class="appbar__item">
-            <a href="#Education" class="appbar__link">Education</a>
-          </li>
-          <li class="appbar__item">
-            <a href="#Experience" class="appbar__link">Experience</a>
-          </li>
-          <li class="appbar__item">
-            <a href="#Certifications" class="appbar__link">Certifications</a>
-          </li>
-          <li class="appbar__item">
-            <a href="#Projects" class="appbar__link">Projects</a>
-          </li>
-        </ul>
-        <div class="appbar-scrim"></div>
-      </nav>
+      </div>
+
+      <div class="appbar__section">
+        <span class="appbar__title">Haroun Ach Portfolio</span>
+      </div>
+
+      <div class="appbar__section appbar__section--end">
+        <nav class="appbar__nav">
+          <a href="#About" class="appbar__link appbar__link--active">About</a>
+          <a href="#Skills" class="appbar__link">Skills</a>
+          <a href="#Education" class="appbar__link">Education</a>
+          <a href="#Experience" class="appbar__link">Experience</a>
+          <a href="#Certifications" class="appbar__link">Certifications</a>
+          <a href="#Projects" class="appbar__link">Projects</a>
+        </nav>
+      </div>
+      <div class="appbar__scrim"></div>
     </header>
-    <main class="main">
-      <section class="section" id="About">
-        <section class="about-section">
-          <article class="profile">
-            <div class="profile__figure">
-              <img
-                src="./assets/mypicture.jpg"
-                alt="Haroun Ach Photo"
-                class="profile__img"
-              />
-            </div>
-          </article>
-          <article class="description">
-            <h1 class="title">Haroun Ach</h1>
-            <h2 class="subtitle">Frontend Web Developer</h2>
-            <p class="description__text">
+    <main class="page__main">
+      <!-- About section -->
+      <section class="about-section" id="About">
+        <div class="about-section__img-section">
+          <figure class="about-section__img-wrapper">
+            <img
+              src="./images/mypicture.jpg"
+              alt="Haroun Ach Photo"
+              class="about-section__img"
+            />
+          </figure>
+        </div>
+
+        <div class="about-section__text-section">
+          <div class="about-section__text-wrapper">
+            <h1 class="about-section__name">Haroun Ach</h1>
+            <h2 class="about-section__profession">Frontend Web Developer</h2>
+            <p class="about-section__description">
               I am a Frontend Web Developer a have good experience with web
               technologies including HTML, CSS and JavaScript, as well as
               ReactJS and NodeJS Since I have started web development, I have
               been spending every spare minute writing code for the web, and
               learning everything on web application development.
             </p>
-          </article>
-          <article class="profile-links">
-            <a href="#" class="download-resume-btn"> Download Resume </a>
-            <div class="profile-social">
-              <a
-                href="https://www.linkedin.com/in/haroun-achouche-24147212b/"
-                class="profile-social__link"
-                ><i class="fab fa-linkedin-in profile-social__icon"></i> </a
-              ><a
-                href="https://twitter.com/harounach8"
-                class="profile-social__link"
-                ><i class="fab fa-twitter profile-social__icon"></i
-              ></a>
-              <a
-                href="https://github.com/harounach"
-                class="profile-social__link"
-              >
-                <i class="fab fa-github profile-social__icon"></i>
-              </a>
-            </div>
-          </article>
-        </section>
+          </div>
+        </div>
       </section>
-      <hr class="divider" />
-      <section class="section" id="Skills">
-        <h3 class="section-title">Skills</h3>
-        <div class="skills">
-          <div class="skills__card">
-            <div class="skills__card__graphic">
-              <i class="skills__card__icon fab fa-html5"></i>
+
+      <!-- Call To Action -->
+      <section class="cta-section">
+        <div class="cta-section__section btn-wrapper">
+          <a href="#" class="cta-section__btn btn">Download Resume</a>
+        </div>
+        <div
+          class="
+            cta-section__section cta-section__section--social
+            btn-wrapper btn-wrapper--left
+          "
+        >
+          <a
+            href="https://www.linkedin.com/in/haroun-achouche-24147212b/"
+            class="cta-section__btn btn btn--40"
+          >
+            <i class="btn__icon fab fa-linkedin-in"></i>
+          </a>
+          <a
+            href="https://twitter.com/harounach8"
+            class="cta-section__btn btn btn--40 btn--left-margin"
+          >
+            <i class="btn__icon fab fa-twitter"></i>
+          </a>
+          <a
+            href="https://github.com/harounach"
+            class="cta-section__btn btn btn--40 btn--left-margin"
+          >
+            <i class="btn__icon fab fa-github"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="skills-section" id="Skills">
+        <h3 class="subtitle">Skills</h3>
+        <div class="skills-grid">
+          <!-- HTML -->
+          <div class="skill-card">
+            <div class="skill-card__icon-wrapper">
+              <i class="skill-card__icon fab fa-html5"></i>
             </div>
-            <div class="skills__card__text">
-              <h5 class="skills__card__text__title">HTML</h5>
-              <p class="skills__card__text__desc">
+            <div class="skill-card__text-wrapper">
+              <h5 class="skill-card__title">HTML</h5>
+              <p class="skill-card__description">
                 The language for structuring web pages
               </p>
             </div>
           </div>
-          <div class="skills__card">
-            <div class="skills__card__graphic">
-              <i class="skills__card__icon fab fa-css3-alt"></i>
+
+          <!-- CSS -->
+          <div class="skill-card">
+            <div class="skill-card__icon-wrapper">
+              <i class="skill-card__icon fab fa-css3-alt"></i>
             </div>
-            <div class="skills__card__text">
-              <h5 class="skills__card__text__title">CSS</h5>
-              <p class="skills__card__text__desc">Adds styles to web pages</p>
+            <div class="skill-card__text-wrapper">
+              <h5 class="skill-card__title">CSS</h5>
+              <p class="skill-card__description">Adds styles to web pages</p>
             </div>
           </div>
-          <div class="skills__card">
-            <div class="skills__card__graphic">
-              <i class="skills__card__icon fab fa-js"></i>
+
+          <!-- JavaScript -->
+          <div class="skill-card">
+            <div class="skill-card__icon-wrapper">
+              <i class="skill-card__icon fab fa-js"></i>
             </div>
-            <div class="skills__card__text">
-              <h5 class="skills__card__text__title">JavaScript</h5>
-              <p class="skills__card__text__desc">
+            <div class="skill-card__text-wrapper">
+              <h5 class="skill-card__title">JavaScript</h5>
+              <p class="skill-card__description">
                 Controls functionaliy of web pages
               </p>
             </div>
           </div>
 
-          <div class="skills__card">
-            <div class="skills__card__graphic">
-              <i class="skills__card__icon fab fa-react"></i>
+          <!-- REACT -->
+          <div class="skill-card">
+            <div class="skill-card__icon-wrapper">
+              <i class="skill-card__icon fab fa-react"></i>
             </div>
-            <div class="skills__card__text">
-              <h5 class="skills__card__text__title">REACT</h5>
-              <p class="skills__card__text__desc">
+            <div class="skill-card__text-wrapper">
+              <h5 class="skill-card__title">REACT</h5>
+              <p class="skill-card__description">
                 JS library for buiding user interfaces
               </p>
             </div>
           </div>
-          <div class="skills__card">
-            <div class="skills__card__graphic">
-              <i class="skills__card__icon fab fa-node-js"></i>
+
+          <!-- NODE.JS -->
+          <div class="skill-card">
+            <div class="skill-card__icon-wrapper">
+              <i class="skill-card__icon fab fa-node-js"></i>
             </div>
-            <div class="skills__card__text">
-              <h5 class="skills__card__text__title">NODE.JS</h5>
-              <p class="skills__card__text__desc">
+            <div class="skill-card__text-wrapper">
+              <h5 class="skill-card__title">NODE.JS</h5>
+              <p class="skill-card__description">
                 JS runtime for buiding web servers
               </p>
             </div>
           </div>
-          <div class="skills__card">
-            <div class="skills__card__graphic">
-              <i class="skills__card__icon fab fa-git-alt"></i>
+
+          <!-- GIT -->
+          <div class="skill-card">
+            <div class="skill-card__icon-wrapper">
+              <i class="skill-card__icon fab fa-git-alt"></i>
             </div>
-            <div class="skills__card__text">
-              <h5 class="skills__card__text__title">GIT</h5>
-              <p class="skills__card__text__desc">Version control system</p>
+            <div class="skill-card__text-wrapper">
+              <h5 class="skill-card__title">GIT</h5>
+              <p class="skill-card__description">Version control system</p>
             </div>
           </div>
-          <div class="skills__card">
-            <div class="skills__card__graphic">
-              <i class="skills__card__icon fab fa-github"></i>
+
+          <!-- GITHUB -->
+          <div class="skill-card">
+            <div class="skill-card__icon-wrapper">
+              <i class="skill-card__icon fab fa-github"></i>
             </div>
-            <div class="skills__card__text">
-              <h5 class="skills__card__text__title">GITHUB</h5>
-              <p class="skills__card__text__desc">
+            <div class="skill-card__text-wrapper">
+              <h5 class="skill-card__title">GITHUB</h5>
+              <p class="skill-card__description">
                 Git repositories web service
               </p>
             </div>
           </div>
-          <div class="skills__card">
-            <div class="skills__card__graphic">
-              <i class="skills__card__icon fas fa-database"></i>
+
+          <!-- MONGODB -->
+          <div class="skill-card">
+            <div class="skill-card__icon-wrapper">
+              <i class="skill-card__icon fab fas fa-database"></i>
             </div>
-            <div class="skills__card__text">
-              <h5 class="skills__card__text__title">MONGODB</h5>
-              <p class="skills__card__text__desc">
+            <div class="skill-card__text-wrapper">
+              <h5 class="skill-card__title">MONGODB</h5>
+              <p class="skill-card__description">
                 NonSQL document-based database
               </p>
             </div>
           </div>
-          <div class="skills__card">
-            <div class="skills__card__graphic">
-              <i class="skills__card__icon fab fa-figma"></i>
+
+          <!-- Python -->
+          <div class="skill-card">
+            <div class="skill-card__icon-wrapper">
+              <i class="skill-card__icon fab fa-python"></i>
             </div>
-            <div class="skills__card__text">
-              <h5 class="skills__card__text__title">FIGMA</h5>
-              <p class="skills__card__text__desc">
-                Web-based collaborative design tool
+            <div class="skill-card__text-wrapper">
+              <h5 class="skill-card__title">PYTHON</h5>
+              <p class="skill-card__description">
+                Simple and powerful general purpose programming language
               </p>
             </div>
           </div>
         </div>
       </section>
-      <hr class="divider" />
-      <section class="section" id="Education">
-        <h3 class="section-title">Education</h3>
-        <article class="edu-section">
-          <h4 class="edu-title">Bachelor Degree of Software Engineering</h4>
-          <h6 class="edu-univ">University of Constantine, Algeria</h6>
-          <h6 class="edu-years">2012-2015</h6>
+
+      <!-- Education -->
+
+      <section class="education-section" id="Education">
+        <h3 class="subtitle">Education</h3>
+        <article class="education-article">
+          <h4 class="education-article__title">
+            Bachelor Degree of Software Engineering
+          </h4>
+          <h6 class="education-article__univ">
+            University of Constantine, Algeria
+          </h6>
+          <h6 class="education-article__years">2012-2015</h6>
         </article>
       </section>
-      <hr class="divider" />
-      <section class="section" id="Experience">
-        <h3 class="section-title">Experience</h3>
-        <article class="exp-section">
-          <h4>Freelancing Frontend Web Development</h4>
-          <h6>2015-Present</h6>
+
+      <!-- Experience -->
+
+      <section class="experience-section" id="Experience">
+        <h3 class="subtitle">Experience</h3>
+        <article class="experience-text">
+          <h4 class="experience-text__job">
+            Freelancing Frontend Web Development
+          </h4>
+          <h6 class="experience-text__years">2015-Present</h6>
         </article>
       </section>
-      <hr class="divider" />
-      <section class="section" id="Certifications">
-        <h3 class="section-title">Certifications</h3>
-        <article class="cert-section">
+
+      <!-- Certifications -->
+
+      <section class="cert-section" id="Certifications">
+        <h3 class="subtitle">Certifications</h3>
+        <article class="cert-grid">
+          <!-- Responsive Web Design -->
           <a
             href="https://www.freecodecamp.org/certification/harounach/responsive-web-design"
             target="_blank"
             class="cert-card"
           >
-            <div class="cert-card__graphic">
+            <div class="cert-card__icon-wrapper">
               <i class="cert-card__icon fas fa-medal"></i>
             </div>
             <div class="cert-card__content">
-              <h5 class="cert-card__text">Responsive Web Design</h5>
-              <h6 class="cert-card__info">By FreeCodeCamp</h6>
+              <h5 class="cert-card__name">Responsive Web Design</h5>
+              <h6 class="cert-card__issuer">By FreeCodeCamp</h6>
             </div>
           </a>
 
+          <!-- JavaScript Algorithms and Data Structures -->
           <a
             href="https://www.freecodecamp.org/certification/harounach/javascript-algorithms-and-data-structures"
             target="_blank"
             class="cert-card"
           >
-            <div class="cert-card__graphic">
+            <div class="cert-card__icon-wrapper">
               <i class="cert-card__icon fas fa-medal"></i>
             </div>
             <div class="cert-card__content">
-              <h5 class="cert-card__text">
+              <h5 class="cert-card__name">
                 JavaScript Algorithms and Data Structures
               </h5>
-              <h6 class="cert-card__info">By FreeCodeCamp</h6>
+              <h6 class="cert-card__issuer">By FreeCodeCamp</h6>
             </div>
           </a>
 
+          <!-- Front End Libraries -->
           <a
             href="https://www.freecodecamp.org/certification/harounach/front-end-libraries"
             target="_blank"
             class="cert-card"
           >
-            <div class="cert-card__graphic">
+            <div class="cert-card__icon-wrapper">
               <i class="cert-card__icon fas fa-medal"></i>
             </div>
             <div class="cert-card__content">
-              <h5 class="cert-card__text">Front End Libraries</h5>
-              <h6 class="cert-card__info">By FreeCodeCamp</h6>
+              <h5 class="cert-card__name">Front End Libraries</h5>
+              <h6 class="cert-card__issuer">By FreeCodeCamp</h6>
             </div>
           </a>
 
+          <!-- Data Visualization -->
           <a
             href="https://www.freecodecamp.org/certification/harounach/data-visualization"
             target="_blank"
             class="cert-card"
           >
-            <div class="cert-card__graphic">
+            <div class="cert-card__icon-wrapper">
               <i class="cert-card__icon fas fa-medal"></i>
             </div>
             <div class="cert-card__content">
-              <h5 class="cert-card__text">Data Visualization</h5>
-              <h6 class="cert-card__info">By FreeCodeCamp</h6>
+              <h5 class="cert-card__name">Data Visualization</h5>
+              <h6 class="cert-card__issuer">By FreeCodeCamp</h6>
             </div>
           </a>
 
+          <!-- APIs and Microservices -->
           <a
             href="https://www.freecodecamp.org/certification/harounach/apis-and-microservices"
             target="_blank"
             class="cert-card"
           >
-            <div class="cert-card__graphic">
+            <div class="cert-card__icon-wrapper">
               <i class="cert-card__icon fas fa-medal"></i>
             </div>
             <div class="cert-card__content">
-              <h5 class="cert-card__text">APIs and Microservices</h5>
-              <h6 class="cert-card__info">By FreeCodeCamp</h6>
+              <h5 class="cert-card__name">APIs and Microservices</h5>
+              <h6 class="cert-card__issuer">By FreeCodeCamp</h6>
             </div>
           </a>
 
+          <!-- MongoDB Basics -->
           <a
             href="https://university.mongodb.com/course_completion/8459d44c-38d9-4e24-afa9-266f3372359e"
             target="_blank"
             class="cert-card"
           >
-            <div class="cert-card__graphic">
+            <div class="cert-card__icon-wrapper">
               <i class="cert-card__icon fas fa-medal"></i>
             </div>
             <div class="cert-card__content">
-              <h5 class="cert-card__text">MongoDB Basics</h5>
-              <h6 class="cert-card__info">By MongoDB</h6>
+              <h5 class="cert-card__name">MongoDB Basics</h5>
+              <h6 class="cert-card__issuer">By MongoDB</h6>
             </div>
           </a>
 
+          <!-- Basic Cluster Administration -->
           <a
-            href="https://university.mongodb.com/course_completion/b930b053-badf-4299-b84e-a49b78802c3d?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
+            href="https://university.mongodb.com/course_completion/b930b053-badf-4299-b84e-a49b78802c3d"
             target="_blank"
             class="cert-card"
           >
-            <div class="cert-card__graphic">
+            <div class="cert-card__icon-wrapper">
               <i class="cert-card__icon fas fa-medal"></i>
             </div>
             <div class="cert-card__content">
-              <h5 class="cert-card__text">Basic Cluster Administration</h5>
-              <h6 class="cert-card__info">By MongoDB</h6>
+              <h5 class="cert-card__name">Basic Cluster Administration</h5>
+              <h6 class="cert-card__issuer">By MongoDB</h6>
             </div>
           </a>
 
+          <!-- The MongoDB Aggregation Framework -->
           <a
             href="https://university.mongodb.com/course_completion/08889396-fb40-466c-8d19-f4079e036735"
             target="_blank"
             class="cert-card"
           >
-            <div class="cert-card__graphic">
+            <div class="cert-card__icon-wrapper">
               <i class="cert-card__icon fas fa-medal"></i>
             </div>
             <div class="cert-card__content">
-              <h5 class="cert-card__text">The MongoDB Aggregation Framework</h5>
-              <h6 class="cert-card__info">By MongoDB</h6>
+              <h5 class="cert-card__name">The MongoDB Aggregation Framework</h5>
+              <h6 class="cert-card__issuer">By MongoDB</h6>
             </div>
           </a>
 
+          <!-- MongoDB for Javascript Developers -->
           <a
             href="https://university.mongodb.com/course_completion/05e6d4c7-e1c0-410b-96d8-4ca5317e13d3"
             target="_blank"
             class="cert-card"
           >
-            <div class="cert-card__graphic">
+            <div class="cert-card__icon-wrapper">
               <i class="cert-card__icon fas fa-medal"></i>
             </div>
             <div class="cert-card__content">
-              <h5 class="cert-card__text">MongoDB for Javascript Developers</h5>
-              <h6 class="cert-card__info">By MongoDB</h6>
+              <h5 class="cert-card__name">MongoDB for Javascript Developers</h5>
+              <h6 class="cert-card__issuer">By MongoDB</h6>
             </div>
           </a>
 
+          <!-- MongoDB Performance -->
           <a
             href="https://university.mongodb.com/course_completion/c878c70a-4df3-429d-b919-a5ac04b8830e"
             target="_blank"
             class="cert-card"
           >
-            <div class="cert-card__graphic">
+            <div class="cert-card__icon-wrapper">
               <i class="cert-card__icon fas fa-medal"></i>
             </div>
             <div class="cert-card__content">
-              <h5 class="cert-card__text">MongoDB Performance</h5>
-              <h6 class="cert-card__info">By MongoDB</h6>
+              <h5 class="cert-card__name">MongoDB Performance</h5>
+              <h6 class="cert-card__issuer">By MongoDB</h6>
             </div>
           </a>
 
+          <!-- Data Modeling -->
           <a
             href="https://university.mongodb.com/course_completion/b0e70ebd-5245-4f89-a858-06d2235312d2"
             target="_blank"
             class="cert-card"
           >
-            <div class="cert-card__graphic">
+            <div class="cert-card__icon-wrapper">
               <i class="cert-card__icon fas fa-medal"></i>
             </div>
             <div class="cert-card__content">
-              <h5 class="cert-card__text">Data Modeling</h5>
-              <h6 class="cert-card__info">By MongoDB</h6>
+              <h5 class="cert-card__name">Data Modeling</h5>
+              <h6 class="cert-card__issuer">By MongoDB</h6>
             </div>
           </a>
 
+          <!-- Google Analytics for Beginners -->
           <a
             href="https://analytics.google.com/analytics/academy/certificate/RE4EAJboT3WjNDF3qVAmYg"
             target="_blank"
             class="cert-card"
           >
-            <div class="cert-card__graphic">
+            <div class="cert-card__icon-wrapper">
               <i class="cert-card__icon fas fa-medal"></i>
             </div>
             <div class="cert-card__content">
-              <h5 class="cert-card__text">Google Analytics for Beginners</h5>
-              <h6 class="cert-card__info">By Google</h6>
+              <h5 class="cert-card__name">Google Analytics for Beginners</h5>
+              <h6 class="cert-card__issuer">By Google</h6>
             </div>
           </a>
+
+          <!-- Advanced Google Analytics -->
           <a
             href="https://analytics.google.com/analytics/academy/certificate/w-f6X-a-RfmMG4vE1ve94A"
             target="_blank"
             class="cert-card"
           >
-            <div class="cert-card__graphic">
+            <div class="cert-card__icon-wrapper">
               <i class="cert-card__icon fas fa-medal"></i>
             </div>
             <div class="cert-card__content">
-              <h5 class="cert-card__text">Advanced Google Analytics</h5>
-              <h6 class="cert-card__info">By Google</h6>
+              <h5 class="cert-card__name">Advanced Google Analytics</h5>
+              <h6 class="cert-card__issuer">By Google</h6>
             </div>
           </a>
+
+          <!-- Google Tag Manager Fundamentals -->
           <a
             href="https://analytics.google.com/analytics/academy/certificate/MmfJ-dlcSvmMmj-t_qyxoA"
             target="_blank"
             class="cert-card"
           >
-            <div class="cert-card__graphic">
+            <div class="cert-card__icon-wrapper">
               <i class="cert-card__icon fas fa-medal"></i>
             </div>
             <div class="cert-card__content">
-              <h5 class="cert-card__text">Google Tag Manager Fundamentals</h5>
-              <h6 class="cert-card__info">By Google</h6>
+              <h5 class="cert-card__name">Google Tag Manager Fundamentals</h5>
+              <h6 class="cert-card__issuer">By Google</h6>
             </div>
           </a>
+
+          <!-- Ecommerce Analytics: From Data to Decisions -->
           <a
             href="https://analytics.google.com/analytics/academy/certificate/HE7Zc8P2Ru-xWtV8nj0nPw"
             target="_blank"
             class="cert-card"
           >
-            <div class="cert-card__graphic">
+            <div class="cert-card__icon-wrapper">
               <i class="cert-card__icon fas fa-medal"></i>
             </div>
             <div class="cert-card__content">
-              <h5 class="cert-card__text">
+              <h5 class="cert-card__name">
                 Ecommerce Analytics: From Data to Decisions
               </h5>
-              <h6 class="cert-card__info">By Google</h6>
+              <h6 class="cert-card__issuer">By Google</h6>
             </div>
           </a>
         </article>
       </section>
-      <hr class="divider" />
-      <section class="section" id="Projects">
-        <h3 class="section-title">Projects</h3>
-        <article class="projects-section">
-          <!-- 01- D3-Bar-Chart -->
+
+      <!-- Projects -->
+
+      <section class="projects-section" id="Projects">
+        <h3 class="subtitle">Projects</h3>
+        <article class="projects-grid">
+          <!-- New -->
           <a
-            href="https://codepen.io/harounacho444/full/zYBXZQJ"
-            class="projects-card"
+            href="https://github.com/harounach/todolist"
+            class="project-card"
             target="_blank"
           >
-            <figure class="projects-card__fig">
+            <figure class="project-card__fig">
               <img
-                src="./assets/D3-Bar-Chart.jpg"
+                src="./images/TodoList.jpg"
                 alt=""
-                class="projects-card__thumbnail"
+                class="project-card__thumbnail"
               />
             </figure>
 
-            <div class="projects-card__info">
-              <h5 class="projects-card__title">D3 Bar Chart</h5>
-              <h6 class="projects-card__desc">
+            <div class="project-card__text-wrapper">
+              <h5 class="project-card__title">TodoList</h5>
+              <h6 class="project-card__desc">A React Todo List App</h6>
+            </div>
+            <span class="project-card__tag">Tool</span>
+          </a>
+
+          <a
+            href="https://github.com/harounach/eerkel-frontend"
+            class="project-card"
+            target="_blank"
+          >
+            <figure class="project-card__fig">
+              <img
+                src="./images/Eerkel-Frontend.jpg"
+                alt=""
+                class="project-card__thumbnail"
+              />
+            </figure>
+
+            <div class="project-card__text-wrapper">
+              <h5 class="project-card__title">Eerkel</h5>
+              <h6 class="project-card__desc">Front End for a Chat App</h6>
+            </div>
+            <span class="project-card__tag">Messaging</span>
+          </a>
+
+          <a
+            href="https://github.com/harounach/storybook"
+            class="project-card"
+            target="_blank"
+          >
+            <figure class="project-card__fig">
+              <img
+                src="./images/Storybook.jpg"
+                alt=""
+                class="project-card__thumbnail"
+              />
+            </figure>
+
+            <div class="project-card__text-wrapper">
+              <h5 class="project-card__title">StoryBook</h5>
+              <h6 class="project-card__desc">
+                Create and share stories about your life
+              </h6>
+            </div>
+            <span class="project-card__tag">Personal</span>
+          </a>
+
+          <a
+            href="https://github.com/harounach/lensey"
+            class="project-card"
+            target="_blank"
+          >
+            <figure class="project-card__fig">
+              <img
+                src="./images/Lensey.jpg"
+                alt=""
+                class="project-card__thumbnail"
+              />
+            </figure>
+
+            <div class="project-card__text-wrapper">
+              <h5 class="project-card__title">Lensey</h5>
+              <h6 class="project-card__desc">
+                Lensey is a simple news website
+              </h6>
+            </div>
+            <span class="project-card__tag">News</span>
+          </a>
+
+          <a
+            href="https://github.com/harounach/suun"
+            class="project-card"
+            target="_blank"
+          >
+            <figure class="project-card__fig">
+              <img
+                src="./images/Suun.jpg"
+                alt=""
+                class="project-card__thumbnail"
+              />
+            </figure>
+
+            <div class="project-card__text-wrapper">
+              <h5 class="project-card__title">Suun</h5>
+              <h6 class="project-card__desc">Suun is simple weather website</h6>
+            </div>
+            <span class="project-card__tag">Weather</span>
+          </a>
+
+          <!-- Old -->
+          <a
+            href="https://codepen.io/harounacho444/full/zYBXZQJ"
+            class="project-card"
+            target="_blank"
+          >
+            <figure class="project-card__fig">
+              <img
+                src="./images/D3-Bar-Chart.jpg"
+                alt=""
+                class="project-card__thumbnail"
+              />
+            </figure>
+
+            <div class="project-card__text-wrapper">
+              <h5 class="project-card__title">D3 Bar Chart</h5>
+              <h6 class="project-card__desc">
                 Visualize Data with a Bar Chart
               </h6>
             </div>
-            <span class="projects-card__tag">Visualization</span>
+            <span class="project-card__tag">Visualization</span>
           </a>
 
-          <!-- 02- D3-Scatter-Plot -->
           <a
             href="https://codepen.io/harounacho444/full/qBNwwoy"
-            class="projects-card"
+            class="project-card"
             target="_blank"
           >
-            <figure class="projects-card__fig">
+            <figure class="project-card__fig">
               <img
-                src="./assets/D3-Scatter-Plot.jpg"
+                src="./images/D3-Scatter-Plot.jpg"
                 alt=""
-                class="projects-card__thumbnail"
+                class="project-card__thumbnail"
               />
             </figure>
 
-            <div class="projects-card__info">
-              <h5 class="projects-card__title">D3 Scatter Plot</h5>
-              <h6 class="projects-card__desc">
-                Visualize Data with a Scatterplot Graph
+            <div class="project-card__text-wrapper">
+              <h5 class="project-card__title">D3 Scatter Plot</h5>
+              <h6 class="project-card__desc">
+                Visualize Data with Scatterplot Graph
               </h6>
             </div>
-            <span class="projects-card__tag">Visualization</span>
+            <span class="project-card__tag">Visualization</span>
           </a>
 
-          <!-- 03- D3-Heat-Map -->
           <a
             href="https://codepen.io/harounacho444/full/BazgJRM"
-            class="projects-card"
+            class="project-card"
             target="_blank"
           >
-            <figure class="projects-card__fig">
+            <figure class="project-card__fig">
               <img
-                src="./assets/D3-Heat-Map.jpg"
+                src="./images/D3-Heat-Map.jpg"
                 alt=""
-                class="projects-card__thumbnail"
+                class="project-card__thumbnail"
               />
             </figure>
 
-            <div class="projects-card__info">
-              <h5 class="projects-card__title">D3 Heat Map</h5>
-              <h6 class="projects-card__desc">
-                Visualize Data with a Heat Map
-              </h6>
+            <div class="project-card__text-wrapper">
+              <h5 class="project-card__title">D3 Heat Map</h5>
+              <h6 class="project-card__desc">Visualize Data with Heat Map</h6>
             </div>
-            <span class="projects-card__tag">Visualization</span>
+            <span class="project-card__tag">Visualization</span>
           </a>
 
-          <!-- 04- D3-Choropleth-Map -->
           <a
             href="https://codepen.io/harounacho444/full/WNxqKzy"
-            class="projects-card"
+            class="project-card"
             target="_blank"
           >
-            <figure class="projects-card__fig">
+            <figure class="project-card__fig">
               <img
-                src="./assets/D3-Choropleth-Map.jpg"
+                src="./images/D3-Choropleth-Map.jpg"
                 alt=""
-                class="projects-card__thumbnail"
+                class="project-card__thumbnail"
               />
             </figure>
 
-            <div class="projects-card__info">
-              <h5 class="projects-card__title">D3 Choropleth Map</h5>
-              <h6 class="projects-card__desc">
-                Visualize Data with a Choropleth Map
+            <div class="project-card__text-wrapper">
+              <h5 class="project-card__title">D3 Choropleth Map</h5>
+              <h6 class="project-card__desc">
+                Visualize Data with Choropleth Map
               </h6>
             </div>
-            <span class="projects-card__tag">Visualization</span>
+            <span class="project-card__tag">Visualization</span>
           </a>
 
-          <!-- 05- D3-Tree-Map -->
           <a
             href="https://codepen.io/harounacho444/full/QWEXXRJ"
-            class="projects-card"
+            class="project-card"
             target="_blank"
           >
-            <figure class="projects-card__fig">
+            <figure class="project-card__fig">
               <img
-                src="./assets/D3-Tree-Map.jpg"
+                src="./images/D3-Tree-Map.jpg"
                 alt=""
-                class="projects-card__thumbnail"
+                class="project-card__thumbnail"
               />
             </figure>
 
-            <div class="projects-card__info">
-              <h5 class="projects-card__title">D3 Tree Map</h5>
-              <h6 class="projects-card__desc">
-                Visualize Data with a Treemap Diagram
+            <div class="project-card__text-wrapper">
+              <h5 class="project-card__title">D3 Tree Map</h5>
+              <h6 class="project-card__desc">
+                Visualize Data with Treemap Diagram
               </h6>
             </div>
-            <span class="projects-card__tag">Visualization</span>
+            <span class="project-card__tag">Visualization</span>
           </a>
 
-          <!-- 06- Random-Quote-Machine -->
           <a
             href="https://codepen.io/harounacho444/full/NWNVxoo"
-            class="projects-card"
+            class="project-card"
             target="_blank"
           >
-            <figure class="projects-card__fig">
+            <figure class="project-card__fig">
               <img
-                src="./assets/Random-Quote-Machine.jpg"
+                src="./images/Random-Quote-Machine.jpg"
                 alt=""
-                class="projects-card__thumbnail"
+                class="project-card__thumbnail"
               />
             </figure>
 
-            <div class="projects-card__info">
-              <h5 class="projects-card__title">Random Quote Machine</h5>
-              <h6 class="projects-card__desc">Build a Random Quote Machine</h6>
+            <div class="project-card__text-wrapper">
+              <h5 class="project-card__title">Random Quote Machine</h5>
+              <h6 class="project-card__desc">Build a Random Quote Machine</h6>
             </div>
-            <span class="projects-card__tag">Visualization</span>
+            <span class="project-card__tag">Quotes</span>
           </a>
 
-          <!-- 07- Markdown-Previewer -->
           <a
             href="https://codepen.io/harounacho444/full/QWNRNry"
-            class="projects-card"
+            class="project-card"
             target="_blank"
           >
-            <figure class="projects-card__fig">
+            <figure class="project-card__fig">
               <img
-                src="./assets/Markdown-Previewer.jpg"
+                src="./images/Markdown-Previewer.jpg"
                 alt=""
-                class="projects-card__thumbnail"
+                class="project-card__thumbnail"
               />
             </figure>
 
-            <div class="projects-card__info">
-              <h5 class="projects-card__title">Markdown Previewer</h5>
-              <h6 class="projects-card__desc">Build a Markdown Previewer</h6>
+            <div class="project-card__text-wrapper">
+              <h5 class="project-card__title">Markdown Previewer</h5>
+              <h6 class="project-card__desc">Build a Markdown Previewer</h6>
             </div>
-            <span class="projects-card__tag">Visualization</span>
+            <span class="project-card__tag">Tool</span>
           </a>
 
-          <!-- 08- Drum-Machine -->
           <a
             href="https://codepen.io/harounacho444/full/LYNoaQv"
-            class="projects-card"
+            class="project-card"
             target="_blank"
           >
-            <figure class="projects-card__fig">
+            <figure class="project-card__fig">
               <img
-                src="./assets/Drum-Machine.jpg"
+                src="./images/Drum-Machine.jpg"
                 alt=""
-                class="projects-card__thumbnail"
+                class="project-card__thumbnail"
               />
             </figure>
 
-            <div class="projects-card__info">
-              <h5 class="projects-card__title">Drum Machine</h5>
-              <h6 class="projects-card__desc">Build a Drum Machine</h6>
+            <div class="project-card__text-wrapper">
+              <h5 class="project-card__title">Drum Machine</h5>
+              <h6 class="project-card__desc">Build a Drum Machine</h6>
             </div>
-            <span class="projects-card__tag">Visualization</span>
+            <span class="project-card__tag">Entertainment</span>
           </a>
 
-          <!-- 09- JavaScript-Calculator -->
           <a
             href="https://codepen.io/harounacho444/full/BaKeepM"
-            class="projects-card"
+            class="project-card"
             target="_blank"
           >
-            <figure class="projects-card__fig">
+            <figure class="project-card__fig">
               <img
-                src="./assets/JavaScript-Calculator.jpg"
+                src="./images/JavaScript-Calculator.jpg"
                 alt=""
-                class="projects-card__thumbnail"
+                class="project-card__thumbnail"
               />
             </figure>
 
-            <div class="projects-card__info">
-              <h5 class="projects-card__title">JavaScript Calculator</h5>
-              <h6 class="projects-card__desc">Build a JavaScript Calculator</h6>
+            <div class="project-card__text-wrapper">
+              <h5 class="project-card__title">JavaScript Calculator</h5>
+              <h6 class="project-card__desc">Build a JavaScript Calculator</h6>
             </div>
-            <span class="projects-card__tag">Visualization</span>
+            <span class="project-card__tag">Tool</span>
           </a>
 
-          <!-- 10- (25+5)-Clock -->
           <a
             href="https://codepen.io/harounacho444/full/ExyLNxO"
-            class="projects-card"
+            class="project-card"
             target="_blank"
           >
-            <figure class="projects-card__fig">
+            <figure class="project-card__fig">
               <img
-                src="./assets/(25+5)-Clock.jpg"
+                src="./images/(25+5)-Clock.jpg"
                 alt=""
-                class="projects-card__thumbnail"
+                class="project-card__thumbnail"
               />
             </figure>
 
-            <div class="projects-card__info">
-              <h5 class="projects-card__title">25 + 5 Clock</h5>
-              <h6 class="projects-card__desc">Build a 25 + 5 Clock</h6>
+            <div class="project-card__text-wrapper">
+              <h5 class="project-card__title">25 + 5 Clock</h5>
+              <h6 class="project-card__desc">Build a 25 + 5 Clock</h6>
             </div>
-            <span class="projects-card__tag">Visualization</span>
+            <span class="project-card__tag">Tool</span>
           </a>
 
-          <!-- 11- Survey-Form -->
           <a
             href="https://codepen.io/harounacho444/full/KKVVZyz"
-            class="projects-card"
+            class="project-card"
             target="_blank"
           >
-            <figure class="projects-card__fig">
+            <figure class="project-card__fig">
               <img
-                src="./assets/Survey-Form.jpg"
+                src="./images/Survey-Form.jpg"
                 alt=""
-                class="projects-card__thumbnail"
+                class="project-card__thumbnail"
               />
             </figure>
 
-            <div class="projects-card__info">
-              <h5 class="projects-card__title">Survey Form</h5>
-              <h6 class="projects-card__desc">Build a Survey Form</h6>
+            <div class="project-card__text-wrapper">
+              <h5 class="project-card__title">Survey Form</h5>
+              <h6 class="project-card__desc">Build a Survey Form</h6>
             </div>
-            <span class="projects-card__tag">Visualization</span>
+            <span class="project-card__tag">Analytics</span>
           </a>
 
-          <!-- 12- Product-Landing-Page -->
           <a
             href="https://codepen.io/harounacho444/full/YzwqWEN"
-            class="projects-card"
+            class="project-card"
             target="_blank"
           >
-            <figure class="projects-card__fig">
+            <figure class="project-card__fig">
               <img
-                src="./assets/Product-Landing-Page.jpg"
+                src="./images/Product-Landing-Page.jpg"
                 alt=""
-                class="projects-card__thumbnail"
+                class="project-card__thumbnail"
               />
             </figure>
 
-            <div class="projects-card__info">
-              <h5 class="projects-card__title">Product Landing Page</h5>
-              <h6 class="projects-card__desc">Build a Product Landing Page</h6>
+            <div class="project-card__text-wrapper">
+              <h5 class="project-card__title">Product Landing Page</h5>
+              <h6 class="project-card__desc">Build a Product Landing Page</h6>
             </div>
-            <span class="projects-card__tag">Visualization</span>
+            <span class="project-card__tag">Business</span>
           </a>
 
-          <!-- 13- Technical-Documentation-Page -->
           <a
             href="https://codepen.io/harounacho444/full/RwraBaR"
-            class="projects-card"
+            class="project-card"
             target="_blank"
           >
-            <figure class="projects-card__fig">
+            <figure class="project-card__fig">
               <img
-                src="./assets/Technical-Documentation-Page.jpg"
+                src="./images/Technical-Documentation-Page.jpg"
                 alt=""
-                class="projects-card__thumbnail"
+                class="project-card__thumbnail"
               />
             </figure>
 
-            <div class="projects-card__info">
-              <h5 class="projects-card__title">Technical Documentation Page</h5>
-              <h6 class="projects-card__desc">
+            <div class="project-card__text-wrapper">
+              <h5 class="project-card__title">Technical Documentation Page</h5>
+              <h6 class="project-card__desc">
                 Build a Technical Documentation Page
               </h6>
             </div>
-            <span class="projects-card__tag">Visualization</span>
+            <span class="project-card__tag">Tech</span>
           </a>
 
-          <!-- 14- Technical-Documentation-Page -->
           <a
             href="https://codepen.io/harounacho444/full/XWXKxNa"
-            class="projects-card"
+            class="project-card"
             target="_blank"
           >
-            <figure class="projects-card__fig">
+            <figure class="project-card__fig">
               <img
-                src="./assets/Personal-Porfolio-Webpage.jpg"
+                src="./images/Personal-Porfolio-Webpage.jpg"
                 alt=""
-                class="projects-card__thumbnail"
+                class="project-card__thumbnail"
               />
             </figure>
 
-            <div class="projects-card__info">
-              <h5 class="projects-card__title">Personal Portfolio Webpage</h5>
-              <h6 class="projects-card__desc">
+            <div class="project-card__text-wrapper">
+              <h5 class="project-card__title">Personal Portfolio Webpage</h5>
+              <h6 class="project-card__desc">
                 Build a Personal Portfolio Webpage
               </h6>
             </div>
-            <span class="projects-card__tag">Visualization</span>
+            <span class="project-card__tag">Personal</span>
           </a>
         </article>
       </section>
-      <hr class="divider" />
     </main>
-    <footer class="footer">
-      <p class="footer-content">Footer goes here</p>
+    <footer class="page__footer footer">
+      <p class="copyright-notice">Copyright Haroun Ach 2021</p>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./scripts/app.js"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- App.js -->
+    <script src="./js/app.js"></script>
   </body>
 </html>
