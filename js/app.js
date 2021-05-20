@@ -15,13 +15,13 @@ $(document).ready(function () {
       const self = this;
 
       // Open and close appbar nav
-      this.menuBtn.click(function (event) {
+      this.menuBtn.on("click", function (event) {
         event.stopPropagation();
         self.appbar.toggleClass("appbar--open");
       });
 
       // Close appbar nav
-      $(document).click(function (event) {
+      $(document).on("click", function (event) {
         self.appbar.toggleClass("appbar--open", false);
       });
 
