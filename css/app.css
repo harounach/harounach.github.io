@@ -143,8 +143,7 @@ input {
 .appbar__bar--middle {
   width: 70%;
   align-self: flex-start;
-  transition: transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946),
-    opacity 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+  transition: transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946), opacity 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
   opacity: 1;
 }
 .appbar__bar--bottom {
@@ -169,9 +168,7 @@ input {
   top: 85px;
   left: 0;
   bottom: 0;
-  box-shadow: 0 0px 2.2px rgba(0, 0, 0, 0.028), 0 0px 5.3px rgba(0, 0, 0, 0.04),
-    0 0px 10px rgba(0, 0, 0, 0.05), 0 0px 17.9px rgba(0, 0, 0, 0.06),
-    0 0px 33.4px rgba(0, 0, 0, 0.072), 0 0px 80px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0px 2.2px rgba(0, 0, 0, 0.028), 0 0px 5.3px rgba(0, 0, 0, 0.04), 0 0px 10px rgba(0, 0, 0, 0.05), 0 0px 17.9px rgba(0, 0, 0, 0.06), 0 0px 33.4px rgba(0, 0, 0, 0.072), 0 0px 80px rgba(0, 0, 0, 0.1);
   z-index: 16;
   will-change: transform;
   transform: translateX(-100%);
@@ -331,9 +328,9 @@ input {
 .about__title {
   font-size: 60px;
   -webkit-text-decoration-color: #f17563;
-  text-decoration-color: #f17563;
+          text-decoration-color: #f17563;
   -webkit-text-decoration: underline #f17563 8px;
-  text-decoration: underline #f17563 8px;
+          text-decoration: underline #f17563 8px;
 }
 .about__description {
   font-size: 1rem;
@@ -395,9 +392,7 @@ input {
   align-items: center;
   padding: 0.5rem;
   border-radius: 0.25rem;
-  box-shadow: 0 0.9px 1.3px -6px rgba(0, 0, 0, 0.045),
-    0 2.5px 3.6px -6px rgba(0, 0, 0, 0.065),
-    0 6px 8.7px -6px rgba(0, 0, 0, 0.085), 0 20px 29px -6px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 0.9px 1.3px -6px rgba(0, 0, 0, 0.045), 0 2.5px 3.6px -6px rgba(0, 0, 0, 0.065), 0 6px 8.7px -6px rgba(0, 0, 0, 0.085), 0 20px 29px -6px rgba(0, 0, 0, 0.13);
 }
 .skill-card__icon-wrapper {
   width: 3rem;
@@ -445,9 +440,7 @@ input {
   padding: 1.5rem 1rem;
   border-radius: 0.25rem;
   gap: 1rem;
-  box-shadow: 0 0.9px 1.3px -6px rgba(0, 0, 0, 0.045),
-    0 2.5px 3.6px -6px rgba(0, 0, 0, 0.065),
-    0 6px 8.7px -6px rgba(0, 0, 0, 0.085), 0 20px 29px -6px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 0.9px 1.3px -6px rgba(0, 0, 0, 0.045), 0 2.5px 3.6px -6px rgba(0, 0, 0, 0.065), 0 6px 8.7px -6px rgba(0, 0, 0, 0.085), 0 20px 29px -6px rgba(0, 0, 0, 0.13);
 }
 .education__title {
   margin: 0;
@@ -475,9 +468,7 @@ input {
   gap: 1rem;
   padding: 1.5rem 1rem;
   border-radius: 0.25rem;
-  box-shadow: 0 0.9px 1.3px -6px rgba(0, 0, 0, 0.045),
-    0 2.5px 3.6px -6px rgba(0, 0, 0, 0.065),
-    0 6px 8.7px -6px rgba(0, 0, 0, 0.085), 0 20px 29px -6px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 0.9px 1.3px -6px rgba(0, 0, 0, 0.045), 0 2.5px 3.6px -6px rgba(0, 0, 0, 0.065), 0 6px 8.7px -6px rgba(0, 0, 0, 0.085), 0 20px 29px -6px rgba(0, 0, 0, 0.13);
 }
 .experience__job {
   margin: 0;
@@ -524,9 +515,7 @@ input {
   padding: 0.5rem;
   border-radius: 0.25rem;
   gap: 1rem;
-  box-shadow: 0 0.9px 1.3px -6px rgba(0, 0, 0, 0.045),
-    0 2.5px 3.6px -6px rgba(0, 0, 0, 0.065),
-    0 6px 8.7px -6px rgba(0, 0, 0, 0.085), 0 20px 29px -6px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 0.9px 1.3px -6px rgba(0, 0, 0, 0.045), 0 2.5px 3.6px -6px rgba(0, 0, 0, 0.065), 0 6px 8.7px -6px rgba(0, 0, 0, 0.085), 0 20px 29px -6px rgba(0, 0, 0, 0.13);
 }
 .cert-card__icon-wrapper {
   width: 3rem;
@@ -603,9 +592,7 @@ input {
   align-items: center;
   border-radius: 0.25rem;
   overflow: hidden;
-  box-shadow: 0 0.9px 1.3px -6px rgba(0, 0, 0, 0.045),
-    0 2.5px 3.6px -6px rgba(0, 0, 0, 0.065),
-    0 6px 8.7px -6px rgba(0, 0, 0, 0.085), 0 20px 29px -6px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 0.9px 1.3px -6px rgba(0, 0, 0, 0.045), 0 2.5px 3.6px -6px rgba(0, 0, 0, 0.065), 0 6px 8.7px -6px rgba(0, 0, 0, 0.085), 0 20px 29px -6px rgba(0, 0, 0, 0.13);
   position: relative;
 }
 .project-card__fig {
