@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg5"
+   xml:space="preserve"
+   inkscape:version="1.2.1 (ef4d3fba62, 2022-07-19, custom)"
+   sodipodi:docname="google-ads-dev.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="0.32869417"
+     inkscape:cx="-120.1725"
+     inkscape:cy="390.94092"
+     inkscape:window-width="1366"
+     inkscape:window-height="634"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g156" /><defs
+     id="defs2" /><g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"><g
+       id="g156"
+       transform="matrix(0.20963587,0,0,0.20963587,-4.5792099e-6,21.519445)">
+	<path
+   class="st0"
+   d="M 50.4,1628.6 862.5,221.9 1566.2,628.2 754.2,2034.9 Z"
+   id="path150"
+   style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:23.8508801;stroke-dasharray:none" />
+	<path
+   class="st1"
+   d="M 2385.1,1623.7 1572.5,216.5 C 1467.6,18.1 1221.8,-57.7 1023.4,47.2 825,152.1 749.3,397.9 854.1,596.3 c 4.6,8.7 9.5,17.2 14.7,25.6 l 812.6,1407.2 c 109.6,195.8 357.2,265.7 553,156.1 195.8,-109.6 265.7,-357.2 156.1,-553 -1.8,-3.2 -3.6,-6.3 -5.4,-9.4 z"
+   id="path152"
+   style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-opacity:1;stroke-width:23.8508801;stroke-dasharray:none" />
+	<circle
+   class="st2"
+   cx="415.84033"
+   cy="1828.6"
+   r="406.29999"
+   id="circle154"
+   style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:23.8508801;stroke-dasharray:none;stroke-opacity:1" />
+</g></g><style
+     type="text/css"
+     id="style148">
+	.st0{fill:#FBBC04;}
+	.st1{fill:#4285F4;}
+	.st2{fill:#34A853;}
+</style></svg>

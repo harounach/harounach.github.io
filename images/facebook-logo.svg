@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg5"
+   xml:space="preserve"
+   inkscape:version="1.2.1 (ef4d3fba62, 2022-07-19, custom)"
+   sodipodi:docname="facebook-dev.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="0.65738834"
+     inkscape:cx="98.115522"
+     inkscape:cy="270.00783"
+     inkscape:window-width="1366"
+     inkscape:window-height="634"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" /><defs
+     id="defs2" /><g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"><g
+       id="g37"
+       transform="matrix(0.86926995,0,0,0.86926995,-109.91485,-1.9828101)"><circle
+         cx="420.94501"
+         cy="296.78101"
+         fill="#3c5a9a"
+         r="294.5"
+         id="circle25"
+         style="fill:#ffffff;fill-opacity:1" /><path
+         d="m 516.704,92.677 h -65.239 c -38.715,0 -81.777,16.283 -81.777,72.402 0.189,19.554 0,38.281 0,59.357 H 324.9 v 71.271 h 46.174 v 205.177 h 84.847 V 294.353 h 56.002 l 5.067,-70.117 h -62.531 c 0,0 0.14,-31.191 0,-40.249 0,-22.177 23.076,-20.907 24.464,-20.907 10.981,0 32.332,0.032 37.813,0 V 92.677 Z"
+         fill="#ffffff"
+         id="path27"
+         style="fill:#000000;fill-opacity:1" /></g></g></svg>
