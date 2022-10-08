@@ -44,41 +44,51 @@
   </head>
   <body class="page">
     <header class="page__header appbar">
-      <!-- menu -->
-      <div class="appbar__section">
-        <button class="appbar__menu">
-          <div class="appbar__icon">
-            <span class="appbar__bar appbar__bar--top"></span>
-            <span class="appbar__bar appbar__bar--middle"></span>
-            <span class="appbar__bar appbar__bar--bottom"></span>
+      <div class="container">
+        <div class="appbar__content">
+          <!-- menu -->
+          <div class="appbar__section">
+            <button class="appbar__menu">
+              <div class="appbar__icon">
+                <span class="appbar__bar appbar__bar--top"></span>
+                <span class="appbar__bar appbar__bar--middle"></span>
+                <span class="appbar__bar appbar__bar--bottom"></span>
+              </div>
+            </button>
           </div>
-        </button>
-      </div>
 
-      <div class="appbar__section">
-        <img
-          class="appbar__logo"
-          src="./images/Haroun-Achouche-Logo.svg"
-          alt="Logo"
-        />
-      </div>
+          <div class="appbar__section">
+            <img class="appbar__logo" src="./images/Logo.svg" alt="Logo" />
+          </div>
 
-      <div class="appbar__section appbar__section--end">
-        <nav class="appbar__nav">
-          <a href="#About" class="appbar__link appbar__link--active">About</a>
-          <a href="#Skills" class="appbar__link">Skills</a>
-          <a href="#Education" class="appbar__link">Education</a>
-          <a href="#Experience" class="appbar__link">Experience</a>
-          <a href="#Certifications" class="appbar__link">Certifications</a>
-          <a href="#Contact" class="appbar__link">Contact</a>
-        </nav>
+          <div class="appbar__section appbar__section--end">
+            <nav class="appbar__nav">
+              <a
+                href="#About"
+                class="appbar__link appbar__link--active scrollto"
+                >About</a
+              >
+              <a href="#Skills" class="appbar__link scrollto">Skills</a>
+              <a href="#Education" class="appbar__link scrollto">Education</a>
+              <a href="#Experience" class="appbar__link scrollto">Experience</a>
+              <a href="#Certifications" class="appbar__link scrollto"
+                >Certifications</a
+              >
+              <a
+                href="#Contact"
+                class="appbar__link appbar__link-btn btn scrollto"
+                >Contact</a
+              >
+            </nav>
+          </div>
+          <div class="appbar__scrim"></div>
+        </div>
       </div>
-      <div class="appbar__scrim"></div>
     </header>
     <main class="page__main">
       <div class="container">
         <!-- About section -->
-        <section class="about" id="About">
+        <section class="about section" id="About">
           <div class="about__graphic">
             <img
               src="./images/harounach.jpg"
@@ -89,103 +99,49 @@
           <div class="about__content">
             <h1 class="about__title">
               Haroun Achouche <br />
-              Digital Marketer
+              <span class="about__title--position">Software Engineer</span>
             </h1>
             <p class="about__description">
-              I am a Digital Marketer, I have experience building and growing
-              online presence for businesses and developing solid brands through
-              social media including Facebook and Instagram as well as
-              Pinterest, and also driving search engine traffics by optimizing
-              page content to rank higher in the result pages.
+              I am a Web Developer a have good experience with web technologies
+              including HTML, CSS and JavaScript, as well as ReactJS and NodeJS
+              Since I have started web development, I have been spending every
+              spare minute writing code for the web, and learning everything on
+              web application development.
             </p>
             <a href="./assets/Haroun-Achouche-Resume.pdf" class="about__btn btn"
-              >Download Resume (PDF)
-              <i class="btn__icon fas fa-chevron-right"></i
+              >Download Resume (PDF) <i class="btn__icon fas fa-arrow-right"></i
             ></a>
           </div>
         </section>
 
         <!-- Skills -->
-        <section class="skills-section" id="Skills">
+        <section class="skills-section section" id="Skills">
           <h3 class="title">Skills</h3>
           <div class="section">
             <div class="skills-grid">
-              <!-- Facebook Ads -->
-              <div class="skill-card">
-                <img
-                  src="./images/facebook-logo.svg"
-                  alt="Facebook Logo"
-                  class="skill-card__img"
-                />
-                <h5 class="skill-card__title">Facebook Ads</h5>
-              </div>
-
-              <!-- Google Ads -->
-              <div class="skill-card">
-                <img
-                  src="./images/google-ads-logo.svg"
-                  alt="Google Ads Logo"
-                  class="skill-card__img"
-                />
-                <h5 class="skill-card__title">Google Ads</h5>
-              </div>
-
-              <!-- Instagram Ads -->
-              <div class="skill-card">
-                <img
-                  src="./images/instagram-logo.svg"
-                  alt="Instagram Logo"
-                  class="skill-card__img"
-                />
-                <h5 class="skill-card__title">Instagram Ads</h5>
-              </div>
-
-              <!-- SEO -->
-              <div class="skill-card">
-                <img
-                  src="./images/seo-logo.svg"
-                  alt="SEO Logo"
-                  class="skill-card__img"
-                />
-                <h5 class="skill-card__title">Search Engine Optimization</h5>
-              </div>
-
-              <!-- Google My Business -->
-              <div class="skill-card">
-                <img
-                  src="./images/google-my-business-logo.svg"
-                  alt="Google My Business Logo"
-                  class="skill-card__img"
-                />
-                <h5 class="skill-card__title">Google My Business</h5>
-              </div>
-
-              <!-- Google Analytics -->
-              <div class="skill-card">
-                <img
-                  src="./images/google-analytics-logo.svg"
-                  alt="Google Analytics Logo"
-                  class="skill-card__img"
-                />
-                <h5 class="skill-card__title">Google Analytics</h5>
-              </div>
-
-              <!-- Web Development -->
-              <div class="skill-card">
-                <img
-                  src="./images/web-logo.svg"
-                  alt="Web Logo"
-                  class="skill-card__img"
-                />
-                <h5 class="skill-card__title">Web Development</h5>
-              </div>
+              <div class="skill-card">HTML</div>
+              <div class="skill-card">CSS</div>
+              <div class="skill-card">JavaScript</div>
+              <div class="skill-card">React</div>
+              <div class="skill-card">Node.JS</div>
+              <div class="skill-card">SASS</div>
+              <div class="skill-card">PHP</div>
+              <div class="skill-card">WordPress</div>
+              <div class="skill-card">TypeScript</div>
+              <div class="skill-card">Python</div>
+              <div class="skill-card">Git</div>
+              <div class="skill-card">Github</div>
+              <div class="skill-card">CI/CD</div>
+              <div class="skill-card">Docker</div>
+              <div class="skill-card">Firebase</div>
+              <div class="skill-card">AWS</div>
             </div>
           </div>
         </section>
 
         <!-- Education -->
 
-        <section class="education" id="Education">
+        <section class="education section" id="Education">
           <h3 class="title">Education</h3>
           <div class="section">
             <article class="education__article">
@@ -202,47 +158,32 @@
 
         <!-- Experience -->
 
-        <section class="experience" id="Experience">
+        <section class="experience section" id="Experience">
           <h3 class="title">Experience</h3>
           <div class="section">
             <article class="experience__content">
-              <h4 class="experience__job">Digital Marketer</h4>
-              <h5 class="experience__years">JULY 2022 - PRESENT</h5>
-              <ul class="list">
-                <li class="list__item">Define marketing goals.</li>
-                <li class="list__item">Define target audience.</li>
-                <li class="list__item">Create strong brand.</li>
-                <li class="list__item">
-                  Establish and manage social media presence.
-                </li>
-                <li class="list__item">Build and grow followers.</li>
-                <li class="list__item">
-                  Create effective ads on Facebook and Google.
-                </li>
-                <li class="list__item">
-                  Analyze marketing efforts and draw insights.
-                </li>
-              </ul>
-            </article>
-            <article class="experience__content">
               <h4 class="experience__job">Freelance Web Developer</h4>
-              <h5 class="experience__years">SEPTEMBER 2015 - June 2022</h5>
-              <ul class="list">
-                <li class="list__item">Design the front end of the website.</li>
-                <li class="list__item">Develop search friendly web pages</li>
-                <li class="list__item">
+              <h5 class="experience__years">SEPTEMBER 2015 - PRESENT</h5>
+              <ul class="experience__list">
+                <li class="experience__item">
+                  Design the front end of the website.
+                </li>
+                <li class="experience__item">
+                  Develop search friendly web pages
+                </li>
+                <li class="experience__item">
                   Maintain and improve clients codebase.
                 </li>
-                <li class="list__item">
+                <li class="experience__item">
                   Built online web solutions for individuals
                 </li>
-                <li class="list__item">
+                <li class="experience__item">
                   Develop HTML/CSS templates for landing pages
                 </li>
-                <li class="list__item">
+                <li class="experience__item">
                   Perform browsers testing and catch bugs
                 </li>
-                <li class="list__item">
+                <li class="experience__item">
                   Create websites that engage customers in order to enhance my
                   clients’ online present
                 </li>
@@ -253,192 +194,15 @@
 
         <!-- Certifications -->
 
-        <section class="cert" id="Certifications">
+        <section class="cert section" id="Certifications">
           <h3 class="title">Certifications</h3>
           <div class="section">
             <article class="cert__grid">
               <!-- 01 -->
-              <!-- Build an Online Business Presence With a Facebook Page -->
-              <div class="cert-card">
-                <div class="cert-card__icon-wrapper">
-                  <i class="cert-card__icon fas fa-medal"></i>
-                </div>
-                <div class="cert-card__content">
-                  <h5 class="cert-card__name">
-                    Build an Online Business Presence With a Facebook Page
-                  </h5>
-                  <h6 class="cert-card__issuer">By Meta</h6>
-                  <a
-                    href="https://certifications.facebookblueprint.com/student/award/Cb4DoRndNjWBJnijaHdxy3Ur"
-                    target="_blank"
-                    class="cert-card__btn btn"
-                    >View <i class="btn__icon fas fa-chevron-right"></i
-                  ></a>
-                </div>
-              </div>
-
-              <!-- 02 -->
-              <!-- Build an Online Business Presence with Instagram -->
-              <div class="cert-card">
-                <div class="cert-card__icon-wrapper">
-                  <i class="cert-card__icon fas fa-medal"></i>
-                </div>
-                <div class="cert-card__content">
-                  <h5 class="cert-card__name">
-                    Build an Online Business Presence with Instagram
-                  </h5>
-                  <h6 class="cert-card__issuer">By Meta</h6>
-                  <a
-                    href="https://certifications.facebookblueprint.com/student/award/XhebtLzkWZBwv5BtuXwr5XJG"
-                    target="_blank"
-                    class="cert-card__btn btn"
-                    >View <i class="btn__icon fas fa-chevron-right"></i
-                  ></a>
-                </div>
-              </div>
-
-              <!-- 03 -->
-              <!-- Get started with advertising on Facebook and Instagram -->
-              <div class="cert-card">
-                <div class="cert-card__icon-wrapper">
-                  <i class="cert-card__icon fas fa-medal"></i>
-                </div>
-                <div class="cert-card__content">
-                  <h5 class="cert-card__name">
-                    Get started with advertising on Facebook and Instagram
-                  </h5>
-                  <h6 class="cert-card__issuer">By Meta</h6>
-                  <a
-                    href="https://certifications.facebookblueprint.com/student/award/Y4mAiSqSnDWJm1iuDrcRLGuV"
-                    target="_blank"
-                    class="cert-card__btn btn"
-                    >View <i class="btn__icon fas fa-chevron-right"></i
-                  ></a>
-                </div>
-              </div>
-
-              <!-- 04 -->
-              <!-- Fundamentals of digital marketing -->
-              <div class="cert-card">
-                <div class="cert-card__icon-wrapper">
-                  <i class="cert-card__icon fas fa-medal"></i>
-                </div>
-                <div class="cert-card__content">
-                  <h5 class="cert-card__name">
-                    Fundamentals of digital marketing
-                  </h5>
-                  <h6 class="cert-card__issuer">By Google</h6>
-                  <a
-                    href="./assets/Haroun-Achouche-Google-Digital-Garage-Certificate.pdf"
-                    target="_blank"
-                    class="cert-card__btn btn"
-                    download="Haroun-Achouche-Google-Digital-Garage-Certificate.pdf"
-                    >View <i class="btn__icon fas fa-chevron-right"></i
-                  ></a>
-                </div>
-              </div>
-
-              <!-- 05 -->
-              <!-- Google My Business -->
-              <div class="cert-card">
-                <div class="cert-card__icon-wrapper">
-                  <i class="cert-card__icon fas fa-medal"></i>
-                </div>
-                <div class="cert-card__content">
-                  <h5 class="cert-card__name">Google My Business</h5>
-                  <h6 class="cert-card__issuer">By Google</h6>
-                  <a
-                    href="https://skillshop.exceedlms.com/student/award/mq4cAVME6jowVNn6KHA9CS2J"
-                    target="_blank"
-                    class="cert-card__btn btn"
-                    >View <i class="btn__icon fas fa-chevron-right"></i
-                  ></a>
-                </div>
-              </div>
-
-              <!-- 06 -->
-              <!-- Google Analytics for Beginners -->
-              <div class="cert-card">
-                <div class="cert-card__icon-wrapper">
-                  <i class="cert-card__icon fas fa-medal"></i>
-                </div>
-                <div class="cert-card__content">
-                  <h5 class="cert-card__name">
-                    Google Analytics for Beginners
-                  </h5>
-                  <h6 class="cert-card__issuer">By Google</h6>
-                  <a
-                    href="https://analytics.google.com/analytics/academy/certificate/RE4EAJboT3WjNDF3qVAmYg"
-                    target="_blank"
-                    class="cert-card__btn btn"
-                    >View <i class="btn__icon fas fa-chevron-right"></i
-                  ></a>
-                </div>
-              </div>
-
-              <!-- 07 -->
-              <!-- Advanced Google Analytics -->
-              <div class="cert-card">
-                <div class="cert-card__icon-wrapper">
-                  <i class="cert-card__icon fas fa-medal"></i>
-                </div>
-                <div class="cert-card__content">
-                  <h5 class="cert-card__name">Advanced Google Analytics</h5>
-                  <h6 class="cert-card__issuer">By Google</h6>
-                  <a
-                    href="https://analytics.google.com/analytics/academy/certificate/w-f6X-a-RfmMG4vE1ve94A"
-                    target="_blank"
-                    class="cert-card__btn btn"
-                    >View <i class="btn__icon fas fa-chevron-right"></i
-                  ></a>
-                </div>
-              </div>
-
-              <!-- 08 -->
-              <!-- Google Tag Manager Fundamentals -->
-              <div class="cert-card">
-                <div class="cert-card__icon-wrapper">
-                  <i class="cert-card__icon fas fa-medal"></i>
-                </div>
-                <div class="cert-card__content">
-                  <h5 class="cert-card__name">
-                    Google Tag Manager Fundamentals
-                  </h5>
-                  <h6 class="cert-card__issuer">By Google</h6>
-                  <a
-                    href="https://analytics.google.com/analytics/academy/certificate/MmfJ-dlcSvmMmj-t_qyxoA"
-                    target="_blank"
-                    class="cert-card__btn btn"
-                    >View <i class="btn__icon fas fa-chevron-right"></i
-                  ></a>
-                </div>
-              </div>
-
-              <!-- 09 -->
-              <!-- Ecommerce Analytics: From Data to Decisions -->
-              <div class="cert-card">
-                <div class="cert-card__icon-wrapper">
-                  <i class="cert-card__icon fas fa-medal"></i>
-                </div>
-                <div class="cert-card__content">
-                  <h5 class="cert-card__name">
-                    Ecommerce Analytics: From Data to Decisions
-                  </h5>
-                  <h6 class="cert-card__issuer">By Google</h6>
-                  <a
-                    href="https://analytics.google.com/analytics/academy/certificate/HE7Zc8P2Ru-xWtV8nj0nPw"
-                    target="_blank"
-                    class="cert-card__btn btn"
-                    >View <i class="btn__icon fas fa-chevron-right"></i
-                  ></a>
-                </div>
-              </div>
-
-              <!-- 10 -->
               <!-- Responsive Web Design -->
               <div class="cert-card">
                 <div class="cert-card__icon-wrapper">
-                  <i class="cert-card__icon fas fa-medal"></i>
+                  <i class="cert-card__icon fas fa-award"></i>
                 </div>
                 <div class="cert-card__content">
                   <h5 class="cert-card__name">Responsive Web Design</h5>
@@ -452,11 +216,11 @@
                 </div>
               </div>
 
-              <!-- 11 -->
+              <!-- 02 -->
               <!-- JavaScript Algorithms and Data Structures -->
               <div class="cert-card">
                 <div class="cert-card__icon-wrapper">
-                  <i class="cert-card__icon fas fa-medal"></i>
+                  <i class="cert-card__icon fas fa-award"></i>
                 </div>
                 <div class="cert-card__content">
                   <h5 class="cert-card__name">
@@ -472,11 +236,11 @@
                 </div>
               </div>
 
-              <!-- 12 -->
+              <!-- 03 -->
               <!-- Front End Libraries -->
               <div class="cert-card">
                 <div class="cert-card__icon-wrapper">
-                  <i class="cert-card__icon fas fa-medal"></i>
+                  <i class="cert-card__icon fas fa-award"></i>
                 </div>
                 <div class="cert-card__content">
                   <h5 class="cert-card__name">Front End Libraries</h5>
@@ -490,11 +254,11 @@
                 </div>
               </div>
 
-              <!-- 13 -->
+              <!-- 04 -->
               <!-- Data Visualization -->
               <div class="cert-card">
                 <div class="cert-card__icon-wrapper">
-                  <i class="cert-card__icon fas fa-medal"></i>
+                  <i class="cert-card__icon fas fa-award"></i>
                 </div>
                 <div class="cert-card__content">
                   <h5 class="cert-card__name">Data Visualization</h5>
@@ -503,16 +267,17 @@
                     href="https://www.freecodecamp.org/certification/harounach/data-visualization"
                     target="_blank"
                     class="cert-card__btn btn"
+                    download="Haroun-Achouche-Google-Digital-Garage-Certificate.pdf"
                     >View <i class="btn__icon fas fa-chevron-right"></i
                   ></a>
                 </div>
               </div>
 
-              <!-- 14 -->
+              <!-- 05 -->
               <!-- APIs and Microservices -->
               <div class="cert-card">
                 <div class="cert-card__icon-wrapper">
-                  <i class="cert-card__icon fas fa-medal"></i>
+                  <i class="cert-card__icon fas fa-award"></i>
                 </div>
                 <div class="cert-card__content">
                   <h5 class="cert-card__name">APIs and Microservices</h5>
@@ -525,13 +290,259 @@
                   ></a>
                 </div>
               </div>
+
+              <!-- 06 -->
+              <!-- MongoDB Basics -->
+              <div class="cert-card">
+                <div class="cert-card__icon-wrapper">
+                  <i class="cert-card__icon fas fa-award"></i>
+                </div>
+                <div class="cert-card__content">
+                  <h5 class="cert-card__name">MongoDB Basics</h5>
+                  <h6 class="cert-card__issuer">By MongoDB</h6>
+                  <a
+                    href="https://university.mongodb.com/course_completion/8459d44c-38d9-4e24-afa9-266f3372359e?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
+                    target="_blank"
+                    class="cert-card__btn btn"
+                    >View <i class="btn__icon fas fa-chevron-right"></i
+                  ></a>
+                </div>
+              </div>
+
+              <!-- 07 -->
+              <!-- Basic Cluster Administration -->
+              <div class="cert-card">
+                <div class="cert-card__icon-wrapper">
+                  <i class="cert-card__icon fas fa-award"></i>
+                </div>
+                <div class="cert-card__content">
+                  <h5 class="cert-card__name">Basic Cluster Administration</h5>
+                  <h6 class="cert-card__issuer">By MongoDB</h6>
+                  <a
+                    href="https://university.mongodb.com/course_completion/b930b053-badf-4299-b84e-a49b78802c3d?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
+                    target="_blank"
+                    class="cert-card__btn btn"
+                    >View <i class="btn__icon fas fa-chevron-right"></i
+                  ></a>
+                </div>
+              </div>
+
+              <!-- 08 -->
+              <!-- The MongoDB Aggregation Framework -->
+              <div class="cert-card">
+                <div class="cert-card__icon-wrapper">
+                  <i class="cert-card__icon fas fa-award"></i>
+                </div>
+                <div class="cert-card__content">
+                  <h5 class="cert-card__name">
+                    The MongoDB Aggregation Framework
+                  </h5>
+                  <h6 class="cert-card__issuer">By MongoDB</h6>
+                  <a
+                    href="https://university.mongodb.com/course_completion/08889396-fb40-466c-8d19-f4079e036735?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
+                    target="_blank"
+                    class="cert-card__btn btn"
+                    >View <i class="btn__icon fas fa-chevron-right"></i
+                  ></a>
+                </div>
+              </div>
+
+              <!-- 09 -->
+              <!-- MongoDB for Javascript Developers -->
+              <div class="cert-card">
+                <div class="cert-card__icon-wrapper">
+                  <i class="cert-card__icon fas fa-award"></i>
+                </div>
+                <div class="cert-card__content">
+                  <h5 class="cert-card__name">
+                    MongoDB for Javascript Developers
+                  </h5>
+                  <h6 class="cert-card__issuer">By MongoDB</h6>
+                  <a
+                    href="https://university.mongodb.com/course_completion/05e6d4c7-e1c0-410b-96d8-4ca5317e13d3?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
+                    target="_blank"
+                    class="cert-card__btn btn"
+                    >View <i class="btn__icon fas fa-chevron-right"></i
+                  ></a>
+                </div>
+              </div>
+
+              <!-- 10 -->
+              <!-- MongoDB Performance -->
+              <div class="cert-card">
+                <div class="cert-card__icon-wrapper">
+                  <i class="cert-card__icon fas fa-award"></i>
+                </div>
+                <div class="cert-card__content">
+                  <h5 class="cert-card__name">MongoDB Performance</h5>
+                  <h6 class="cert-card__issuer">By MongoDB</h6>
+                  <a
+                    href="https://university.mongodb.com/course_completion/c878c70a-4df3-429d-b919-a5ac04b8830e?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
+                    target="_blank"
+                    class="cert-card__btn btn"
+                    >View <i class="btn__icon fas fa-chevron-right"></i
+                  ></a>
+                </div>
+              </div>
+
+              <!-- 11 -->
+              <!-- Data Modeling -->
+              <div class="cert-card">
+                <div class="cert-card__icon-wrapper">
+                  <i class="cert-card__icon fas fa-award"></i>
+                </div>
+                <div class="cert-card__content">
+                  <h5 class="cert-card__name">Data Modeling</h5>
+                  <h6 class="cert-card__issuer">By MongoDB</h6>
+                  <a
+                    href="https://university.mongodb.com/course_completion/b0e70ebd-5245-4f89-a858-06d2235312d2?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
+                    target="_blank"
+                    class="cert-card__btn btn"
+                    >View <i class="btn__icon fas fa-chevron-right"></i
+                  ></a>
+                </div>
+              </div>
+
+              <!-- 12 -->
+              <!-- Fundamentals of digital marketing -->
+              <div class="cert-card">
+                <div class="cert-card__icon-wrapper">
+                  <i class="cert-card__icon fas fa-award"></i>
+                </div>
+                <div class="cert-card__content">
+                  <h5 class="cert-card__name">
+                    Fundamentals of digital marketing
+                  </h5>
+                  <h6 class="cert-card__issuer">By Google</h6>
+                  <a
+                    href="./assets/Haroun-Achouche-Google-Digital-Garage-Certificate.pdf"
+                    target="_blank"
+                    class="cert-card__btn btn"
+                    >View <i class="btn__icon fas fa-chevron-right"></i
+                  ></a>
+                </div>
+              </div>
+
+              <!-- 13 -->
+              <!-- Google Analytics for Beginners -->
+              <div class="cert-card">
+                <div class="cert-card__icon-wrapper">
+                  <i class="cert-card__icon fas fa-award"></i>
+                </div>
+                <div class="cert-card__content">
+                  <h5 class="cert-card__name">
+                    Google Analytics for Beginners
+                  </h5>
+                  <h6 class="cert-card__issuer">By Google</h6>
+                  <a
+                    href="https://analytics.google.com/analytics/academy/certificate/RE4EAJboT3WjNDF3qVAmYg"
+                    target="_blank"
+                    class="cert-card__btn btn"
+                    >View <i class="btn__icon fas fa-chevron-right"></i
+                  ></a>
+                </div>
+              </div>
+
+              <!-- 14 -->
+              <!-- Advanced Google Analyticss -->
+              <div class="cert-card">
+                <div class="cert-card__icon-wrapper">
+                  <i class="cert-card__icon fas fa-award"></i>
+                </div>
+                <div class="cert-card__content">
+                  <h5 class="cert-card__name">Advanced Google Analytics</h5>
+                  <h6 class="cert-card__issuer">By Google</h6>
+                  <a
+                    href="https://analytics.google.com/analytics/academy/certificate/w-f6X-a-RfmMG4vE1ve94A"
+                    target="_blank"
+                    class="cert-card__btn btn"
+                    >View <i class="btn__icon fas fa-chevron-right"></i
+                  ></a>
+                </div>
+              </div>
+
+              <!-- 15 -->
+              <!-- Google Tag Manager Fundamentals -->
+              <div class="cert-card">
+                <div class="cert-card__icon-wrapper">
+                  <i class="cert-card__icon fas fa-award"></i>
+                </div>
+                <div class="cert-card__content">
+                  <h5 class="cert-card__name">
+                    Google Tag Manager Fundamentals
+                  </h5>
+                  <h6 class="cert-card__issuer">By Google</h6>
+                  <a
+                    href="https://analytics.google.com/analytics/academy/certificate/MmfJ-dlcSvmMmj-t_qyxoA"
+                    target="_blank"
+                    class="cert-card__btn btn"
+                    >View <i class="btn__icon fas fa-chevron-right"></i
+                  ></a>
+                </div>
+              </div>
+
+              <!-- 16 -->
+              <!-- Ecommerce Analytics: From Data to Decisions -->
+              <div class="cert-card">
+                <div class="cert-card__icon-wrapper">
+                  <i class="cert-card__icon fas fa-award"></i>
+                </div>
+                <div class="cert-card__content">
+                  <h5 class="cert-card__name">
+                    Ecommerce Analytics: From Data to Decisions
+                  </h5>
+                  <h6 class="cert-card__issuer">By Google</h6>
+                  <a
+                    href="https://analytics.google.com/analytics/academy/certificate/HE7Zc8P2Ru-xWtV8nj0nPw"
+                    target="_blank"
+                    class="cert-card__btn btn"
+                    >View <i class="btn__icon fas fa-chevron-right"></i
+                  ></a>
+                </div>
+              </div>
+
+              <!-- 17 -->
+              <!-- Google My Business -->
+              <div class="cert-card">
+                <div class="cert-card__icon-wrapper">
+                  <i class="cert-card__icon fas fa-award"></i>
+                </div>
+                <div class="cert-card__content">
+                  <h5 class="cert-card__name">Google My Business</h5>
+                  <h6 class="cert-card__issuer">By Google</h6>
+                  <a
+                    href="https://skillshop.exceedlms.com/student/award/mq4cAVME6jowVNn6KHA9CS2J"
+                    target="_blank"
+                    class="cert-card__btn btn"
+                    >View <i class="btn__icon fas fa-chevron-right"></i
+                  ></a>
+                </div>
+              </div>
+
+              <!-- 18 -->
+              <!-- Advanced Google Analyticss -->
+              <div class="cert-card">
+                <div class="cert-card__icon-wrapper">
+                  <i class="cert-card__icon fas fa-award"></i>
+                </div>
+                <div class="cert-card__content">
+                  <h5 class="cert-card__name">Advanced Google Analytics</h5>
+                  <h6 class="cert-card__issuer">By Google</h6>
+                  <a
+                    href="https://analytics.google.com/analytics/academy/certificate/w-f6X-a-RfmMG4vE1ve94A"
+                    target="_blank"
+                    class="cert-card__btn btn"
+                    >View <i class="btn__icon fas fa-chevron-right"></i
+                  ></a>
+                </div>
+              </div>
             </article>
           </div>
         </section>
 
         <!-- Contact -->
 
-        <section class="contact" id="Contact">
+        <section class="contact section" id="Contact">
           <h3 class="title">Contact</h3>
           <div class="section">
             <ul class="socialbar">
@@ -539,7 +550,7 @@
               <li class="socialbar__item">
                 <a
                   class="socialbar__link"
-                  href="https://www.facebook.com/haronac"
+                  href="https://www.facebook.com/harounach8"
                   title="Facebook"
                   ><i
                     class="socialbar__icon fab fa-facebook"
@@ -618,8 +629,11 @@
       </div>
     </main>
     <footer class="page__footer footer">
-      <p class="copyright-notice">Copyright Haroun Achouche 2022</p>
+      <p class="copyright-notice">© Copyright Haroun Achouche 2022</p>
     </footer>
+    <a href="#About" class="page__back btn btn--back btn--active scrollto">
+      <i class="btn__icon fas fa-chevron-up"></i>
+    </a>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- App.js -->
