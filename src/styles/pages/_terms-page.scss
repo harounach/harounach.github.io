@@ -1,0 +1,21 @@
+@use "../abstracts/mixins" as mixins;
+
+// terms-page
+.terms-page {
+}
+
+// terms-page__hero
+.terms-page__hero {
+  background-image: url("../images/image29.jpg");
+}
+
+// terms-page__terms
+.terms-page__terms {
+  @include mixins.breakpoint(xl) {
+    background-image: url("../images/Bread2.svg"), url("../images/Meat.svg");
+    background-repeat: no-repeat;
+    background-size: 218px 200px;
+    background-position: 2% 2%, 96% 2%;
+    background-origin: border-box;
+  }
+}

@@ -1,0 +1,11 @@
+// gallery
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  // gallery--even
+}
+
+.gallery__item {
+  max-width: 100%;
+}

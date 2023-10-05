@@ -1,0 +1,25 @@
+@use "../abstracts/mixins" as mixins;
+
+// gifts-page
+.gifts-page {
+}
+
+// gifts-page__hero
+.gifts-page__hero {
+  background-image: url("../images/image33.jpg");
+}
+
+// gifts-page__intro
+.gifts-page__intro {
+  @include mixins.breakpoint(xl) {
+    background-image: url("../images/Gift-Card.svg"), url("../images/Gift.svg");
+    background-repeat: no-repeat;
+    background-size:
+      160px 220px,
+      240px 190px;
+    background-position:
+      5% 15%,
+      96% 15%;
+    background-origin: border-box;
+  }
+}

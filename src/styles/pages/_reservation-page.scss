@@ -1,0 +1,43 @@
+@use "../abstracts/mixins" as mixins;
+
+// reservation-page
+.reservation-page {
+}
+
+// reservation-page__hero
+.reservation-page__hero {
+  background-image: url("../images/image27.jpg");
+}
+
+// reservation-page__intro
+.reservation-page__intro {
+  @include mixins.breakpoint(xl) {
+    background-image: url("../images/Steak.svg"), url("../images/Apple.svg");
+    background-repeat: no-repeat;
+    background-size: 218px 160px;
+    background-position:
+      2% 22%,
+      96% 22%;
+    background-origin: border-box;
+  }
+}
+
+// reservation-page__book
+.reservation-page__book {
+  @include mixins.breakpoint(xl) {
+    background-image: url("../images/Bread2.svg"), url("../images/Meat.svg"),
+      url("../images/Wind.svg"), url("../images/Wind-Mini.svg");
+    background-repeat: no-repeat;
+    background-size:
+      218px 200px,
+      218px 200px,
+      285px 200px,
+      285px 200px;
+    background-position:
+      2% 10%,
+      96% 10%,
+      2% 55%,
+      96% 55%;
+    background-origin: border-box;
+  }
+}

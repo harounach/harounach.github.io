@@ -1,0 +1,21 @@
+@use "../abstracts/mixins" as mixins;
+
+// policy-page
+.policy-page {
+}
+
+// policy-page__hero
+.policy-page__hero {
+  background-image: url("../images/image29.jpg");
+}
+
+// policy-page__policies
+.policy-page__policies {
+  @include mixins.breakpoint(xl) {
+    background-image: url("../images/Bread2.svg"), url("../images/Meat.svg");
+    background-repeat: no-repeat;
+    background-size: 218px 200px;
+    background-position: 2% 2%, 96% 2%;
+    background-origin: border-box;
+  }
+}

@@ -1,0 +1,30 @@
+@use "../abstracts/mixins" as mixins;
+
+// menu-page
+.menu-page {
+}
+
+// menu-page__hero
+.menu-page__hero {
+  background-image: url("../images/image43.jpg");
+}
+
+// menu-page__menu
+.menu-page__menu {
+  @include mixins.breakpoint(xl) {
+    background-image: url("../images/Banana.svg"), url("../images/Hot-Dish.svg"),
+      url("../images/Cup.svg"), url("../images/Orange.svg");
+    background-repeat: no-repeat;
+    background-size:
+      218px 200px,
+      218px 200px,
+      216px 158px,
+      218px 114px;
+    background-position:
+      2% 8%,
+      96% 8%,
+      2% 55%,
+      96% 55%;
+    background-origin: border-box;
+  }
+}

@@ -1,0 +1,102 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mixins;
+
+// carousel
+.carousel {
+  display: flex;
+  flex-direction: column;
+  gap: vars.$space-5;
+  position: relative;
+}
+
+.carousel__inner {
+  list-style: none;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.carousel__item {
+  position: relative;
+  display: none;
+  height: 100%;
+
+  // carousel__item--active
+  &--active {
+    display: block;
+  }
+}
+
+.carousel__btn {
+  // display: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: vars.$border solid vars.$primary-500;
+  border-radius: vars.$radius-pill;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  font-size: 20px;
+  background-color: transparent;
+  color: vars.$primary-500;
+  position: absolute;
+  top: calc(50% - 2rem);
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 3;
+
+  &:hover {
+    background-color: vars.$primary-500;
+    color: vars.$black;
+  }
+
+  &--prev {
+    left: 6rem;
+  }
+
+  &--next {
+    right: 6rem;
+  }
+}
+
+// carousel__dots
+.carousel__dots {
+  display: flex;
+  gap: vars.$space-3;
+  position: absolute;
+  bottom: 0.125rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: vars.$radius-pill;
+  border: vars.$border-sm solid vars.$primary-500;
+  background-color: transparent;
+  cursor: pointer;
+
+  // dot--active
+  &--active {
+    background-color: vars.$primary-500;
+  }
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
