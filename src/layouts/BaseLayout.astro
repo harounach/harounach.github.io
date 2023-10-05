@@ -1,0 +1,110 @@
+---
+import "../styles/app.css";
+const { pageTitle, mainClass } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Haroun Achouche Portfolio</title>
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+    <meta
+      name="description"
+      content="Haroun Achouche portfolio, skills, eductaion, experience, certification, Haroun Ach Portfolio"
+    />
+    <meta
+      name="keywords"
+      content="Haroun Achouche,Haroun Ach, Haroun Ach Portfolio"
+    />
+    <!-- Google Search Verification -->
+    <meta
+      name="google-site-verification"
+      content="Amwbrym6ZnvrBN13LXGtYnvYW4JsJmJS0Tgnd0av2g8"
+    />
+    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4H0Y22DZQ1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-4H0Y22DZQ1");
+    </script>
+    <!-- Pinterest Verification -->
+    <meta name="p:domain_verify" content="ab57ae76b4053f945710fea74a3337ca" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/db5fbb90a7.js"
+      crossorigin="anonymous"></script>
+  </head>
+  <body class="page">
+    <header class="page__header appbar">
+      <div class="container">
+        <div class="appbar__content">
+          <!-- menu -->
+          <div class="appbar__section">
+            <button class="appbar__menu">
+              <div class="appbar__icon">
+                <span class="appbar__bar appbar__bar--top"></span>
+                <span class="appbar__bar appbar__bar--middle"></span>
+                <span class="appbar__bar appbar__bar--bottom"></span>
+              </div>
+            </button>
+          </div>
+
+          <div class="appbar__section">
+            <img class="appbar__logo" src="./images/Logo.svg" alt="Logo" />
+          </div>
+
+          <div class="appbar__section appbar__section--end">
+            <nav class="appbar__nav">
+              <a
+                href="#About"
+                class="appbar__link appbar__link--active scrollto">About</a
+              >
+              <a href="#Skills" class="appbar__link scrollto">Skills</a>
+              <a href="#Education" class="appbar__link scrollto">Education</a>
+              <a href="#Experience" class="appbar__link scrollto">Experience</a>
+              <a href="#Certifications" class="appbar__link scrollto"
+                >Certifications</a
+              >
+              <a href="#Projects" class="appbar__link scrollto"> Projects</a>
+              <a
+                href="#Contact"
+                class="appbar__link appbar__link-btn btn scrollto">Contact</a
+              >
+            </nav>
+          </div>
+          <div class="appbar__scrim"></div>
+        </div>
+      </div>
+    </header>
+    <main id="content" class:list={[mainClass]}>
+      <slot />
+    </main>
+    <footer class="page__footer footer">
+      <p class="copyright-notice">© Copyright Haroun Achouche 2022</p>
+    </footer>
+    <a href="#About" class="page__back btn btn--back btn--active scrollto">
+      <i class="btn__icon fas fa-chevron-up"></i>
+    </a>
+    <!-- jQuery -->
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <!-- App.js -->
+    <script src="../scripts/app.js"></script>
+  </body>
+</html>
