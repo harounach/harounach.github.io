@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
+import Button from "@components/actionable/Button.astro";
 
 const pageTitle = "Haroun Achouche Portfolio";
 const metaDescription =
@@ -15,20 +16,27 @@ const metaKeyWords = "Haroun Achouche,Haroun Ach, Haroun Ach Portfolio";
 >
   <div class="container">
     <!-- About section -->
-    <section class="about section" id="About">
-      <div class="about__graphic">
+    <section
+      class="flex flex-column justify-content-center gap-6 py-12 | md:flex-row-reverse"
+      id="About"
+    >
+      <div>
         <img
           src="/images/harounach.jpg"
-          alt="Haroun Achouche Photo"
-          class="about__img"
+          alt="Haroun Achouche"
+          class="responsive aspect-portrait"
+          style="max-width: 300px;"
         />
       </div>
-      <div class="about__content">
-        <h1 class="about__title">
-          Haroun Achouche <br />
-          <span class="about__title--position">Software Engineer</span>
+      <div
+        class="flex flex-column align-items-center gap-4 | md:align-items-flex-start"
+      >
+        <h1 class="flex flex-column">
+          <span class="display-large text-black">Haroun Achouche</span>
+          <span class="display-large text-secondary-500">Software Engineer</span
+          >
         </h1>
-        <p class="about__description">
+        <p class="text-md">
           I am a Software Engineer, I have a degree in software engineering and
           over 6 years of web developement experience. I have extensive
           experience with web technology including HTML, CSS , and JavaScript.,
@@ -36,9 +44,12 @@ const metaKeyWords = "Haroun Achouche,Haroun Ach, Haroun Ach Portfolio";
           have been spending every spare minute writing code for the web, and
           learning everything on web application development.
         </p>
-        <a href="./assets/Haroun-Achouche-Resume.pdf" class="about__btn btn"
-          >Download Resume (PDF) <i class="btn__icon fas fa-arrow-right"></i></a
-        >
+        <div>
+          <Button
+            label="Download Resume"
+            url="/assets/Haroun-Achouche-Resume.pdf"
+          />
+        </div>
       </div>
     </section>
 
