@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Button from "@components/actionable/Button.astro";
+import SkillCard from "@components/section/SkillCard.astro";
+import Heading from "@components/section/Heading.astro";
 
 const pageTitle = "Haroun Achouche Portfolio";
 const metaDescription =
@@ -14,1069 +16,1069 @@ const metaKeyWords = "Haroun Achouche,Haroun Ach, Haroun Ach Portfolio";
   metaDescription={metaDescription}
   metaKeyWords={metaKeyWords}
 >
-  <div class="container">
-    <!-- About section -->
-    <section
-      class="flex flex-column justify-content-center gap-6 py-12 | md:flex-row-reverse"
-      id="About"
-    >
-      <div>
-        <img
-          src="/images/harounach.jpg"
-          alt="Haroun Achouche"
-          class="responsive aspect-portrait"
-          style="max-width: 300px;"
-        />
-      </div>
+  <!-- About section -->
+  <section id="About" class="py-12">
+    <div class="container">
       <div
-        class="flex flex-column align-items-center gap-4 | md:align-items-flex-start"
+        class="flex flex-column justify-content-center gap-6 | md:flex-row-reverse"
       >
-        <h1 class="flex flex-column">
-          <span class="display-large text-black">Haroun Achouche</span>
-          <span class="display-large text-secondary-500">Software Engineer</span
-          >
-        </h1>
-        <p class="text-md">
-          I am a Software Engineer, I have a degree in software engineering and
-          over 6 years of web developement experience. I have extensive
-          experience with web technology including HTML, CSS , and JavaScript.,
-          as well as ReactJS and NodeJS Since I have started web development, I
-          have been spending every spare minute writing code for the web, and
-          learning everything on web application development.
-        </p>
         <div>
-          <Button
-            label="Download Resume"
-            url="/assets/Haroun-Achouche-Resume.pdf"
+          <img
+            src="/images/harounach.jpg"
+            alt="Haroun Achouche"
+            class="responsive aspect-portrait"
+            style="max-width: 300px;"
           />
         </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section class="skills-section section" id="Skills">
-      <h3 class="title">Skills</h3>
-      <div class="section">
-        <div class="skills-grid">
-          <div class="skill-card">HTML</div>
-          <div class="skill-card">CSS</div>
-          <div class="skill-card">JavaScript</div>
-          <div class="skill-card">React</div>
-          <div class="skill-card">Node.JS</div>
-          <div class="skill-card">SASS</div>
-          <div class="skill-card">PHP</div>
-          <div class="skill-card">WordPress</div>
-          <div class="skill-card">TypeScript</div>
-          <div class="skill-card">Python</div>
-          <div class="skill-card">Git</div>
-          <div class="skill-card">Github</div>
-          <div class="skill-card">CI/CD</div>
-          <div class="skill-card">Docker</div>
-          <div class="skill-card">Firebase</div>
-          <div class="skill-card">AWS</div>
+        <div
+          class="flex flex-column align-items-center gap-4 | md:align-items-flex-start"
+        >
+          <h1 class="flex flex-column">
+            <span class="display-large text-black">Haroun Achouche</span>
+            <span class="display-large text-secondary-500"
+              >Software Engineer</span
+            >
+          </h1>
+          <p class="text-md">
+            I am a Software Engineer, I have a degree in software engineering
+            and over 6 years of web developement experience. I have extensive
+            experience with web technology including HTML, CSS , and
+            JavaScript., as well as ReactJS and NodeJS Since I have started web
+            development, I have been spending every spare minute writing code
+            for the web, and learning everything on web application development.
+          </p>
+          <div>
+            <Button
+              label="Download Resume"
+              url="/assets/Haroun-Achouche-Resume.pdf"
+            />
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Education -->
+  <!-- Skills -->
+  <section id="Skills" class="bg-neutral-900 py-12">
+    <div class="container">
+      <Heading
+        title="Skills"
+        description="I have experience with these technologies"
+        center
+        centerDescription
+        dark
+      />
 
-    <section class="education section" id="Education">
-      <h3 class="title">Education</h3>
-      <div class="section">
-        <article class="education__article">
-          <h4 class="education__title">
-            Bachelor Degree of Software Engineering
-          </h4>
-          <h5 class="education__years">SEPTEMBER 2012 - JUNE 2015</h5>
-          <h5 class="education__univ">
-            University of Constantine, Constantine, Algeria
-          </h5>
-        </article>
+      <div class="flex flex-wrap gap-3 | md:w-75 md:mx-auto">
+        <SkillCard label="HTML" />
+        <SkillCard label="CSS" />
+        <SkillCard label="JavaScript" />
+        <SkillCard label="React" />
+        <SkillCard label="Node.js" />
+        <SkillCard label="SASS" />
+        <SkillCard label="PHP" />
+        <SkillCard label="WordPress" />
+        <SkillCard label="Python" />
+        <SkillCard label="Git/Github" />
+        <SkillCard label="CI/CD" />
+        <SkillCard label="Docker" />
+        <SkillCard label="Firebase" />
+        <SkillCard label="AWS" />
       </div>
-    </section>
-
-    <!-- Experience -->
-
-    <section class="experience section" id="Experience">
-      <h3 class="title">Experience</h3>
-      <div class="section">
-        <article class="experience__content">
-          <h4 class="experience__job">Freelance Web Developer</h4>
-          <h5 class="experience__years">SEPTEMBER 2015 - PRESENT</h5>
-          <ul class="experience__list">
-            <li class="experience__item">
-              Design the front end of the website.
-            </li>
-            <li class="experience__item">Develop search friendly web pages</li>
-            <li class="experience__item">
-              Maintain and improve clients codebase.
-            </li>
-            <li class="experience__item">
-              Built online web solutions for individuals
-            </li>
-            <li class="experience__item">
-              Develop HTML/CSS templates for landing pages
-            </li>
-            <li class="experience__item">
-              Perform browsers testing and catch bugs
-            </li>
-            <li class="experience__item">
-              Create websites that engage customers in order to enhance my
-              clients’ online present
-            </li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- Certifications -->
-
-    <section class="cert section" id="Certifications">
-      <h3 class="title">Certifications</h3>
-      <div class="section">
-        <article class="cert__grid">
-          <!-- 01 -->
-          <!-- Responsive Web Design -->
-          <div class="cert-card">
-            <div class="cert-card__icon-wrapper">
-              <i class="cert-card__icon fas fa-award"></i>
-            </div>
-            <div class="cert-card__content">
-              <h5 class="cert-card__name">Responsive Web Design</h5>
-              <h6 class="cert-card__issuer">By FreeCodeCamp</h6>
-              <a
-                href="https://www.freecodecamp.org/certification/harounach/responsive-web-design"
-                target="_blank"
-                class="cert-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-          </div>
-
-          <!-- 02 -->
-          <!-- JavaScript Algorithms and Data Structures -->
-          <div class="cert-card">
-            <div class="cert-card__icon-wrapper">
-              <i class="cert-card__icon fas fa-award"></i>
-            </div>
-            <div class="cert-card__content">
-              <h5 class="cert-card__name">
-                JavaScript Algorithms and Data Structures
-              </h5>
-              <h6 class="cert-card__issuer">By FreeCodeCamp</h6>
-              <a
-                href="https://www.freecodecamp.org/certification/harounach/javascript-algorithms-and-data-structures"
-                target="_blank"
-                class="cert-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-          </div>
-
-          <!-- 03 -->
-          <!-- Front End Libraries -->
-          <div class="cert-card">
-            <div class="cert-card__icon-wrapper">
-              <i class="cert-card__icon fas fa-award"></i>
-            </div>
-            <div class="cert-card__content">
-              <h5 class="cert-card__name">Front End Libraries</h5>
-              <h6 class="cert-card__issuer">By FreeCodeCamp</h6>
-              <a
-                href="https://www.freecodecamp.org/certification/harounach/front-end-libraries"
-                target="_blank"
-                class="cert-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-          </div>
-
-          <!-- 04 -->
-          <!-- Data Visualization -->
-          <div class="cert-card">
-            <div class="cert-card__icon-wrapper">
-              <i class="cert-card__icon fas fa-award"></i>
-            </div>
-            <div class="cert-card__content">
-              <h5 class="cert-card__name">Data Visualization</h5>
-              <h6 class="cert-card__issuer">By FreeCodeCamp</h6>
-              <a
-                href="https://www.freecodecamp.org/certification/harounach/data-visualization"
-                target="_blank"
-                class="cert-card__btn btn"
-                download="Haroun-Achouche-Google-Digital-Garage-Certificate.pdf"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-          </div>
-
-          <!-- 05 -->
-          <!-- APIs and Microservices -->
-          <div class="cert-card">
-            <div class="cert-card__icon-wrapper">
-              <i class="cert-card__icon fas fa-award"></i>
-            </div>
-            <div class="cert-card__content">
-              <h5 class="cert-card__name">APIs and Microservices</h5>
-              <h6 class="cert-card__issuer">By FreeCodeCamp</h6>
-              <a
-                href="https://www.freecodecamp.org/certification/harounach/apis-and-microservices"
-                target="_blank"
-                class="cert-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-          </div>
-
-          <!-- 06 -->
-          <!-- MongoDB Basics -->
-          <div class="cert-card">
-            <div class="cert-card__icon-wrapper">
-              <i class="cert-card__icon fas fa-award"></i>
-            </div>
-            <div class="cert-card__content">
-              <h5 class="cert-card__name">MongoDB Basics</h5>
-              <h6 class="cert-card__issuer">By MongoDB</h6>
-              <a
-                href="https://university.mongodb.com/course_completion/8459d44c-38d9-4e24-afa9-266f3372359e?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
-                target="_blank"
-                class="cert-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-          </div>
-
-          <!-- 07 -->
-          <!-- Basic Cluster Administration -->
-          <div class="cert-card">
-            <div class="cert-card__icon-wrapper">
-              <i class="cert-card__icon fas fa-award"></i>
-            </div>
-            <div class="cert-card__content">
-              <h5 class="cert-card__name">Basic Cluster Administration</h5>
-              <h6 class="cert-card__issuer">By MongoDB</h6>
-              <a
-                href="https://university.mongodb.com/course_completion/b930b053-badf-4299-b84e-a49b78802c3d?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
-                target="_blank"
-                class="cert-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-          </div>
-
-          <!-- 08 -->
-          <!-- The MongoDB Aggregation Framework -->
-          <div class="cert-card">
-            <div class="cert-card__icon-wrapper">
-              <i class="cert-card__icon fas fa-award"></i>
-            </div>
-            <div class="cert-card__content">
-              <h5 class="cert-card__name">The MongoDB Aggregation Framework</h5>
-              <h6 class="cert-card__issuer">By MongoDB</h6>
-              <a
-                href="https://university.mongodb.com/course_completion/08889396-fb40-466c-8d19-f4079e036735?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
-                target="_blank"
-                class="cert-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-          </div>
-
-          <!-- 09 -->
-          <!-- MongoDB for Javascript Developers -->
-          <div class="cert-card">
-            <div class="cert-card__icon-wrapper">
-              <i class="cert-card__icon fas fa-award"></i>
-            </div>
-            <div class="cert-card__content">
-              <h5 class="cert-card__name">MongoDB for Javascript Developers</h5>
-              <h6 class="cert-card__issuer">By MongoDB</h6>
-              <a
-                href="https://university.mongodb.com/course_completion/05e6d4c7-e1c0-410b-96d8-4ca5317e13d3?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
-                target="_blank"
-                class="cert-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-          </div>
-
-          <!-- 10 -->
-          <!-- MongoDB Performance -->
-          <div class="cert-card">
-            <div class="cert-card__icon-wrapper">
-              <i class="cert-card__icon fas fa-award"></i>
-            </div>
-            <div class="cert-card__content">
-              <h5 class="cert-card__name">MongoDB Performance</h5>
-              <h6 class="cert-card__issuer">By MongoDB</h6>
-              <a
-                href="https://university.mongodb.com/course_completion/c878c70a-4df3-429d-b919-a5ac04b8830e?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
-                target="_blank"
-                class="cert-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-          </div>
-
-          <!-- 11 -->
-          <!-- Data Modeling -->
-          <div class="cert-card">
-            <div class="cert-card__icon-wrapper">
-              <i class="cert-card__icon fas fa-award"></i>
-            </div>
-            <div class="cert-card__content">
-              <h5 class="cert-card__name">Data Modeling</h5>
-              <h6 class="cert-card__issuer">By MongoDB</h6>
-              <a
-                href="https://university.mongodb.com/course_completion/b0e70ebd-5245-4f89-a858-06d2235312d2?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
-                target="_blank"
-                class="cert-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-          </div>
-
-          <!-- 12 -->
-          <!-- Fundamentals of digital marketing -->
-          <div class="cert-card">
-            <div class="cert-card__icon-wrapper">
-              <i class="cert-card__icon fas fa-award"></i>
-            </div>
-            <div class="cert-card__content">
-              <h5 class="cert-card__name">Fundamentals of digital marketing</h5>
-              <h6 class="cert-card__issuer">By Google</h6>
-              <a
-                href="./assets/Haroun-Achouche-Google-Digital-Garage-Certificate.pdf"
-                target="_blank"
-                class="cert-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-          </div>
-
-          <!-- 13 -->
-          <!-- Google Analytics for Beginners -->
-          <div class="cert-card">
-            <div class="cert-card__icon-wrapper">
-              <i class="cert-card__icon fas fa-award"></i>
-            </div>
-            <div class="cert-card__content">
-              <h5 class="cert-card__name">Google Analytics for Beginners</h5>
-              <h6 class="cert-card__issuer">By Google</h6>
-              <a
-                href="https://analytics.google.com/analytics/academy/certificate/RE4EAJboT3WjNDF3qVAmYg"
-                target="_blank"
-                class="cert-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-          </div>
-
-          <!-- 14 -->
-          <!-- Advanced Google Analyticss -->
-          <div class="cert-card">
-            <div class="cert-card__icon-wrapper">
-              <i class="cert-card__icon fas fa-award"></i>
-            </div>
-            <div class="cert-card__content">
-              <h5 class="cert-card__name">Advanced Google Analytics</h5>
-              <h6 class="cert-card__issuer">By Google</h6>
-              <a
-                href="https://analytics.google.com/analytics/academy/certificate/w-f6X-a-RfmMG4vE1ve94A"
-                target="_blank"
-                class="cert-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-          </div>
-
-          <!-- 15 -->
-          <!-- Google Tag Manager Fundamentals -->
-          <div class="cert-card">
-            <div class="cert-card__icon-wrapper">
-              <i class="cert-card__icon fas fa-award"></i>
-            </div>
-            <div class="cert-card__content">
-              <h5 class="cert-card__name">Google Tag Manager Fundamentals</h5>
-              <h6 class="cert-card__issuer">By Google</h6>
-              <a
-                href="https://analytics.google.com/analytics/academy/certificate/MmfJ-dlcSvmMmj-t_qyxoA"
-                target="_blank"
-                class="cert-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-          </div>
-
-          <!-- 16 -->
-          <!-- Ecommerce Analytics: From Data to Decisions -->
-          <div class="cert-card">
-            <div class="cert-card__icon-wrapper">
-              <i class="cert-card__icon fas fa-award"></i>
-            </div>
-            <div class="cert-card__content">
-              <h5 class="cert-card__name">
-                Ecommerce Analytics: From Data to Decisions
-              </h5>
-              <h6 class="cert-card__issuer">By Google</h6>
-              <a
-                href="https://analytics.google.com/analytics/academy/certificate/HE7Zc8P2Ru-xWtV8nj0nPw"
-                target="_blank"
-                class="cert-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-          </div>
-
-          <!-- 17 -->
-          <!-- Google My Business -->
-          <div class="cert-card">
-            <div class="cert-card__icon-wrapper">
-              <i class="cert-card__icon fas fa-award"></i>
-            </div>
-            <div class="cert-card__content">
-              <h5 class="cert-card__name">Google My Business</h5>
-              <h6 class="cert-card__issuer">By Google</h6>
-              <a
-                href="https://skillshop.exceedlms.com/student/award/mq4cAVME6jowVNn6KHA9CS2J"
-                target="_blank"
-                class="cert-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-          </div>
-
-          <!-- 18 -->
-          <!-- Advanced Google Analyticss -->
-          <div class="cert-card">
-            <div class="cert-card__icon-wrapper">
-              <i class="cert-card__icon fas fa-award"></i>
-            </div>
-            <div class="cert-card__content">
-              <h5 class="cert-card__name">Advanced Google Analytics</h5>
-              <h6 class="cert-card__issuer">By Google</h6>
-              <a
-                href="https://analytics.google.com/analytics/academy/certificate/w-f6X-a-RfmMG4vE1ve94A"
-                target="_blank"
-                class="cert-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section class="projects" id="Projects">
-      <h3 class="title">Projects</h3>
-      <div class="section">
-        <article class="projects__grid">
-          <!-- New -->
-
-          <!-- VegeFru -->
-          <div class="project-card">
-            <figure class="project-card__fig">
-              <img
-                src="/images/VegeFru.jpg"
-                alt=""
-                class="project-card__thumbnail"
-              />
-            </figure>
-
-            <div class="project-card__text-wrapper">
-              <h5 class="project-card__title">VegeFru</h5>
-              <h6 class="project-card__desc">A Online Grocery Store Web App</h6>
-              <a
-                href="https://github.com/harounach/vegefru"
-                target="_blank"
-                class="project-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-            <span class="project-card__tag">Ecommerce</span>
-          </div>
-
-          <!-- Piplechat -->
-          <div class="project-card">
-            <figure class="project-card__fig">
-              <img
-                src="/images/Piplchat.jpg"
-                alt=""
-                class="project-card__thumbnail"
-              />
-            </figure>
-
-            <div class="project-card__text-wrapper">
-              <h5 class="project-card__title">Piplechat</h5>
-              <h6 class="project-card__desc">A React and Firebase Chat App</h6>
-              <a
-                href="https://github.com/harounach/piplchat"
-                target="_blank"
-                class="project-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-            <span class="project-card__tag">Messaging</span>
-          </div>
-
-          <!-- Vuestore -->
-          <div class="project-card">
-            <figure class="project-card__fig">
-              <img
-                src="/images/Vuestore.jpg"
-                alt=""
-                class="project-card__thumbnail"
-              />
-            </figure>
-
-            <div class="project-card__text-wrapper">
-              <h5 class="project-card__title">Vuestore</h5>
-              <h6 class="project-card__desc">A Vue.js Shopping Cart</h6>
-              <a
-                href="https://github.com/harounach/vuestore"
-                target="_blank"
-                class="project-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-            <span class="project-card__tag">Ecommerce</span>
-          </div>
-
-          <!-- Wildfire-Tracker -->
-          <div class="project-card">
-            <figure class="project-card__fig">
-              <img
-                src="/images/Wildfire-Tracker.jpg"
-                alt=""
-                class="project-card__thumbnail"
-              />
-            </figure>
-
-            <div class="project-card__text-wrapper">
-              <h5 class="project-card__title">Wildfire Tracker</h5>
-              <h6 class="project-card__desc">A Wildfire Tracker App</h6>
-              <a
-                href="https://github.com/harounach/wildfire-tracker"
-                target="_blank"
-                class="project-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-            <span class="project-card__tag">Tool</span>
-          </div>
-
-          <div class="project-card">
-            <figure class="project-card__fig">
-              <img
-                src="/images/TodoList.jpg"
-                alt=""
-                class="project-card__thumbnail"
-              />
-            </figure>
-
-            <div class="project-card__text-wrapper">
-              <h5 class="project-card__title">TodoList</h5>
-              <h6 class="project-card__desc">A React Todo List App</h6>
-              <a
-                href="https://github.com/harounach/todolist"
-                target="_blank"
-                class="project-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-            <span class="project-card__tag">Tool</span>
-          </div>
-
-          <div class="project-card">
-            <figure class="project-card__fig">
-              <img
-                src="/images/Eerkel-Frontend.jpg"
-                alt=""
-                class="project-card__thumbnail"
-              />
-            </figure>
-
-            <div class="project-card__text-wrapper">
-              <h5 class="project-card__title">Eerkel</h5>
-              <h6 class="project-card__desc">Front End for a Chat App</h6>
-              <a
-                href="https://github.com/harounach/eerkel-frontend"
-                target="_blank"
-                class="project-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-            <span class="project-card__tag">Messaging</span>
-          </div>
-
-          <div class="project-card">
-            <figure class="project-card__fig">
-              <img
-                src="/images/Storybook.jpg"
-                alt=""
-                class="project-card__thumbnail"
-              />
-            </figure>
-
-            <div class="project-card__text-wrapper">
-              <h5 class="project-card__title">StoryBook</h5>
-              <h6 class="project-card__desc">
-                Create and share stories about your life
-              </h6>
-              <a
-                href="https://github.com/harounach/storybook"
-                target="_blank"
-                class="project-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-            <span class="project-card__tag">Personal</span>
-          </div>
-
-          <div class="project-card">
-            <figure class="project-card__fig">
-              <img
-                src="/images/Lensey.jpg"
-                alt=""
-                class="project-card__thumbnail"
-              />
-            </figure>
-
-            <div class="project-card__text-wrapper">
-              <h5 class="project-card__title">Lensey</h5>
-              <h6 class="project-card__desc">
-                Lensey is a simple news website
-              </h6>
-              <a
-                href="https://github.com/harounach/lensey"
-                target="_blank"
-                class="project-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-            <span class="project-card__tag">News</span>
-          </div>
-
-          <div class="project-card">
-            <figure class="project-card__fig">
-              <img
-                src="/images/Suun.jpg"
-                alt=""
-                class="project-card__thumbnail"
-              />
-            </figure>
-
-            <div class="project-card__text-wrapper">
-              <h5 class="project-card__title">Suun</h5>
-              <h6 class="project-card__desc">Suun is simple weather website</h6>
-              <a
-                href="https://github.com/harounach/suun"
-                target="_blank"
-                class="project-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-            <span class="project-card__tag">Weather</span>
-          </div>
-
-          <!-- Old -->
-          <div class="project-card">
-            <figure class="project-card__fig">
-              <img
-                src="/images/D3-Bar-Chart.jpg"
-                alt=""
-                class="project-card__thumbnail"
-              />
-            </figure>
-
-            <div class="project-card__text-wrapper">
-              <h5 class="project-card__title">D3 Bar Chart</h5>
-              <h6 class="project-card__desc">
-                Visualize Data with a Bar Chart
-              </h6>
-              <a
-                href="https://codepen.io/harounacho444/full/zYBXZQJ"
-                target="_blank"
-                class="project-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-            <span class="project-card__tag">Visualization</span>
-          </div>
-
-          <div class="project-card">
-            <figure class="project-card__fig">
-              <img
-                src="/images/D3-Scatter-Plot.jpg"
-                alt=""
-                class="project-card__thumbnail"
-              />
-            </figure>
-
-            <div class="project-card__text-wrapper">
-              <h5 class="project-card__title">D3 Scatter Plot</h5>
-              <h6 class="project-card__desc">
-                Visualize Data with Scatterplot Graph
-              </h6>
-              <a
-                href="https://codepen.io/harounacho444/full/qBNwwoy"
-                target="_blank"
-                class="project-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-            <span class="project-card__tag">Visualization</span>
-          </div>
-
-          <div class="project-card">
-            <figure class="project-card__fig">
-              <img
-                src="/images/D3-Heat-Map.jpg"
-                alt=""
-                class="project-card__thumbnail"
-              />
-            </figure>
-
-            <div class="project-card__text-wrapper">
-              <h5 class="project-card__title">D3 Heat Map</h5>
-              <h6 class="project-card__desc">Visualize Data with Heat Map</h6>
-              <a
-                href="https://codepen.io/harounacho444/full/BazgJRM"
-                target="_blank"
-                class="project-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-            <span class="project-card__tag">Visualization</span>
-          </div>
-
-          <div class="project-card">
-            <figure class="project-card__fig">
-              <img
-                src="/images/D3-Choropleth-Map.jpg"
-                alt=""
-                class="project-card__thumbnail"
-              />
-            </figure>
-
-            <div class="project-card__text-wrapper">
-              <h5 class="project-card__title">D3 Choropleth Map</h5>
-              <h6 class="project-card__desc">
-                Visualize Data with Choropleth Map
-              </h6>
-              <a
-                href="https://codepen.io/harounacho444/full/WNxqKzy"
-                target="_blank"
-                class="project-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-            <span class="project-card__tag">Visualization</span>
-          </div>
-
-          <div class="project-card">
-            <figure class="project-card__fig">
-              <img
-                src="/images/D3-Tree-Map.jpg"
-                alt=""
-                class="project-card__thumbnail"
-              />
-            </figure>
-
-            <div class="project-card__text-wrapper">
-              <h5 class="project-card__title">D3 Tree Map</h5>
-              <h6 class="project-card__desc">
-                Visualize Data with Treemap Diagram
-              </h6>
-              <a
-                href="https://codepen.io/harounacho444/full/QWEXXRJ"
-                target="_blank"
-                class="project-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-            <span class="project-card__tag">Visualization</span>
-          </div>
-
-          <div class="project-card">
-            <figure class="project-card__fig">
-              <img
-                src="/images/Random-Quote-Machine.jpg"
-                alt=""
-                class="project-card__thumbnail"
-              />
-            </figure>
-
-            <div class="project-card__text-wrapper">
-              <h5 class="project-card__title">Random Quote Machine</h5>
-              <h6 class="project-card__desc">Build a Random Quote Machine</h6>
-              <a
-                href="https://codepen.io/harounacho444/full/NWNVxoo"
-                target="_blank"
-                class="project-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-            <span class="project-card__tag">Quotes</span>
-          </div>
-
-          <div class="project-card">
-            <figure class="project-card__fig">
-              <img
-                src="/images/Markdown-Previewer.jpg"
-                alt=""
-                class="project-card__thumbnail"
-              />
-            </figure>
-
-            <div class="project-card__text-wrapper">
-              <h5 class="project-card__title">Markdown Previewer</h5>
-              <h6 class="project-card__desc">Build a Markdown Previewer</h6>
-              <a
-                href="https://codepen.io/harounacho444/full/QWNRNry"
-                target="_blank"
-                class="project-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-            <span class="project-card__tag">Tool</span>
-          </div>
-
-          <div class="project-card">
-            <figure class="project-card__fig">
-              <img
-                src="/images/Drum-Machine.jpg"
-                alt=""
-                class="project-card__thumbnail"
-              />
-            </figure>
-
-            <div class="project-card__text-wrapper">
-              <h5 class="project-card__title">Drum Machine</h5>
-              <h6 class="project-card__desc">Build a Drum Machine</h6>
-              <a
-                href="https://codepen.io/harounacho444/full/LYNoaQv"
-                target="_blank"
-                class="project-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-            <span class="project-card__tag">Entertainment</span>
-          </div>
-
-          <div class="project-card">
-            <figure class="project-card__fig">
-              <img
-                src="/images/JavaScript-Calculator.jpg"
-                alt=""
-                class="project-card__thumbnail"
-              />
-            </figure>
-
-            <div class="project-card__text-wrapper">
-              <h5 class="project-card__title">JavaScript Calculator</h5>
-              <h6 class="project-card__desc">Build a JavaScript Calculator</h6>
-              <a
-                href="https://codepen.io/harounacho444/full/BaKeepM"
-                target="_blank"
-                class="project-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-            <span class="project-card__tag">Tool</span>
-          </div>
-
-          <div class="project-card">
-            <figure class="project-card__fig">
-              <img
-                src="/images/(25+5)-Clock.jpg"
-                alt=""
-                class="project-card__thumbnail"
-              />
-            </figure>
-
-            <div class="project-card__text-wrapper">
-              <h5 class="project-card__title">25 + 5 Clock</h5>
-              <h6 class="project-card__desc">Build a 25 + 5 Clock</h6>
-              <a
-                href="https://codepen.io/harounacho444/full/ExyLNxO"
-                target="_blank"
-                class="project-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-            <span class="project-card__tag">Tool</span>
-          </div>
-
-          <div class="project-card">
-            <figure class="project-card__fig">
-              <img
-                src="/images/Survey-Form.jpg"
-                alt=""
-                class="project-card__thumbnail"
-              />
-            </figure>
-
-            <div class="project-card__text-wrapper">
-              <h5 class="project-card__title">Survey Form</h5>
-              <h6 class="project-card__desc">Build a Survey Form</h6>
-              <a
-                href="https://codepen.io/harounacho444/full/KKVVZyz"
-                target="_blank"
-                class="project-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-            <span class="project-card__tag">Analytics</span>
-          </div>
-
-          <div class="project-card">
-            <figure class="project-card__fig">
-              <img
-                src="/images/Product-Landing-Page.jpg"
-                alt=""
-                class="project-card__thumbnail"
-              />
-            </figure>
-
-            <div class="project-card__text-wrapper">
-              <h5 class="project-card__title">Product Landing Page</h5>
-              <h6 class="project-card__desc">Build a Product Landing Page</h6>
-              <a
-                href="https://codepen.io/harounacho444/full/YzwqWEN"
-                target="_blank"
-                class="project-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-            <span class="project-card__tag">Business</span>
-          </div>
-
-          <div class="project-card">
-            <figure class="project-card__fig">
-              <img
-                src="/images/Technical-Documentation-Page.jpg"
-                alt=""
-                class="project-card__thumbnail"
-              />
-            </figure>
-
-            <div class="project-card__text-wrapper">
-              <h5 class="project-card__title">Technical Documentation Page</h5>
-              <h6 class="project-card__desc">
-                Build a Technical Documentation Page
-              </h6>
-              <a
-                href="https://codepen.io/harounacho444/full/RwraBaR"
-                target="_blank"
-                class="project-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-            <span class="project-card__tag">Tech</span>
-          </div>
-
-          <div class="project-card">
-            <figure class="project-card__fig">
-              <img
-                src="/images/Personal-Porfolio-Webpage.jpg"
-                alt=""
-                class="project-card__thumbnail"
-              />
-            </figure>
-
-            <div class="project-card__text-wrapper">
-              <h5 class="project-card__title">Personal Portfolio Webpage</h5>
-              <h6 class="project-card__desc">
-                Build a Personal Portfolio Webpage
-              </h6>
-              <a
-                href="https://codepen.io/harounacho444/full/XWXKxNa"
-                target="_blank"
-                class="project-card__btn btn"
-                >View <i class="btn__icon fas fa-chevron-right"></i></a
-              >
-            </div>
-            <span class="project-card__tag">Personal</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Contact -->
-
-    <section class="contact section" id="Contact">
-      <h3 class="title">Contact</h3>
-      <div class="section">
-        <ul class="socialbar">
-          <!-- Facebook -->
-          <li class="socialbar__item">
-            <a
-              class="socialbar__link"
-              href="https://www.facebook.com/harounacho18"
-              title="Facebook"
-              ><i class="socialbar__icon fab fa-facebook" aria-hidden="true"
-              ></i></a
-            >
+    </div>
+  </section>
+
+  <!-- Education -->
+
+  <section class="education section" id="Education">
+    <h3 class="title">Education</h3>
+    <div class="section">
+      <article class="education__article">
+        <h4 class="education__title">
+          Bachelor Degree of Software Engineering
+        </h4>
+        <h5 class="education__years">SEPTEMBER 2012 - JUNE 2015</h5>
+        <h5 class="education__univ">
+          University of Constantine, Constantine, Algeria
+        </h5>
+      </article>
+    </div>
+  </section>
+
+  <!-- Experience -->
+
+  <section class="experience section" id="Experience">
+    <h3 class="title">Experience</h3>
+    <div class="section">
+      <article class="experience__content">
+        <h4 class="experience__job">Freelance Web Developer</h4>
+        <h5 class="experience__years">SEPTEMBER 2015 - PRESENT</h5>
+        <ul class="experience__list">
+          <li class="experience__item">Design the front end of the website.</li>
+          <li class="experience__item">Develop search friendly web pages</li>
+          <li class="experience__item">
+            Maintain and improve clients codebase.
           </li>
-
-          <!-- Instagram -->
-          <li class="socialbar__item">
-            <a
-              class="socialbar__link"
-              href="https://www.instagram.com/harounachouche/"
-              title="Instagram"
-              ><i class="socialbar__icon fab fa-instagram" aria-hidden="true"
-              ></i></a
-            >
+          <li class="experience__item">
+            Built online web solutions for individuals
           </li>
-
-          <!-- Twitter -->
-          <li class="socialbar__item">
-            <a
-              class="socialbar__link"
-              href="https://twitter.com/harounachouche"
-              title="Twitter"
-              ><i class="socialbar__icon fab fa-twitter" aria-hidden="true"
-              ></i></a
-            >
+          <li class="experience__item">
+            Develop HTML/CSS templates for landing pages
           </li>
-
-          <!-- LinkedIn -->
-          <li class="socialbar__item">
-            <a
-              class="socialbar__link"
-              href="https://www.linkedin.com/in/haroun-achouche/"
-              title="LinkedIn"
-              ><i class="socialbar__icon fab fa-linkedin-in" aria-hidden="true"
-              ></i></a
-            >
+          <li class="experience__item">
+            Perform browsers testing and catch bugs
           </li>
-
-          <!-- Pinterest -->
-          <li class="socialbar__item">
-            <a
-              class="socialbar__link"
-              href="https://www.pinterest.com/harounachouche/"
-              title="Pinterest"
-              ><i class="socialbar__icon fab fa-pinterest" aria-hidden="true"
-              ></i></a
-            >
-          </li>
-
-          <!-- Github -->
-          <li class="socialbar__item">
-            <a
-              class="socialbar__link"
-              href="https://github.com/harounach"
-              title="Github"
-              ><i class="socialbar__icon fab fa-github" aria-hidden="true"
-              ></i></a
-            >
+          <li class="experience__item">
+            Create websites that engage customers in order to enhance my
+            clients’ online present
           </li>
         </ul>
-      </div>
-    </section>
-  </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+
+  <section class="cert section" id="Certifications">
+    <h3 class="title">Certifications</h3>
+    <div class="section">
+      <article class="cert__grid">
+        <!-- 01 -->
+        <!-- Responsive Web Design -->
+        <div class="cert-card">
+          <div class="cert-card__icon-wrapper">
+            <i class="cert-card__icon fas fa-award"></i>
+          </div>
+          <div class="cert-card__content">
+            <h5 class="cert-card__name">Responsive Web Design</h5>
+            <h6 class="cert-card__issuer">By FreeCodeCamp</h6>
+            <a
+              href="https://www.freecodecamp.org/certification/harounach/responsive-web-design"
+              target="_blank"
+              class="cert-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+        </div>
+
+        <!-- 02 -->
+        <!-- JavaScript Algorithms and Data Structures -->
+        <div class="cert-card">
+          <div class="cert-card__icon-wrapper">
+            <i class="cert-card__icon fas fa-award"></i>
+          </div>
+          <div class="cert-card__content">
+            <h5 class="cert-card__name">
+              JavaScript Algorithms and Data Structures
+            </h5>
+            <h6 class="cert-card__issuer">By FreeCodeCamp</h6>
+            <a
+              href="https://www.freecodecamp.org/certification/harounach/javascript-algorithms-and-data-structures"
+              target="_blank"
+              class="cert-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+        </div>
+
+        <!-- 03 -->
+        <!-- Front End Libraries -->
+        <div class="cert-card">
+          <div class="cert-card__icon-wrapper">
+            <i class="cert-card__icon fas fa-award"></i>
+          </div>
+          <div class="cert-card__content">
+            <h5 class="cert-card__name">Front End Libraries</h5>
+            <h6 class="cert-card__issuer">By FreeCodeCamp</h6>
+            <a
+              href="https://www.freecodecamp.org/certification/harounach/front-end-libraries"
+              target="_blank"
+              class="cert-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+        </div>
+
+        <!-- 04 -->
+        <!-- Data Visualization -->
+        <div class="cert-card">
+          <div class="cert-card__icon-wrapper">
+            <i class="cert-card__icon fas fa-award"></i>
+          </div>
+          <div class="cert-card__content">
+            <h5 class="cert-card__name">Data Visualization</h5>
+            <h6 class="cert-card__issuer">By FreeCodeCamp</h6>
+            <a
+              href="https://www.freecodecamp.org/certification/harounach/data-visualization"
+              target="_blank"
+              class="cert-card__btn btn"
+              download="Haroun-Achouche-Google-Digital-Garage-Certificate.pdf"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+        </div>
+
+        <!-- 05 -->
+        <!-- APIs and Microservices -->
+        <div class="cert-card">
+          <div class="cert-card__icon-wrapper">
+            <i class="cert-card__icon fas fa-award"></i>
+          </div>
+          <div class="cert-card__content">
+            <h5 class="cert-card__name">APIs and Microservices</h5>
+            <h6 class="cert-card__issuer">By FreeCodeCamp</h6>
+            <a
+              href="https://www.freecodecamp.org/certification/harounach/apis-and-microservices"
+              target="_blank"
+              class="cert-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+        </div>
+
+        <!-- 06 -->
+        <!-- MongoDB Basics -->
+        <div class="cert-card">
+          <div class="cert-card__icon-wrapper">
+            <i class="cert-card__icon fas fa-award"></i>
+          </div>
+          <div class="cert-card__content">
+            <h5 class="cert-card__name">MongoDB Basics</h5>
+            <h6 class="cert-card__issuer">By MongoDB</h6>
+            <a
+              href="https://university.mongodb.com/course_completion/8459d44c-38d9-4e24-afa9-266f3372359e?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
+              target="_blank"
+              class="cert-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+        </div>
+
+        <!-- 07 -->
+        <!-- Basic Cluster Administration -->
+        <div class="cert-card">
+          <div class="cert-card__icon-wrapper">
+            <i class="cert-card__icon fas fa-award"></i>
+          </div>
+          <div class="cert-card__content">
+            <h5 class="cert-card__name">Basic Cluster Administration</h5>
+            <h6 class="cert-card__issuer">By MongoDB</h6>
+            <a
+              href="https://university.mongodb.com/course_completion/b930b053-badf-4299-b84e-a49b78802c3d?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
+              target="_blank"
+              class="cert-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+        </div>
+
+        <!-- 08 -->
+        <!-- The MongoDB Aggregation Framework -->
+        <div class="cert-card">
+          <div class="cert-card__icon-wrapper">
+            <i class="cert-card__icon fas fa-award"></i>
+          </div>
+          <div class="cert-card__content">
+            <h5 class="cert-card__name">The MongoDB Aggregation Framework</h5>
+            <h6 class="cert-card__issuer">By MongoDB</h6>
+            <a
+              href="https://university.mongodb.com/course_completion/08889396-fb40-466c-8d19-f4079e036735?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
+              target="_blank"
+              class="cert-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+        </div>
+
+        <!-- 09 -->
+        <!-- MongoDB for Javascript Developers -->
+        <div class="cert-card">
+          <div class="cert-card__icon-wrapper">
+            <i class="cert-card__icon fas fa-award"></i>
+          </div>
+          <div class="cert-card__content">
+            <h5 class="cert-card__name">MongoDB for Javascript Developers</h5>
+            <h6 class="cert-card__issuer">By MongoDB</h6>
+            <a
+              href="https://university.mongodb.com/course_completion/05e6d4c7-e1c0-410b-96d8-4ca5317e13d3?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
+              target="_blank"
+              class="cert-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+        </div>
+
+        <!-- 10 -->
+        <!-- MongoDB Performance -->
+        <div class="cert-card">
+          <div class="cert-card__icon-wrapper">
+            <i class="cert-card__icon fas fa-award"></i>
+          </div>
+          <div class="cert-card__content">
+            <h5 class="cert-card__name">MongoDB Performance</h5>
+            <h6 class="cert-card__issuer">By MongoDB</h6>
+            <a
+              href="https://university.mongodb.com/course_completion/c878c70a-4df3-429d-b919-a5ac04b8830e?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
+              target="_blank"
+              class="cert-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+        </div>
+
+        <!-- 11 -->
+        <!-- Data Modeling -->
+        <div class="cert-card">
+          <div class="cert-card__icon-wrapper">
+            <i class="cert-card__icon fas fa-award"></i>
+          </div>
+          <div class="cert-card__content">
+            <h5 class="cert-card__name">Data Modeling</h5>
+            <h6 class="cert-card__issuer">By MongoDB</h6>
+            <a
+              href="https://university.mongodb.com/course_completion/b0e70ebd-5245-4f89-a858-06d2235312d2?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
+              target="_blank"
+              class="cert-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+        </div>
+
+        <!-- 12 -->
+        <!-- Fundamentals of digital marketing -->
+        <div class="cert-card">
+          <div class="cert-card__icon-wrapper">
+            <i class="cert-card__icon fas fa-award"></i>
+          </div>
+          <div class="cert-card__content">
+            <h5 class="cert-card__name">Fundamentals of digital marketing</h5>
+            <h6 class="cert-card__issuer">By Google</h6>
+            <a
+              href="./assets/Haroun-Achouche-Google-Digital-Garage-Certificate.pdf"
+              target="_blank"
+              class="cert-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+        </div>
+
+        <!-- 13 -->
+        <!-- Google Analytics for Beginners -->
+        <div class="cert-card">
+          <div class="cert-card__icon-wrapper">
+            <i class="cert-card__icon fas fa-award"></i>
+          </div>
+          <div class="cert-card__content">
+            <h5 class="cert-card__name">Google Analytics for Beginners</h5>
+            <h6 class="cert-card__issuer">By Google</h6>
+            <a
+              href="https://analytics.google.com/analytics/academy/certificate/RE4EAJboT3WjNDF3qVAmYg"
+              target="_blank"
+              class="cert-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+        </div>
+
+        <!-- 14 -->
+        <!-- Advanced Google Analyticss -->
+        <div class="cert-card">
+          <div class="cert-card__icon-wrapper">
+            <i class="cert-card__icon fas fa-award"></i>
+          </div>
+          <div class="cert-card__content">
+            <h5 class="cert-card__name">Advanced Google Analytics</h5>
+            <h6 class="cert-card__issuer">By Google</h6>
+            <a
+              href="https://analytics.google.com/analytics/academy/certificate/w-f6X-a-RfmMG4vE1ve94A"
+              target="_blank"
+              class="cert-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+        </div>
+
+        <!-- 15 -->
+        <!-- Google Tag Manager Fundamentals -->
+        <div class="cert-card">
+          <div class="cert-card__icon-wrapper">
+            <i class="cert-card__icon fas fa-award"></i>
+          </div>
+          <div class="cert-card__content">
+            <h5 class="cert-card__name">Google Tag Manager Fundamentals</h5>
+            <h6 class="cert-card__issuer">By Google</h6>
+            <a
+              href="https://analytics.google.com/analytics/academy/certificate/MmfJ-dlcSvmMmj-t_qyxoA"
+              target="_blank"
+              class="cert-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+        </div>
+
+        <!-- 16 -->
+        <!-- Ecommerce Analytics: From Data to Decisions -->
+        <div class="cert-card">
+          <div class="cert-card__icon-wrapper">
+            <i class="cert-card__icon fas fa-award"></i>
+          </div>
+          <div class="cert-card__content">
+            <h5 class="cert-card__name">
+              Ecommerce Analytics: From Data to Decisions
+            </h5>
+            <h6 class="cert-card__issuer">By Google</h6>
+            <a
+              href="https://analytics.google.com/analytics/academy/certificate/HE7Zc8P2Ru-xWtV8nj0nPw"
+              target="_blank"
+              class="cert-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+        </div>
+
+        <!-- 17 -->
+        <!-- Google My Business -->
+        <div class="cert-card">
+          <div class="cert-card__icon-wrapper">
+            <i class="cert-card__icon fas fa-award"></i>
+          </div>
+          <div class="cert-card__content">
+            <h5 class="cert-card__name">Google My Business</h5>
+            <h6 class="cert-card__issuer">By Google</h6>
+            <a
+              href="https://skillshop.exceedlms.com/student/award/mq4cAVME6jowVNn6KHA9CS2J"
+              target="_blank"
+              class="cert-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+        </div>
+
+        <!-- 18 -->
+        <!-- Advanced Google Analyticss -->
+        <div class="cert-card">
+          <div class="cert-card__icon-wrapper">
+            <i class="cert-card__icon fas fa-award"></i>
+          </div>
+          <div class="cert-card__content">
+            <h5 class="cert-card__name">Advanced Google Analytics</h5>
+            <h6 class="cert-card__issuer">By Google</h6>
+            <a
+              href="https://analytics.google.com/analytics/academy/certificate/w-f6X-a-RfmMG4vE1ve94A"
+              target="_blank"
+              class="cert-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects" id="Projects">
+    <h3 class="title">Projects</h3>
+    <div class="section">
+      <article class="projects__grid">
+        <!-- New -->
+
+        <!-- VegeFru -->
+        <div class="project-card">
+          <figure class="project-card__fig">
+            <img
+              src="/images/VegeFru.jpg"
+              alt=""
+              class="project-card__thumbnail"
+            />
+          </figure>
+
+          <div class="project-card__text-wrapper">
+            <h5 class="project-card__title">VegeFru</h5>
+            <h6 class="project-card__desc">A Online Grocery Store Web App</h6>
+            <a
+              href="https://github.com/harounach/vegefru"
+              target="_blank"
+              class="project-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+          <span class="project-card__tag">Ecommerce</span>
+        </div>
+
+        <!-- Piplechat -->
+        <div class="project-card">
+          <figure class="project-card__fig">
+            <img
+              src="/images/Piplchat.jpg"
+              alt=""
+              class="project-card__thumbnail"
+            />
+          </figure>
+
+          <div class="project-card__text-wrapper">
+            <h5 class="project-card__title">Piplechat</h5>
+            <h6 class="project-card__desc">A React and Firebase Chat App</h6>
+            <a
+              href="https://github.com/harounach/piplchat"
+              target="_blank"
+              class="project-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+          <span class="project-card__tag">Messaging</span>
+        </div>
+
+        <!-- Vuestore -->
+        <div class="project-card">
+          <figure class="project-card__fig">
+            <img
+              src="/images/Vuestore.jpg"
+              alt=""
+              class="project-card__thumbnail"
+            />
+          </figure>
+
+          <div class="project-card__text-wrapper">
+            <h5 class="project-card__title">Vuestore</h5>
+            <h6 class="project-card__desc">A Vue.js Shopping Cart</h6>
+            <a
+              href="https://github.com/harounach/vuestore"
+              target="_blank"
+              class="project-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+          <span class="project-card__tag">Ecommerce</span>
+        </div>
+
+        <!-- Wildfire-Tracker -->
+        <div class="project-card">
+          <figure class="project-card__fig">
+            <img
+              src="/images/Wildfire-Tracker.jpg"
+              alt=""
+              class="project-card__thumbnail"
+            />
+          </figure>
+
+          <div class="project-card__text-wrapper">
+            <h5 class="project-card__title">Wildfire Tracker</h5>
+            <h6 class="project-card__desc">A Wildfire Tracker App</h6>
+            <a
+              href="https://github.com/harounach/wildfire-tracker"
+              target="_blank"
+              class="project-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+          <span class="project-card__tag">Tool</span>
+        </div>
+
+        <div class="project-card">
+          <figure class="project-card__fig">
+            <img
+              src="/images/TodoList.jpg"
+              alt=""
+              class="project-card__thumbnail"
+            />
+          </figure>
+
+          <div class="project-card__text-wrapper">
+            <h5 class="project-card__title">TodoList</h5>
+            <h6 class="project-card__desc">A React Todo List App</h6>
+            <a
+              href="https://github.com/harounach/todolist"
+              target="_blank"
+              class="project-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+          <span class="project-card__tag">Tool</span>
+        </div>
+
+        <div class="project-card">
+          <figure class="project-card__fig">
+            <img
+              src="/images/Eerkel-Frontend.jpg"
+              alt=""
+              class="project-card__thumbnail"
+            />
+          </figure>
+
+          <div class="project-card__text-wrapper">
+            <h5 class="project-card__title">Eerkel</h5>
+            <h6 class="project-card__desc">Front End for a Chat App</h6>
+            <a
+              href="https://github.com/harounach/eerkel-frontend"
+              target="_blank"
+              class="project-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+          <span class="project-card__tag">Messaging</span>
+        </div>
+
+        <div class="project-card">
+          <figure class="project-card__fig">
+            <img
+              src="/images/Storybook.jpg"
+              alt=""
+              class="project-card__thumbnail"
+            />
+          </figure>
+
+          <div class="project-card__text-wrapper">
+            <h5 class="project-card__title">StoryBook</h5>
+            <h6 class="project-card__desc">
+              Create and share stories about your life
+            </h6>
+            <a
+              href="https://github.com/harounach/storybook"
+              target="_blank"
+              class="project-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+          <span class="project-card__tag">Personal</span>
+        </div>
+
+        <div class="project-card">
+          <figure class="project-card__fig">
+            <img
+              src="/images/Lensey.jpg"
+              alt=""
+              class="project-card__thumbnail"
+            />
+          </figure>
+
+          <div class="project-card__text-wrapper">
+            <h5 class="project-card__title">Lensey</h5>
+            <h6 class="project-card__desc">Lensey is a simple news website</h6>
+            <a
+              href="https://github.com/harounach/lensey"
+              target="_blank"
+              class="project-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+          <span class="project-card__tag">News</span>
+        </div>
+
+        <div class="project-card">
+          <figure class="project-card__fig">
+            <img
+              src="/images/Suun.jpg"
+              alt=""
+              class="project-card__thumbnail"
+            />
+          </figure>
+
+          <div class="project-card__text-wrapper">
+            <h5 class="project-card__title">Suun</h5>
+            <h6 class="project-card__desc">Suun is simple weather website</h6>
+            <a
+              href="https://github.com/harounach/suun"
+              target="_blank"
+              class="project-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+          <span class="project-card__tag">Weather</span>
+        </div>
+
+        <!-- Old -->
+        <div class="project-card">
+          <figure class="project-card__fig">
+            <img
+              src="/images/D3-Bar-Chart.jpg"
+              alt=""
+              class="project-card__thumbnail"
+            />
+          </figure>
+
+          <div class="project-card__text-wrapper">
+            <h5 class="project-card__title">D3 Bar Chart</h5>
+            <h6 class="project-card__desc">Visualize Data with a Bar Chart</h6>
+            <a
+              href="https://codepen.io/harounacho444/full/zYBXZQJ"
+              target="_blank"
+              class="project-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+          <span class="project-card__tag">Visualization</span>
+        </div>
+
+        <div class="project-card">
+          <figure class="project-card__fig">
+            <img
+              src="/images/D3-Scatter-Plot.jpg"
+              alt=""
+              class="project-card__thumbnail"
+            />
+          </figure>
+
+          <div class="project-card__text-wrapper">
+            <h5 class="project-card__title">D3 Scatter Plot</h5>
+            <h6 class="project-card__desc">
+              Visualize Data with Scatterplot Graph
+            </h6>
+            <a
+              href="https://codepen.io/harounacho444/full/qBNwwoy"
+              target="_blank"
+              class="project-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+          <span class="project-card__tag">Visualization</span>
+        </div>
+
+        <div class="project-card">
+          <figure class="project-card__fig">
+            <img
+              src="/images/D3-Heat-Map.jpg"
+              alt=""
+              class="project-card__thumbnail"
+            />
+          </figure>
+
+          <div class="project-card__text-wrapper">
+            <h5 class="project-card__title">D3 Heat Map</h5>
+            <h6 class="project-card__desc">Visualize Data with Heat Map</h6>
+            <a
+              href="https://codepen.io/harounacho444/full/BazgJRM"
+              target="_blank"
+              class="project-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+          <span class="project-card__tag">Visualization</span>
+        </div>
+
+        <div class="project-card">
+          <figure class="project-card__fig">
+            <img
+              src="/images/D3-Choropleth-Map.jpg"
+              alt=""
+              class="project-card__thumbnail"
+            />
+          </figure>
+
+          <div class="project-card__text-wrapper">
+            <h5 class="project-card__title">D3 Choropleth Map</h5>
+            <h6 class="project-card__desc">
+              Visualize Data with Choropleth Map
+            </h6>
+            <a
+              href="https://codepen.io/harounacho444/full/WNxqKzy"
+              target="_blank"
+              class="project-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+          <span class="project-card__tag">Visualization</span>
+        </div>
+
+        <div class="project-card">
+          <figure class="project-card__fig">
+            <img
+              src="/images/D3-Tree-Map.jpg"
+              alt=""
+              class="project-card__thumbnail"
+            />
+          </figure>
+
+          <div class="project-card__text-wrapper">
+            <h5 class="project-card__title">D3 Tree Map</h5>
+            <h6 class="project-card__desc">
+              Visualize Data with Treemap Diagram
+            </h6>
+            <a
+              href="https://codepen.io/harounacho444/full/QWEXXRJ"
+              target="_blank"
+              class="project-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+          <span class="project-card__tag">Visualization</span>
+        </div>
+
+        <div class="project-card">
+          <figure class="project-card__fig">
+            <img
+              src="/images/Random-Quote-Machine.jpg"
+              alt=""
+              class="project-card__thumbnail"
+            />
+          </figure>
+
+          <div class="project-card__text-wrapper">
+            <h5 class="project-card__title">Random Quote Machine</h5>
+            <h6 class="project-card__desc">Build a Random Quote Machine</h6>
+            <a
+              href="https://codepen.io/harounacho444/full/NWNVxoo"
+              target="_blank"
+              class="project-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+          <span class="project-card__tag">Quotes</span>
+        </div>
+
+        <div class="project-card">
+          <figure class="project-card__fig">
+            <img
+              src="/images/Markdown-Previewer.jpg"
+              alt=""
+              class="project-card__thumbnail"
+            />
+          </figure>
+
+          <div class="project-card__text-wrapper">
+            <h5 class="project-card__title">Markdown Previewer</h5>
+            <h6 class="project-card__desc">Build a Markdown Previewer</h6>
+            <a
+              href="https://codepen.io/harounacho444/full/QWNRNry"
+              target="_blank"
+              class="project-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+          <span class="project-card__tag">Tool</span>
+        </div>
+
+        <div class="project-card">
+          <figure class="project-card__fig">
+            <img
+              src="/images/Drum-Machine.jpg"
+              alt=""
+              class="project-card__thumbnail"
+            />
+          </figure>
+
+          <div class="project-card__text-wrapper">
+            <h5 class="project-card__title">Drum Machine</h5>
+            <h6 class="project-card__desc">Build a Drum Machine</h6>
+            <a
+              href="https://codepen.io/harounacho444/full/LYNoaQv"
+              target="_blank"
+              class="project-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+          <span class="project-card__tag">Entertainment</span>
+        </div>
+
+        <div class="project-card">
+          <figure class="project-card__fig">
+            <img
+              src="/images/JavaScript-Calculator.jpg"
+              alt=""
+              class="project-card__thumbnail"
+            />
+          </figure>
+
+          <div class="project-card__text-wrapper">
+            <h5 class="project-card__title">JavaScript Calculator</h5>
+            <h6 class="project-card__desc">Build a JavaScript Calculator</h6>
+            <a
+              href="https://codepen.io/harounacho444/full/BaKeepM"
+              target="_blank"
+              class="project-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+          <span class="project-card__tag">Tool</span>
+        </div>
+
+        <div class="project-card">
+          <figure class="project-card__fig">
+            <img
+              src="/images/(25+5)-Clock.jpg"
+              alt=""
+              class="project-card__thumbnail"
+            />
+          </figure>
+
+          <div class="project-card__text-wrapper">
+            <h5 class="project-card__title">25 + 5 Clock</h5>
+            <h6 class="project-card__desc">Build a 25 + 5 Clock</h6>
+            <a
+              href="https://codepen.io/harounacho444/full/ExyLNxO"
+              target="_blank"
+              class="project-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+          <span class="project-card__tag">Tool</span>
+        </div>
+
+        <div class="project-card">
+          <figure class="project-card__fig">
+            <img
+              src="/images/Survey-Form.jpg"
+              alt=""
+              class="project-card__thumbnail"
+            />
+          </figure>
+
+          <div class="project-card__text-wrapper">
+            <h5 class="project-card__title">Survey Form</h5>
+            <h6 class="project-card__desc">Build a Survey Form</h6>
+            <a
+              href="https://codepen.io/harounacho444/full/KKVVZyz"
+              target="_blank"
+              class="project-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+          <span class="project-card__tag">Analytics</span>
+        </div>
+
+        <div class="project-card">
+          <figure class="project-card__fig">
+            <img
+              src="/images/Product-Landing-Page.jpg"
+              alt=""
+              class="project-card__thumbnail"
+            />
+          </figure>
+
+          <div class="project-card__text-wrapper">
+            <h5 class="project-card__title">Product Landing Page</h5>
+            <h6 class="project-card__desc">Build a Product Landing Page</h6>
+            <a
+              href="https://codepen.io/harounacho444/full/YzwqWEN"
+              target="_blank"
+              class="project-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+          <span class="project-card__tag">Business</span>
+        </div>
+
+        <div class="project-card">
+          <figure class="project-card__fig">
+            <img
+              src="/images/Technical-Documentation-Page.jpg"
+              alt=""
+              class="project-card__thumbnail"
+            />
+          </figure>
+
+          <div class="project-card__text-wrapper">
+            <h5 class="project-card__title">Technical Documentation Page</h5>
+            <h6 class="project-card__desc">
+              Build a Technical Documentation Page
+            </h6>
+            <a
+              href="https://codepen.io/harounacho444/full/RwraBaR"
+              target="_blank"
+              class="project-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+          <span class="project-card__tag">Tech</span>
+        </div>
+
+        <div class="project-card">
+          <figure class="project-card__fig">
+            <img
+              src="/images/Personal-Porfolio-Webpage.jpg"
+              alt=""
+              class="project-card__thumbnail"
+            />
+          </figure>
+
+          <div class="project-card__text-wrapper">
+            <h5 class="project-card__title">Personal Portfolio Webpage</h5>
+            <h6 class="project-card__desc">
+              Build a Personal Portfolio Webpage
+            </h6>
+            <a
+              href="https://codepen.io/harounacho444/full/XWXKxNa"
+              target="_blank"
+              class="project-card__btn btn"
+              >View <i class="btn__icon fas fa-chevron-right"></i></a
+            >
+          </div>
+          <span class="project-card__tag">Personal</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Contact -->
+
+  <section class="contact section" id="Contact">
+    <h3 class="title">Contact</h3>
+    <div class="section">
+      <ul class="socialbar">
+        <!-- Facebook -->
+        <li class="socialbar__item">
+          <a
+            class="socialbar__link"
+            href="https://www.facebook.com/harounacho18"
+            title="Facebook"
+            ><i class="socialbar__icon fab fa-facebook" aria-hidden="true"
+            ></i></a
+          >
+        </li>
+
+        <!-- Instagram -->
+        <li class="socialbar__item">
+          <a
+            class="socialbar__link"
+            href="https://www.instagram.com/harounachouche/"
+            title="Instagram"
+            ><i class="socialbar__icon fab fa-instagram" aria-hidden="true"
+            ></i></a
+          >
+        </li>
+
+        <!-- Twitter -->
+        <li class="socialbar__item">
+          <a
+            class="socialbar__link"
+            href="https://twitter.com/harounachouche"
+            title="Twitter"
+            ><i class="socialbar__icon fab fa-twitter" aria-hidden="true"
+            ></i></a
+          >
+        </li>
+
+        <!-- LinkedIn -->
+        <li class="socialbar__item">
+          <a
+            class="socialbar__link"
+            href="https://www.linkedin.com/in/haroun-achouche/"
+            title="LinkedIn"
+            ><i class="socialbar__icon fab fa-linkedin-in" aria-hidden="true"
+            ></i></a
+          >
+        </li>
+
+        <!-- Pinterest -->
+        <li class="socialbar__item">
+          <a
+            class="socialbar__link"
+            href="https://www.pinterest.com/harounachouche/"
+            title="Pinterest"
+            ><i class="socialbar__icon fab fa-pinterest" aria-hidden="true"
+            ></i></a
+          >
+        </li>
+
+        <!-- Github -->
+        <li class="socialbar__item">
+          <a
+            class="socialbar__link"
+            href="https://github.com/harounach"
+            title="Github"
+            ><i class="socialbar__icon fab fa-github" aria-hidden="true"></i></a
+          >
+        </li>
+      </ul>
+    </div>
+  </section>
 </BaseLayout>

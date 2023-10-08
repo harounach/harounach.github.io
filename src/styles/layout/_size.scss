@@ -18,7 +18,7 @@ $maxHeightMap: map.get(vars.$sizes, "mh");
 @each $breakpoint in map.keys(vars.$breakpoints) {
   @include mixins.breakpoint($breakpoint) {
     @each $w in map.keys($widthMap) {
-      .w-#{$breakpoint}-#{$w} {
+      .#{$breakpoint}\:w-#{$w} {
         width: map.get($widthMap, $w);
       }
     }
@@ -36,7 +36,7 @@ $maxHeightMap: map.get(vars.$sizes, "mh");
 @each $breakpoint in map.keys(vars.$breakpoints) {
   @include mixins.breakpoint($breakpoint) {
     @each $h in map.keys($heightMap) {
-      .h-#{$breakpoint}-#{$h} {
+      .#{$breakpoint}\:h-#{$h} {
         height: map.get($heightMap, $h);
       }
     }
@@ -54,7 +54,7 @@ $maxHeightMap: map.get(vars.$sizes, "mh");
 @each $breakpoint in map.keys(vars.$breakpoints) {
   @include mixins.breakpoint($breakpoint) {
     @each $mw in map.keys($maxWidthMap) {
-      .mw-#{$breakpoint}-#{$mw} {
+      .#{$breakpoint}\:mw-#{$mw} {
         max-width: map.get($maxWidthMap, $mw);
       }
     }
@@ -72,7 +72,7 @@ $maxHeightMap: map.get(vars.$sizes, "mh");
 @each $breakpoint in map.keys(vars.$breakpoints) {
   @include mixins.breakpoint($breakpoint) {
     @each $mh in map.keys($maxHeightMap) {
-      .mh-#{$breakpoint}-#{$mh} {
+      .#{$breakpoint}\:mh-#{$mh} {
         max-height: map.get($maxHeightMap, $mh);
       }
     }

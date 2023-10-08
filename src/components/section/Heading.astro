@@ -1,0 +1,27 @@
+---
+const { title, description, long, center, centerDescription, dark } =
+  Astro.props;
+const textLength = long ? "text-lg" : "text-md";
+const titleOnly = description ? "| mb-3" : "| mb-6";
+const centerTitle = center ? "| text-center" : "| md:text-center";
+const darkTitleColor = dark ? "text-white" : "text-black";
+const darkDescriptionColor = dark ? "text-white" : "text-black";
+---
+
+<h2 class:list={["title-medium", centerTitle, titleOnly, darkTitleColor]}>
+  {title}
+</h2>
+{
+  description && (
+    <p
+      class:list={[
+        "body-base mb-6 | md:mx-auto",
+        { "text-center": centerDescription },
+        textLength,
+        darkDescriptionColor,
+      ]}
+    >
+      {description}
+    </p>
+  )
+}
