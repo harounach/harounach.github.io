@@ -1,0 +1,43 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mixins;
+
+// project-card
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: vars.$space-5;
+  border: vars.$border-sm solid vars.$black;
+  padding-bottom: vars.$space-3;
+  position: relative;
+}
+
+// project-card__img
+.project-card__img {
+}
+
+// project-card__title
+.project-card__title {
+}
+
+// project-card__desc
+.project-card__desc {
+}
+
+// project-card__btn
+.project-card__btn {
+  display: inline-flex;
+}
+
+// project-card__tag
+.project-card__tag {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  color: vars.$white;
+  background-color: vars.$black;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+}

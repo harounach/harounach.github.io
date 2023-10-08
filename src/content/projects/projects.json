@@ -1,0 +1,254 @@
+[
+  {
+    "title": "VegeFru",
+    "description": "A Online Grocery Store Web App",
+    "url": "https://github.com/harounach/vegefru",
+    "img": {
+      "src": "/images/VegeFru.jpg",
+      "alt": "VegeFru"
+    },
+    "tag": "Ecommerce"
+  },
+
+  {
+    "title": "Piplechat",
+    "description": "A React and Firebase Chat App",
+    "url": "https://github.com/harounach/piplchat",
+    "img": {
+      "src": "/images/Piplchat.jpg",
+      "alt": "Piplechat"
+    },
+    "tag": "Messaging"
+  },
+
+  {
+    "title": "Vuestore",
+    "description": "A Vue.js Shopping Cart",
+    "url": "https://github.com/harounach/vuestore",
+    "img": {
+      "src": "/images/Vuestore.jpg",
+      "alt": "Vuestore"
+    },
+    "tag": "Ecommerce"
+  },
+
+  {
+    "title": "Wildfire Tracker",
+    "description": "A Wildfire Tracker App",
+    "url": "https://github.com/harounach/wildfire-tracker",
+    "img": {
+      "src": "/images/Wildfire-Tracker.jpg",
+      "alt": "Wildfire Tracker"
+    },
+    "tag": "Tool"
+  },
+
+  {
+    "title": "TodoList",
+    "description": "A React Todo List App",
+    "url": "https://github.com/harounach/todolist",
+    "img": {
+      "src": "/images/TodoList.jpg",
+      "alt": "TodoList"
+    },
+    "tag": "Tool"
+  },
+
+  {
+    "title": "Eerkel",
+    "description": "Front End for a Chat App",
+    "url": "https://github.com/harounach/eerkel-frontend",
+    "img": {
+      "src": "/images/Eerkel-Frontend.jpg",
+      "alt": "Eerkel"
+    },
+    "tag": "Messaging"
+  },
+
+  {
+    "title": "StoryBook",
+    "description": "Create and share stories about your life",
+    "url": "https://github.com/harounach/storybook",
+    "img": {
+      "src": "/images/Storybook.jpg",
+      "alt": "StoryBook"
+    },
+    "tag": "Personal"
+  },
+
+  {
+    "title": "Lensey",
+    "description": "Lensey is a simple news website",
+    "url": "https://github.com/harounach/lensey",
+    "img": {
+      "src": "/images/Lensey.jpg",
+      "alt": "Lensey"
+    },
+    "tag": "News"
+  },
+
+  {
+    "title": "Suun",
+    "description": "Suun is simple weather website",
+    "url": "https://github.com/harounach/suun",
+    "img": {
+      "src": "/images/Suun.jpg",
+      "alt": "Suun"
+    },
+    "tag": "Weather"
+  },
+
+  {
+    "title": "D3 Bar Chart",
+    "description": "Visualize Data with a Bar Chart",
+    "url": "https://codepen.io/harounacho444/full/zYBXZQJ",
+    "img": {
+      "src": "/images/D3-Bar-Chart.jpg",
+      "alt": "D3 Bar Chart"
+    },
+    "tag": "Visualization"
+  },
+
+  {
+    "title": "D3 Scatter Plot",
+    "description": "Visualize Data with Scatterplot Graph",
+    "url": "https://codepen.io/harounacho444/full/qBNwwoy",
+    "img": {
+      "src": "/images/D3-Scatter-Plot.jpg",
+      "alt": "D3 Scatter Plot"
+    },
+    "tag": "Visualization"
+  },
+
+  {
+    "title": "D3 Heat Map",
+    "description": "Visualize Data with Heat Map",
+    "url": "https://codepen.io/harounacho444/full/BazgJRM",
+    "img": {
+      "src": "/images/D3-Heat-Map.jpg",
+      "alt": "D3 Heat Map"
+    },
+    "tag": "Visualization"
+  },
+
+  {
+    "title": "D3 Choropleth Map",
+    "description": "Visualize Data with Choropleth Map",
+    "url": "https://codepen.io/harounacho444/full/WNxqKzy",
+    "img": {
+      "src": "/images/D3-Choropleth-Map.jpg",
+      "alt": "D3 Choropleth Map"
+    },
+    "tag": "Visualization"
+  },
+
+  {
+    "title": "D3 Tree Map",
+    "description": "Visualize Data with Treemap Diagram",
+    "url": "https://codepen.io/harounacho444/full/QWEXXRJ",
+    "img": {
+      "src": "/images/D3-Tree-Map.jpg",
+      "alt": "D3 Tree Map"
+    },
+    "tag": "Visualization"
+  },
+
+  {
+    "title": "Random Quote Machine",
+    "description": "Build a Random Quote Machine",
+    "url": "https://codepen.io/harounacho444/full/NWNVxoo",
+    "img": {
+      "src": "/images/Random-Quote-Machine.jpg",
+      "alt": "Random Quote Machine"
+    },
+    "tag": "Quotes"
+  },
+
+  {
+    "title": "Markdown Previewer",
+    "description": "Build a Markdown Previewer",
+    "url": "https://codepen.io/harounacho444/full/QWNRNry",
+    "img": {
+      "src": "/images/Markdown-Previewer.jpg",
+      "alt": "Random Quote Machine"
+    },
+    "tag": "Tool"
+  },
+
+  {
+    "title": "Drum Machine",
+    "description": "Build a Drum Machine",
+    "url": "https://codepen.io/harounacho444/full/LYNoaQv",
+    "img": {
+      "src": "/images/Drum-Machine.jpg",
+      "alt": "Random Quote Machine"
+    },
+    "tag": "Entertainment"
+  },
+
+  {
+    "title": "JavaScript Calculator",
+    "description": "Build a JavaScript Calculator",
+    "url": "https://codepen.io/harounacho444/full/BaKeepM",
+    "img": {
+      "src": "/images/JavaScript-Calculator.jpg",
+      "alt": "JavaScript Calculator"
+    },
+    "tag": "Tool"
+  },
+
+  {
+    "title": "25 + 5 Clock",
+    "description": "Build a 25 + 5 Clock",
+    "url": "https://codepen.io/harounacho444/full/ExyLNxO",
+    "img": {
+      "src": "/images/(25+5)-Clock.jpg",
+      "alt": "25 + 5 Clock"
+    },
+    "tag": "Tool"
+  },
+
+  {
+    "title": "Survey Form",
+    "description": "Build a Survey Form",
+    "url": "https://codepen.io/harounacho444/full/KKVVZyz",
+    "img": {
+      "src": "/images/Survey-Form.jpg",
+      "alt": "Survey Form"
+    },
+    "tag": "Analytics"
+  },
+
+  {
+    "title": "Product Landing Page",
+    "description": "Build a Product Landing Page",
+    "url": "https://codepen.io/harounacho444/full/YzwqWEN",
+    "img": {
+      "src": "/images/Product-Landing-Page.jpg",
+      "alt": "Product Landing Page"
+    },
+    "tag": "Business"
+  },
+
+  {
+    "title": "Technical Documentation Page",
+    "description": "Build a Technical Documentation Page",
+    "url": "https://codepen.io/harounacho444/full/RwraBaR",
+    "img": {
+      "src": "/images/Technical-Documentation-Page.jpg",
+      "alt": "Technical Documentation Page"
+    },
+    "tag": "Tech"
+  },
+
+  {
+    "title": "Personal Portfolio Webpage",
+    "description": "Build a Personal Portfolio Webpage",
+    "url": "https://codepen.io/harounacho444/full/XWXKxNa",
+    "img": {
+      "src": "/images/Personal-Porfolio-Webpage.jpg",
+      "alt": "Personal Portfolio Webpage"
+    },
+    "tag": "Personal"
+  }
+]
