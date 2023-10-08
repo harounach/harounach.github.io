@@ -1,0 +1,71 @@
+---
+const { mini, wide, customClasses } = Astro.props;
+---
+
+<ul class:list={["social", { "social--wide": wide }, customClasses]}>
+  <!-- Facebook -->
+  <li>
+    <a
+      href="https://www.facebook.com/harounacho18"
+      title="Facebook"
+      class:list={["social__link", { "social__link--sm": mini }]}
+    >
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
+  </li>
+
+  <!-- Instagram -->
+  <li>
+    <a
+      href="https://www.instagram.com/harounachouche/"
+      title="Instagram"
+      class:list={["social__link", { "social__link--sm": mini }]}
+    >
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+  </li>
+
+  <!-- Twitter -->
+  <li>
+    <a
+      href="https://twitter.com/harounachouche"
+      title="Twitter"
+      class:list={["social__link", { "social__link--sm": mini }]}
+    >
+      <i class="fa-brands fa-twitter"></i>
+    </a>
+  </li>
+
+  <!-- LinkedIn -->
+  <li>
+    <a
+      href="https://www.linkedin.com/in/haroun-achouche/"
+      title="LinkedIn"
+      class:list={["social__link", { "social__link--sm": mini }]}
+    >
+      <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+  </li>
+
+  <!-- Pinterest -->
+  <li>
+    <a
+      href="https://www.pinterest.com/harounachouche/"
+      title="Pinterest"
+      class:list={["social__link", { "social__link--sm": mini }]}
+    >
+      <i class="fa-brands fa-pinterest"></i>
+    </a>
+  </li>
+
+  <!-- Github -->
+  <li>
+    <a
+      href="https://github.com/harounach"
+      title="Github"
+      class:list={["social__link", { "social__link--sm": mini }]}
+    >
+      <i class="fa-brands fa-github"></i>
+    </a>
+  </li>
+</ul>

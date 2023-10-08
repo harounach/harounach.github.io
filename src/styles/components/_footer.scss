@@ -2,6 +2,7 @@
 
 // footer
 .footer {
+  background-color: vars.$gray;
 }
 
 // footer__logo
@@ -18,6 +19,8 @@
 // footer__notice
 .footer__notice {
   background-color: vars.$white;
+  padding: vars.$space-2;
+  text-align: center;
   p {
     color: vars.$neurtral-500;
   }
