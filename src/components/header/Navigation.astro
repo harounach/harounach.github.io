@@ -1,0 +1,16 @@
+---
+import Button from "../actionable/Button.astro";
+---
+
+<nav class="nav">
+  <ul>
+    <li><a class="nav__link" href="/">Home</a></li>
+    <li><a class="nav__link" href="/projects">Projects</a></li>
+    <li>
+      <a class="nav__link" href="/blog">Blog</a>
+    </li>
+    <li>
+      <Button url="#contact" label="Contact" customClasses="nav__link" />
+    </li>
+  </ul>
+</nav>

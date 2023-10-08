@@ -1,0 +1,22 @@
+---
+import Logo from "@components/section/Logo.astro";
+import Navigation from "./Navigation.astro";
+import MenuButton from "./MenuButton.astro";
+
+const { customClasses } = Astro.props;
+---
+
+<header class:list={["header", customClasses]}>
+  <a href="#content" class="skip">Skip to content</a>
+  <div class="container">
+    <div class="header__content">
+      <Logo customClasses="header__logo" />
+      <div class="header__nav">
+        <Navigation />
+      </div>
+      <div class="header__menu-btn">
+        <MenuButton />
+      </div>
+    </div>
+  </div>
+</header>

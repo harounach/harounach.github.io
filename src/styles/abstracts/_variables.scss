@@ -8,12 +8,13 @@ $grid-columns: 12;
 //----- < Colors > ------------------------
 
 // primary
+// #003C8F
 $primary-50: #fcf5e8;
 $primary-100: #faead1;
 $primary-200: #f4d5a4;
 $primary-300: #efc176;
 $primary-400: #eaac48;
-$primary-500: #df931a;
+$primary-500: #003c8f;
 $primary-600: #b77915;
 $primary-700: #895b10;
 $primary-800: #5b3c0b;
@@ -36,12 +37,13 @@ $primary: (
 );
 
 // secondary
+// #F04242
 $secondary-50: #ffe9e5;
 $secondary-100: #ffd3cc;
 $secondary-200: #ffa799;
 $secondary-300: #ff7a66;
 $secondary-400: #ff4e33;
-$secondary-500: #ff4428;
+$secondary-500: #f04242;
 $secondary-600: #cc1b00;
 $secondary-700: #991400;
 $secondary-800: #660e00;
@@ -77,7 +79,7 @@ $neurtral-900: #19191a;
 $neurtral-950: #0c0c0d;
 $white: #ffffff;
 $black: #000000;
-$bg: #16120a;
+$bg: #fff;
 
 // neutral map
 $neutral: (
@@ -96,117 +98,9 @@ $neutral: (
   "black": $black,
 );
 
-// green
-$green-50: #e9fbf0;
-$green-100: #d3f8e1;
-$green-200: #a8f0c2;
-$green-300: #7ce9a4;
-$green-400: #51e186;
-$green-500: #22c55e;
-$green-600: #1eae53;
-$green-700: #16833e;
-$green-800: #0f5729;
-$green-900: #072c15;
-$green-950: #04160a;
-
-// green map
-$green: (
-  "50": $green-50,
-  "100": $green-100,
-  "200": $green-200,
-  "300": $green-300,
-  "400": $green-400,
-  "500": $green-500,
-  "600": $green-600,
-  "700": $green-700,
-  "800": $green-800,
-  "900": $green-900,
-  "950": $green-950,
-);
-
-// orange
-$orange-50: #fef5e7;
-$orange-100: #fdecce;
-$orange-200: #fbd99d;
-$orange-300: #f9c56c;
-$orange-400: #f7b23b;
-$orange-500: #f59f0b;
-$orange-600: #c47f08;
-$orange-700: #935f06;
-$orange-800: #624004;
-$orange-900: #312002;
-$orange-950: #181001;
-
-// orange map
-$orange: (
-  "50": $orange-50,
-  "100": $orange-100,
-  "200": $orange-200,
-  "300": $orange-300,
-  "400": $orange-400,
-  "500": $orange-500,
-  "600": $orange-600,
-  "700": $orange-700,
-  "800": $orange-800,
-  "900": $orange-900,
-  "950": $orange-950,
-);
-
-// red
-$red-50: #fee7eb;
-$red-100: #fccfd6;
-$red-200: #f99fae;
-$red-300: #f76e85;
-$red-400: #f43e5c;
-$red-500: #f43f5d;
-$red-600: #c10b29;
-$red-700: #91081f;
-$red-800: #600615;
-$red-900: #30030a;
-$red-950: #180105;
-
-// red map
-$red: (
-  "50": $red-50,
-  "100": $red-100,
-  "200": $red-200,
-  "300": $red-300,
-  "400": $red-400,
-  "500": $red-500,
-  "600": $red-600,
-  "700": $red-700,
-  "800": $red-800,
-  "900": $red-900,
-  "950": $red-950,
-);
-
-// blue
-$blue-50: #e7f0fe;
-$blue-100: #cee0fd;
-$blue-200: #9dc1fb;
-$blue-300: #6da2f8;
-$blue-400: #3c83f6;
-$blue-500: #3b83f6;
-$blue-600: #0950c3;
-$blue-700: #073c92;
-$blue-800: #042862;
-$blue-900: #021431;
-$blue-950: #010a18;
-
-// blue map
-$blue: (
-  "50": $blue-50,
-  "100": $blue-100,
-  "200": $blue-200,
-  "300": $blue-300,
-  "400": $blue-400,
-  "500": $blue-500,
-  "600": $blue-600,
-  "700": $blue-700,
-  "800": $blue-800,
-  "900": $blue-900,
-  "950": $blue-950,
-);
+// user
+$yellow: #f8c715;
+$gray: #222222;
 
 // text
 $high-text-color: rgba(0, 0, 0, 87%);
@@ -339,11 +233,28 @@ $breakpoints: (
 //----- < Typography > ------------------------
 
 // font-family
-$font-sans: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
-  Cantarell, Noto Sans, sans-serif;
+$font-sans:
+  "Poppins",
+  system-ui,
+  -apple-system,
+  Segoe UI,
+  Roboto,
+  Ubuntu,
+  Cantarell,
+  Noto Sans,
+  sans-serif;
 $font-serif: "Philosopher", ui-serif, serif;
-$font-mono: Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace,
-  SF Mono, Monaco, Droid Sans Mono, Source Code Pro, monospace;
+$font-mono:
+  Dank Mono,
+  Operator Mono,
+  Inconsolata,
+  Fira Mono,
+  ui-monospace,
+  SF Mono,
+  Monaco,
+  Droid Sans Mono,
+  Source Code Pro,
+  monospace;
 
 // font-size
 $font-size-00: 0.75rem; // 12px
@@ -450,31 +361,31 @@ $shadow-color: 220 3% 15%;
 $shadow-strength: 1%;
 $shadow-1: 0 1px 2px -1px hsl(var($shadow-color) /
       calc(var($shadow-strength) + 9%));
-$shadow-2: 0 3px 5px -2px hsl(var($shadow-color) /
-        calc(var($shadow-strength) + 3%)),
+$shadow-2:
+  0 3px 5px -2px hsl(var($shadow-color) / calc(var($shadow-strength) + 3%)),
   0 7px 14px -5px hsl(var($shadow-color) / calc(var($shadow-strength) + 5%));
-$shadow-3: 0 -1px 3px 0 hsl(var($shadow-color) /
-        calc(var($shadow-strength) + 2%)),
+$shadow-3:
+  0 -1px 3px 0 hsl(var($shadow-color) / calc(var($shadow-strength) + 2%)),
   0 1px 2px -5px hsl(var($shadow-color) / calc(var($shadow-strength) + 2%)),
   0 2px 5px -5px hsl(var($shadow-color) / calc(var($shadow-strength) + 4%)),
   0 4px 12px -5px hsl(var($shadow-color) / calc(var($shadow-strength) + 5%)),
   0 12px 15px -5px hsl(var($shadow-color) / calc(var($shadow-strength) + 7%));
-$shadow-4: 0 -2px 5px 0 hsl(var($shadow-color) /
-        calc(var($shadow-strength) + 2%)),
+$shadow-4:
+  0 -2px 5px 0 hsl(var($shadow-color) / calc(var($shadow-strength) + 2%)),
   0 1px 1px -2px hsl(var($shadow-color) / calc(var($shadow-strength) + 3%)),
   0 2px 2px -2px hsl(var($shadow-color) / calc(var($shadow-strength) + 3%)),
   0 5px 5px -2px hsl(var($shadow-color) / calc(var($shadow-strength) + 4%)),
   0 9px 9px -2px hsl(var($shadow-color) / calc(var($shadow-strength) + 5%)),
   0 16px 16px -2px hsl(var($shadow-color) / calc(var($shadow-strength) + 6%));
-$shadow-5: 0 -1px 2px 0 hsl(var($shadow-color) /
-        calc(var($shadow-strength) + 2%)),
+$shadow-5:
+  0 -1px 2px 0 hsl(var($shadow-color) / calc(var($shadow-strength) + 2%)),
   0 2px 1px -2px hsl(var($shadow-color) / calc(var($shadow-strength) + 3%)),
   0 5px 5px -2px hsl(var($shadow-color) / calc(var($shadow-strength) + 3%)),
   0 10px 10px -2px hsl(var($shadow-color) / calc(var($shadow-strength) + 4%)),
   0 20px 20px -2px hsl(var($shadow-color) / calc(var($shadow-strength) + 5%)),
   0 40px 40px -2px hsl(var($shadow-color) / calc(var($shadow-strength) + 7%));
-$shadow-6: 0 -1px 2px 0 hsl(var($shadow-color) /
-        calc(var($shadow-strength) + 2%)),
+$shadow-6:
+  0 -1px 2px 0 hsl(var($shadow-color) / calc(var($shadow-strength) + 2%)),
   0 3px 2px -2px hsl(var($shadow-color) / calc(var($shadow-strength) + 3%)),
   0 7px 5px -2px hsl(var($shadow-color) / calc(var($shadow-strength) + 3%)),
   0 12px 10px -2px hsl(var($shadow-color) / calc(var($shadow-strength) + 4%)),

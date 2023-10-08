@@ -1,11 +1,18 @@
 ---
-import "../styles/app.css";
 import BaseLayout from "@layouts/BaseLayout.astro";
 
 const pageTitle = "Haroun Achouche Portfolio";
+const metaDescription =
+  "Haroun Achouche portfolio, skills, eductaion, experience, certification, Haroun Ach Portfolio";
+const metaKeyWords = "Haroun Achouche,Haroun Ach, Haroun Ach Portfolio";
 ---
 
-<BaseLayout pageTitle={pageTitle} mainClass="page__main">
+<BaseLayout
+  pageTitle={pageTitle}
+  mainClass="page__main"
+  metaDescription={metaDescription}
+  metaKeyWords={metaKeyWords}
+>
   <div class="container">
     <!-- About section -->
     <section class="about section" id="About">

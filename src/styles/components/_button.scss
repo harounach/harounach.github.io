@@ -8,14 +8,27 @@
   @include mixins.buttonText();
   text-decoration: none;
   color: vars.$white;
-  background-color: transparent;
+  background-color: vars.$primary-500;
   border: vars.$border solid vars.$primary-500;
   border-radius: vars.$radius-xs;
   cursor: pointer;
+
   // hover
   &:hover {
-    color: vars.$black;
-    background-color: vars.$primary-500;
+    color: vars.$primary-500;
+    background-color: vars.$white;
+  }
+
+  // btn--secondary
+  &--secondary {
+    color: vars.$primary-500;
+    background-color: vars.$white;
+
+    // hover
+    &:hover {
+      color: vars.$white;
+      background-color: vars.$primary-500;
+    }
   }
 }
 
@@ -48,7 +61,7 @@
 .menu-btn__bar {
   height: 4px;
   width: 100%;
-  background-color: vars.$white;
+  background-color: vars.$neurtral-800;
   border-radius: vars.$border-sm;
   transition:
     transform 0.3s,

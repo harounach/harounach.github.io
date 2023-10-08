@@ -29,34 +29,6 @@
   }
 }
 
-// green
-@each $color in map.keys(vars.$green) {
-  .text-green-#{$color} {
-    color: map.get(vars.$green, $color);
-  }
-}
-
-// orange
-@each $color in map.keys(vars.$orange) {
-  .text-orange-#{$color} {
-    color: map.get(vars.$orange, $color);
-  }
-}
-
-// red
-@each $color in map.keys(vars.$red) {
-  .text-red-#{$color} {
-    color: map.get(vars.$red, $color);
-  }
-}
-
-// blue
-@each $color in map.keys(vars.$blue) {
-  .text-blue-#{$color} {
-    color: map.get(vars.$blue, $color);
-  }
-}
-
 // ----- Generate background colors ----------------------------
 // primary
 @each $color in map.keys(vars.$primary) {
@@ -82,33 +54,5 @@
     .bg-neutral-#{$color} {
       background-color: map.get(vars.$neutral, $color);
     }
-  }
-}
-
-// green
-@each $color in map.keys(vars.$green) {
-  .bg-green-#{$color} {
-    background-color: map.get(vars.$green, $color);
-  }
-}
-
-// orange
-@each $color in map.keys(vars.$orange) {
-  .bg-orange-#{$color} {
-    background-color: map.get(vars.$orange, $color);
-  }
-}
-
-// red
-@each $color in map.keys(vars.$red) {
-  .bg-red-#{$color} {
-    background-color: map.get(vars.$red, $color);
-  }
-}
-
-// blue
-@each $color in map.keys(vars.$blue) {
-  .bg-blue-#{$color} {
-    background-color: map.get(vars.$blue, $color);
   }
 }

@@ -1,0 +1,16 @@
+---
+const { label, type, url, customClasses } = Astro.props;
+const buttonType = type ? type : "button";
+---
+
+{
+  url ? (
+    <a href={url} class:list={["btn", customClasses]}>
+      {label}
+    </a>
+  ) : (
+    <button type={buttonType} class:list={["btn", customClasses]}>
+      {label}
+    </button>
+  )
+}

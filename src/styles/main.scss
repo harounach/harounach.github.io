@@ -24,18 +24,7 @@
 @use "./components/header";
 @use "./components/footer";
 @use "./components/social";
-@use "./components/notification";
 @use "./components/link-list";
-@use "./components/form";
-@use "./components/text-input";
-@use "./components/text-area";
-@use "./components/select-input";
-@use "./components/date-picker";
-@use "./components/gallery";
-@use "./components/pagination";
-@use "./components/review-card";
-@use "./components/carousel";
-@use "./components/tab";
 @use "./components/button";
 
 // <layout>
@@ -54,16 +43,6 @@
 
 // <pages>
 @use "./pages/home-page";
-@use "./pages/about-page";
-@use "./pages/menu-page";
-@use "./pages/contact-page";
-@use "./pages/gallery-page";
-@use "./pages/reservation-page";
-@use "./pages/event-page";
-@use "./pages/careers-page";
-@use "./pages/gifts-page";
-@use "./pages/policy-page";
-@use "./pages/terms-page";
 
 // <themes>
 // @use "./themes/theme-values";
