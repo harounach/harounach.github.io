@@ -1,9 +1,13 @@
 ---
+import { getEntry } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Button from "@components/actionable/Button.astro";
 import SkillCard from "@components/section/SkillCard.astro";
 import Heading from "@components/section/Heading.astro";
+import CertCard from "@components/section/CertCard.astro";
 
+// Get certifications collection entry
+const certCollection = await getEntry("certifications", "certifications");
 const pageTitle = "Haroun Achouche Portfolio";
 const metaDescription =
   "Haroun Achouche portfolio, skills, eductaion, experience, certification, Haroun Ach Portfolio";
@@ -141,339 +145,27 @@ const metaKeyWords = "Haroun Achouche,Haroun Ach, Haroun Ach Portfolio";
   </section>
 
   <!-- Certifications -->
+  <section id="Certifications" class="py-12">
+    <div class="container">
+      <Heading
+        title="Certifications"
+        description="Certifications I've earned"
+        center
+        centerDescription
+      />
 
-  <section class="cert section" id="Certifications">
-    <h3 class="title">Certifications</h3>
-    <div class="section">
-      <article class="cert__grid">
-        <!-- 01 -->
-        <!-- Responsive Web Design -->
-        <div class="cert-card">
-          <div class="cert-card__icon-wrapper">
-            <i class="cert-card__icon fas fa-award"></i>
-          </div>
-          <div class="cert-card__content">
-            <h5 class="cert-card__name">Responsive Web Design</h5>
-            <h6 class="cert-card__issuer">By FreeCodeCamp</h6>
-            <a
-              href="https://www.freecodecamp.org/certification/harounach/responsive-web-design"
-              target="_blank"
-              class="cert-card__btn btn"
-              >View <i class="btn__icon fas fa-chevron-right"></i></a
-            >
-          </div>
-        </div>
-
-        <!-- 02 -->
-        <!-- JavaScript Algorithms and Data Structures -->
-        <div class="cert-card">
-          <div class="cert-card__icon-wrapper">
-            <i class="cert-card__icon fas fa-award"></i>
-          </div>
-          <div class="cert-card__content">
-            <h5 class="cert-card__name">
-              JavaScript Algorithms and Data Structures
-            </h5>
-            <h6 class="cert-card__issuer">By FreeCodeCamp</h6>
-            <a
-              href="https://www.freecodecamp.org/certification/harounach/javascript-algorithms-and-data-structures"
-              target="_blank"
-              class="cert-card__btn btn"
-              >View <i class="btn__icon fas fa-chevron-right"></i></a
-            >
-          </div>
-        </div>
-
-        <!-- 03 -->
-        <!-- Front End Libraries -->
-        <div class="cert-card">
-          <div class="cert-card__icon-wrapper">
-            <i class="cert-card__icon fas fa-award"></i>
-          </div>
-          <div class="cert-card__content">
-            <h5 class="cert-card__name">Front End Libraries</h5>
-            <h6 class="cert-card__issuer">By FreeCodeCamp</h6>
-            <a
-              href="https://www.freecodecamp.org/certification/harounach/front-end-libraries"
-              target="_blank"
-              class="cert-card__btn btn"
-              >View <i class="btn__icon fas fa-chevron-right"></i></a
-            >
-          </div>
-        </div>
-
-        <!-- 04 -->
-        <!-- Data Visualization -->
-        <div class="cert-card">
-          <div class="cert-card__icon-wrapper">
-            <i class="cert-card__icon fas fa-award"></i>
-          </div>
-          <div class="cert-card__content">
-            <h5 class="cert-card__name">Data Visualization</h5>
-            <h6 class="cert-card__issuer">By FreeCodeCamp</h6>
-            <a
-              href="https://www.freecodecamp.org/certification/harounach/data-visualization"
-              target="_blank"
-              class="cert-card__btn btn"
-              download="Haroun-Achouche-Google-Digital-Garage-Certificate.pdf"
-              >View <i class="btn__icon fas fa-chevron-right"></i></a
-            >
-          </div>
-        </div>
-
-        <!-- 05 -->
-        <!-- APIs and Microservices -->
-        <div class="cert-card">
-          <div class="cert-card__icon-wrapper">
-            <i class="cert-card__icon fas fa-award"></i>
-          </div>
-          <div class="cert-card__content">
-            <h5 class="cert-card__name">APIs and Microservices</h5>
-            <h6 class="cert-card__issuer">By FreeCodeCamp</h6>
-            <a
-              href="https://www.freecodecamp.org/certification/harounach/apis-and-microservices"
-              target="_blank"
-              class="cert-card__btn btn"
-              >View <i class="btn__icon fas fa-chevron-right"></i></a
-            >
-          </div>
-        </div>
-
-        <!-- 06 -->
-        <!-- MongoDB Basics -->
-        <div class="cert-card">
-          <div class="cert-card__icon-wrapper">
-            <i class="cert-card__icon fas fa-award"></i>
-          </div>
-          <div class="cert-card__content">
-            <h5 class="cert-card__name">MongoDB Basics</h5>
-            <h6 class="cert-card__issuer">By MongoDB</h6>
-            <a
-              href="https://university.mongodb.com/course_completion/8459d44c-38d9-4e24-afa9-266f3372359e?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
-              target="_blank"
-              class="cert-card__btn btn"
-              >View <i class="btn__icon fas fa-chevron-right"></i></a
-            >
-          </div>
-        </div>
-
-        <!-- 07 -->
-        <!-- Basic Cluster Administration -->
-        <div class="cert-card">
-          <div class="cert-card__icon-wrapper">
-            <i class="cert-card__icon fas fa-award"></i>
-          </div>
-          <div class="cert-card__content">
-            <h5 class="cert-card__name">Basic Cluster Administration</h5>
-            <h6 class="cert-card__issuer">By MongoDB</h6>
-            <a
-              href="https://university.mongodb.com/course_completion/b930b053-badf-4299-b84e-a49b78802c3d?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
-              target="_blank"
-              class="cert-card__btn btn"
-              >View <i class="btn__icon fas fa-chevron-right"></i></a
-            >
-          </div>
-        </div>
-
-        <!-- 08 -->
-        <!-- The MongoDB Aggregation Framework -->
-        <div class="cert-card">
-          <div class="cert-card__icon-wrapper">
-            <i class="cert-card__icon fas fa-award"></i>
-          </div>
-          <div class="cert-card__content">
-            <h5 class="cert-card__name">The MongoDB Aggregation Framework</h5>
-            <h6 class="cert-card__issuer">By MongoDB</h6>
-            <a
-              href="https://university.mongodb.com/course_completion/08889396-fb40-466c-8d19-f4079e036735?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
-              target="_blank"
-              class="cert-card__btn btn"
-              >View <i class="btn__icon fas fa-chevron-right"></i></a
-            >
-          </div>
-        </div>
-
-        <!-- 09 -->
-        <!-- MongoDB for Javascript Developers -->
-        <div class="cert-card">
-          <div class="cert-card__icon-wrapper">
-            <i class="cert-card__icon fas fa-award"></i>
-          </div>
-          <div class="cert-card__content">
-            <h5 class="cert-card__name">MongoDB for Javascript Developers</h5>
-            <h6 class="cert-card__issuer">By MongoDB</h6>
-            <a
-              href="https://university.mongodb.com/course_completion/05e6d4c7-e1c0-410b-96d8-4ca5317e13d3?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
-              target="_blank"
-              class="cert-card__btn btn"
-              >View <i class="btn__icon fas fa-chevron-right"></i></a
-            >
-          </div>
-        </div>
-
-        <!-- 10 -->
-        <!-- MongoDB Performance -->
-        <div class="cert-card">
-          <div class="cert-card__icon-wrapper">
-            <i class="cert-card__icon fas fa-award"></i>
-          </div>
-          <div class="cert-card__content">
-            <h5 class="cert-card__name">MongoDB Performance</h5>
-            <h6 class="cert-card__issuer">By MongoDB</h6>
-            <a
-              href="https://university.mongodb.com/course_completion/c878c70a-4df3-429d-b919-a5ac04b8830e?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
-              target="_blank"
-              class="cert-card__btn btn"
-              >View <i class="btn__icon fas fa-chevron-right"></i></a
-            >
-          </div>
-        </div>
-
-        <!-- 11 -->
-        <!-- Data Modeling -->
-        <div class="cert-card">
-          <div class="cert-card__icon-wrapper">
-            <i class="cert-card__icon fas fa-award"></i>
-          </div>
-          <div class="cert-card__content">
-            <h5 class="cert-card__name">Data Modeling</h5>
-            <h6 class="cert-card__issuer">By MongoDB</h6>
-            <a
-              href="https://university.mongodb.com/course_completion/b0e70ebd-5245-4f89-a858-06d2235312d2?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing"
-              target="_blank"
-              class="cert-card__btn btn"
-              >View <i class="btn__icon fas fa-chevron-right"></i></a
-            >
-          </div>
-        </div>
-
-        <!-- 12 -->
-        <!-- Fundamentals of digital marketing -->
-        <div class="cert-card">
-          <div class="cert-card__icon-wrapper">
-            <i class="cert-card__icon fas fa-award"></i>
-          </div>
-          <div class="cert-card__content">
-            <h5 class="cert-card__name">Fundamentals of digital marketing</h5>
-            <h6 class="cert-card__issuer">By Google</h6>
-            <a
-              href="./assets/Haroun-Achouche-Google-Digital-Garage-Certificate.pdf"
-              target="_blank"
-              class="cert-card__btn btn"
-              >View <i class="btn__icon fas fa-chevron-right"></i></a
-            >
-          </div>
-        </div>
-
-        <!-- 13 -->
-        <!-- Google Analytics for Beginners -->
-        <div class="cert-card">
-          <div class="cert-card__icon-wrapper">
-            <i class="cert-card__icon fas fa-award"></i>
-          </div>
-          <div class="cert-card__content">
-            <h5 class="cert-card__name">Google Analytics for Beginners</h5>
-            <h6 class="cert-card__issuer">By Google</h6>
-            <a
-              href="https://analytics.google.com/analytics/academy/certificate/RE4EAJboT3WjNDF3qVAmYg"
-              target="_blank"
-              class="cert-card__btn btn"
-              >View <i class="btn__icon fas fa-chevron-right"></i></a
-            >
-          </div>
-        </div>
-
-        <!-- 14 -->
-        <!-- Advanced Google Analyticss -->
-        <div class="cert-card">
-          <div class="cert-card__icon-wrapper">
-            <i class="cert-card__icon fas fa-award"></i>
-          </div>
-          <div class="cert-card__content">
-            <h5 class="cert-card__name">Advanced Google Analytics</h5>
-            <h6 class="cert-card__issuer">By Google</h6>
-            <a
-              href="https://analytics.google.com/analytics/academy/certificate/w-f6X-a-RfmMG4vE1ve94A"
-              target="_blank"
-              class="cert-card__btn btn"
-              >View <i class="btn__icon fas fa-chevron-right"></i></a
-            >
-          </div>
-        </div>
-
-        <!-- 15 -->
-        <!-- Google Tag Manager Fundamentals -->
-        <div class="cert-card">
-          <div class="cert-card__icon-wrapper">
-            <i class="cert-card__icon fas fa-award"></i>
-          </div>
-          <div class="cert-card__content">
-            <h5 class="cert-card__name">Google Tag Manager Fundamentals</h5>
-            <h6 class="cert-card__issuer">By Google</h6>
-            <a
-              href="https://analytics.google.com/analytics/academy/certificate/MmfJ-dlcSvmMmj-t_qyxoA"
-              target="_blank"
-              class="cert-card__btn btn"
-              >View <i class="btn__icon fas fa-chevron-right"></i></a
-            >
-          </div>
-        </div>
-
-        <!-- 16 -->
-        <!-- Ecommerce Analytics: From Data to Decisions -->
-        <div class="cert-card">
-          <div class="cert-card__icon-wrapper">
-            <i class="cert-card__icon fas fa-award"></i>
-          </div>
-          <div class="cert-card__content">
-            <h5 class="cert-card__name">
-              Ecommerce Analytics: From Data to Decisions
-            </h5>
-            <h6 class="cert-card__issuer">By Google</h6>
-            <a
-              href="https://analytics.google.com/analytics/academy/certificate/HE7Zc8P2Ru-xWtV8nj0nPw"
-              target="_blank"
-              class="cert-card__btn btn"
-              >View <i class="btn__icon fas fa-chevron-right"></i></a
-            >
-          </div>
-        </div>
-
-        <!-- 17 -->
-        <!-- Google My Business -->
-        <div class="cert-card">
-          <div class="cert-card__icon-wrapper">
-            <i class="cert-card__icon fas fa-award"></i>
-          </div>
-          <div class="cert-card__content">
-            <h5 class="cert-card__name">Google My Business</h5>
-            <h6 class="cert-card__issuer">By Google</h6>
-            <a
-              href="https://skillshop.exceedlms.com/student/award/mq4cAVME6jowVNn6KHA9CS2J"
-              target="_blank"
-              class="cert-card__btn btn"
-              >View <i class="btn__icon fas fa-chevron-right"></i></a
-            >
-          </div>
-        </div>
-
-        <!-- 18 -->
-        <!-- Advanced Google Analyticss -->
-        <div class="cert-card">
-          <div class="cert-card__icon-wrapper">
-            <i class="cert-card__icon fas fa-award"></i>
-          </div>
-          <div class="cert-card__content">
-            <h5 class="cert-card__name">Advanced Google Analytics</h5>
-            <h6 class="cert-card__issuer">By Google</h6>
-            <a
-              href="https://analytics.google.com/analytics/academy/certificate/w-f6X-a-RfmMG4vE1ve94A"
-              target="_blank"
-              class="cert-card__btn btn"
-              >View <i class="btn__icon fas fa-chevron-right"></i></a
-            >
-          </div>
-        </div>
+      <article class="grid grid-col-2 gap-6">
+        {
+          certCollection.data.map((cert) => {
+            return (
+              <CertCard
+                title={cert.title}
+                issuer={cert.issuer}
+                url={cert.url}
+              />
+            );
+          })
+        }
       </article>
     </div>
   </section>
