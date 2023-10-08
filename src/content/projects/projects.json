@@ -7,7 +7,8 @@
       "src": "/images/VegeFru.jpg",
       "alt": "VegeFru"
     },
-    "tag": "Ecommerce"
+    "tag": "Ecommerce",
+    "featured": true
   },
 
   {
@@ -95,7 +96,8 @@
       "src": "/images/Suun.jpg",
       "alt": "Suun"
     },
-    "tag": "Weather"
+    "tag": "Weather",
+    "featured": true
   },
 
   {
@@ -106,7 +108,8 @@
       "src": "/images/D3-Bar-Chart.jpg",
       "alt": "D3 Bar Chart"
     },
-    "tag": "Visualization"
+    "tag": "Visualization",
+    "featured": true
   },
 
   {

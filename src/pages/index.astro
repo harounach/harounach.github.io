@@ -11,6 +11,10 @@ import ProjectCard from "@components/section/ProjectCard.astro";
 const certCollection = await getEntry("certifications", "certifications");
 const projectCollection = await getEntry("projects", "projects");
 
+const feauturedProjects = projectCollection.data.filter(
+  (proj) => proj.featured === true,
+);
+
 const pageTitle = "Haroun Achouche Portfolio";
 const metaDescription =
   "Haroun Achouche portfolio, skills, eductaion, experience, certification, Haroun Ach Portfolio";
@@ -182,9 +186,9 @@ const metaKeyWords = "Haroun Achouche,Haroun Ach, Haroun Ach Portfolio";
         center
         centerDescription
       />
-      <article class="grid grid-col-3 gap-6">
+      <article class="grid grid-col-3 gap-6 mb-6">
         {
-          projectCollection.data.map((proj) => {
+          feauturedProjects.map((proj) => {
             return (
               <ProjectCard
                 imgUrl={proj.img.src}
@@ -198,6 +202,9 @@ const metaKeyWords = "Haroun Achouche,Haroun Ach, Haroun Ach Portfolio";
           })
         }
       </article>
+      <div class="flex justify-content-center">
+        <Button label="View All Projects" url="/projects" />
+      </div>
     </div>
   </section>
 </BaseLayout>
