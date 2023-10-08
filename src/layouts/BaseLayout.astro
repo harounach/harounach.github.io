@@ -1,6 +1,7 @@
 ---
 import "../styles/main.scss";
 import Header from "@components/header/Header.astro";
+import BackButton from "@components/actionable/BackButton.astro";
 const { pageTitle, mainClass, metaDescription, metaKeyWords } = Astro.props;
 ---
 
@@ -54,9 +55,7 @@ const { pageTitle, mainClass, metaDescription, metaKeyWords } = Astro.props;
     <footer class="page__footer footer">
       <p class="copyright-notice">© Copyright Haroun Achouche 2022</p>
     </footer>
-    <a href="#About" class="page__back btn btn--back btn--active scrollto">
-      <i class="btn__icon fas fa-chevron-up"></i>
-    </a>
+    <BackButton />
 
     <!-- App.js -->
     <script src="../scripts/app.js"></script>
