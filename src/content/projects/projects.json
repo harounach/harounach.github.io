@@ -1,5 +1,17 @@
 [
   {
+    "title": "Little Table",
+    "description": "Restaurant Website",
+    "url": "https://littletable.netlify.app",
+    "img": {
+      "src": "/images/Little-Table-Thumbnail.png",
+      "alt": "Little Table Restaurant"
+    },
+    "tag": "Business",
+    "featured": true
+  },
+
+  {
     "title": "VegeFru",
     "description": "A Online Grocery Store Web App",
     "url": "https://github.com/harounach/vegefru",
