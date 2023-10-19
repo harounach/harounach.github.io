@@ -15,6 +15,26 @@ const feauturedProjects = projectCollection.data.filter(
   (proj) => proj.featured === true,
 );
 
+// Skills
+const skills = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Node.js",
+  "SASS",
+  "PHP",
+  "WordPress",
+  "Python",
+  "Git/Github",
+  "CI/CD",
+  "Docker",
+  "Firebase",
+  "AWS",
+  "Google Workspace",
+  "Figma",
+];
+
 const pageTitle = "Haroun Achouche Portfolio";
 const metaDescription =
   "Haroun Achouche portfolio, skills, eductaion, experience, certification, Haroun Ach Portfolio";
@@ -81,20 +101,11 @@ const metaKeyWords = "Haroun Achouche,Haroun Ach, Haroun Ach Portfolio";
       />
 
       <div class="flex flex-wrap gap-3 | md:w-75 md:mx-auto">
-        <SkillCard label="HTML" />
-        <SkillCard label="CSS" />
-        <SkillCard label="JavaScript" />
-        <SkillCard label="React" />
-        <SkillCard label="Node.js" />
-        <SkillCard label="SASS" />
-        <SkillCard label="PHP" />
-        <SkillCard label="WordPress" />
-        <SkillCard label="Python" />
-        <SkillCard label="Git/Github" />
-        <SkillCard label="CI/CD" />
-        <SkillCard label="Docker" />
-        <SkillCard label="Firebase" />
-        <SkillCard label="AWS" />
+        {
+          skills.map((skill) => {
+            return <SkillCard label={skill} />;
+          })
+        }
       </div>
     </div>
   </section>
