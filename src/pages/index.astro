@@ -172,7 +172,7 @@ const metaKeyWords = "Haroun Achouche,Haroun Ach, Haroun Ach Portfolio";
         centerDescription
       />
 
-      <article class="grid grid-col-1 gap-6 md:grid-col-2">
+      <article class="grid grid-col-1 gap-6 | md:grid-col-2">
         {
           certCollection.data.map((cert) => {
             return (
@@ -197,7 +197,9 @@ const metaKeyWords = "Haroun Achouche,Haroun Ach, Haroun Ach Portfolio";
         center
         centerDescription
       />
-      <article class="grid grid-col-3 gap-6 mb-6">
+      <article
+        class="grid grid-col-1 gap-6 mb-6 | md:grid-col-2 | lg:grid-col-3"
+      >
         {
           feauturedProjects.map((proj) => {
             return (
