@@ -1,5 +1,9 @@
 # Haroun Ach Portfolio
 
-Find me on Twitter [@harounach8](https://twitter.com/harounach8)
+## Find me on:
 
-Find me on LinkedIn [Haroun Ach](https://www.linkedin.com/in/haroun-achouche-24147212b/)
+Twitter [@harounachouche](https://twitter.com/harounachouche)
+
+LinkedIn [Haroun Ach](https://www.linkedin.com/in/haroun-achouche/)
+
+My [Portfolio](https://harounach.github.io/)
