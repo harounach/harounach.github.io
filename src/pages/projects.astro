@@ -1,12 +1,8 @@
 ---
-import { getEntry } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
-import ProjectCard from "@components/section/ProjectCard.astro";
+import ProjectList from "@components/section/projects/ProjectList.astro";
 
-// Get projects collection entry
-const projectCollection = await getEntry("projects", "projects");
-
-const pageTitle = "Haroun Achouche Portfolio";
+const pageTitle = "Projects | Haroun Achouche Portfolio";
 const metaDescription =
   "Haroun Achouche portfolio, skills, eductaion, experience, certification, Haroun Ach Portfolio";
 const metaKeyWords = "Haroun Achouche,Haroun Ach, Haroun Ach Portfolio";
@@ -14,31 +10,15 @@ const metaKeyWords = "Haroun Achouche,Haroun Ach, Haroun Ach Portfolio";
 
 <BaseLayout
   pageTitle={pageTitle}
-  mainClass="page__main"
   metaDescription={metaDescription}
   metaKeyWords={metaKeyWords}
 >
-  <section class="py-12">
-    <div class="container">
-      <h1 class="display-base text-center mb-6">Projects</h1>
-      <article
-        class="grid grid-col-1 gap-6 mb-6 | md:grid-col-2 | lg:grid-col-3"
-      >
-        {
-          projectCollection.data.map((proj) => {
-            return (
-              <ProjectCard
-                imgUrl={proj.img.src}
-                imgAlt={proj.img.alt}
-                title={proj.title}
-                descrition={proj.description}
-                url={proj.url}
-                tag={proj.tag}
-              />
-            );
-          })
-        }
-      </article>
-    </div>
-  </section>
+  <main id="content" class="project-page">
+    <section class="section project-page__projects">
+      <div class="container">
+        <h1 class="display-base project-page__title">Projects</h1>
+        <ProjectList />
+      </div>
+    </section>
+  </main>
 </BaseLayout>

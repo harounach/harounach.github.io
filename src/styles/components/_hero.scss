@@ -1,0 +1,96 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins";
+@use "../base/typography" as type;
+
+// hero
+.hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+
+  // tablet
+  @include mixins.breakpoint(sm) {
+    flex-direction: row;
+  }
+
+  // hero__graphic
+  &__graphic {
+    width: 60%;
+    overflow: hidden;
+    border-radius: 0.5rem;
+
+    // tablet
+    @include mixins.breakpoint(sm) {
+      width: 30%;
+    }
+  }
+
+  // hero__img
+  &__img {
+    display: block;
+    width: 100%;
+  }
+
+  // hero__content
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+
+    // tablet
+    @include mixins.breakpoint(sm) {
+      width: 65%;
+    }
+  }
+
+  // hero__title
+  &__title {
+    color: #000;
+    font-size: 60px;
+    text-align: center;
+    position: relative;
+
+    // tablet
+    @include mixins.breakpoint(sm) {
+      text-align: left;
+    }
+
+    // hero__title--position
+    &--position {
+      color: vars.$tertiary-800;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 439px;
+      height: 439px;
+      position: absolute;
+      left: calc(50% - 439px / 2);
+      top: calc(50% - 439px / 2);
+      background-image: url("/images/Decor-Hero.svg");
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+
+  // hero__description
+  &__description {
+    color: rgba($color: #000, $alpha: 0.75);
+  }
+
+  // hero__btn
+  &__btn {
+    align-self: center;
+
+    // tablet
+    @include mixins.breakpoint(sm) {
+      align-self: flex-start;
+    }
+  }
+}

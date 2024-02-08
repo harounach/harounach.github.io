@@ -1,0 +1,24 @@
+---
+import Button from "@components/actionable/Button.astro";
+
+const { imgUrl, imgAlt, title, descrition, url, tag } = Astro.props;
+---
+
+<div class="project-card">
+  <img src={imgUrl} alt={imgAlt} class="project-card__thumbnail" />
+
+  <div class="project-card__content">
+    <h5 class="project-card__title title-base">{title}</h5>
+    <h6 class="project-card__desc body-base">
+      {descrition}
+    </h6>
+
+    <Button
+      label="View"
+      url={url}
+      icon="fas fa-chevron-right"
+      customClasses="project-card__btn"
+    />
+  </div>
+  <span class="project-card__tag">{tag}</span>
+</div>

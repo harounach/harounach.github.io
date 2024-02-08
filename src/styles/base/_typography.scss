@@ -5,19 +5,19 @@
 // display-large
 .display-large {
   @include mixins.displayLargeText();
-  color: vars.$primary-500;
+  color: vars.$neutral-900;
 }
 
 // display-base
 .display-base {
   @include mixins.displayBaseText();
-  color: vars.$primary-500;
+  color: vars.$neutral-900;
 }
 
 // title-large
 .title-large {
   @include mixins.titleLargeText();
-  color: vars.$primary-500;
+  color: vars.$neutral-900;
 }
 
 // title-medium
@@ -50,6 +50,30 @@
   color: vars.$black;
 }
 
+.title {
+  color: vars.$neutral-900;
+  margin-bottom: vars.$space-3;
+}
+
+.subtitle {
+  color: vars.$neutral-900;
+  margin-bottom: vars.$space-3;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 56px;
+    left: -1.25rem;
+    top: -2px;
+    position: absolute;
+    background-image: url("/images/Decor-Subtitle.svg");
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}
+
 .text-center {
   text-align: center;
 }
@@ -76,89 +100,4 @@
 
 .text-sm {
   max-width: 448px;
-}
-
-@each $breakpoint in map.keys(vars.$breakpoints) {
-  @include mixins.breakpoint($breakpoint) {
-    .#{$breakpoint}\:responsive {
-      max-width: 100%;
-      height: auto;
-    }
-
-    // display-large
-    .#{$breakpoint}\:display-large {
-      @include mixins.displayLargeText();
-      color: vars.$primary-500;
-    }
-
-    // display-base
-    .#{$breakpoint}\:display-base {
-      @include mixins.displayBaseText();
-      color: vars.$primary-500;
-    }
-
-    // title-large
-    .#{$breakpoint}\:title-large {
-      @include mixins.titleLargeText();
-      color: vars.$primary-500;
-    }
-
-    // title-medium
-    .#{$breakpoint}\:title-medium {
-      @include mixins.titleMediumText();
-      color: vars.$white;
-    }
-
-    // title-base
-    .#{$breakpoint}\:title-base {
-      @include mixins.titleBaseText();
-      color: vars.$white;
-    }
-
-    // button
-    .#{$breakpoint}\:button {
-      @include mixins.buttonText();
-      color: vars.$white;
-    }
-
-    // body-large
-    .#{$breakpoint}\:body-large {
-      @include mixins.bodyLargeText();
-      color: vars.$white;
-    }
-
-    // body-base
-    .#{$breakpoint}\:body-base {
-      @include mixins.bodyBaseText();
-      color: vars.$white;
-    }
-
-    .#{$breakpoint}\:text-center {
-      text-align: center;
-    }
-
-    .#{$breakpoint}\:text-start {
-      text-align: start;
-    }
-
-    .#{$breakpoint}\:text-end {
-      text-align: end;
-    }
-
-    .#{$breakpoint}\:text-confined {
-      max-width: 768px;
-    }
-
-    .#{$breakpoint}\:text-lg {
-      max-width: 768px;
-    }
-
-    .#{$breakpoint}\:text-md {
-      max-width: 576px;
-    }
-
-    .#{$breakpoint}\:text-sm {
-      max-width: 448px;
-    }
-  }
 }

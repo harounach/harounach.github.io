@@ -1,0 +1,22 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mixins;
+
+.skill-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+// skill-card
+.skill-card {
+  display: inline-block;
+  border: 2px solid #000;
+  background-color: #fff;
+  color: #000;
+  border-radius: 100px;
+  padding: 10px 1rem;
+  font-size: 20px;
+  font-weight: 600;
+  box-shadow: 1px 4px 16px rgba(0, 0, 0, 0.25);
+}

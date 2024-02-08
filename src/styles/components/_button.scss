@@ -3,32 +3,56 @@
 
 // btn
 .btn {
-  display: inline-flex;
-  padding: vars.$space-2 vars.$space-3;
-  @include mixins.buttonText();
-  text-decoration: none;
-  color: vars.$white;
+  border: none;
+  border-radius: 0.25rem;
   background-color: vars.$primary-500;
-  border: vars.$border solid vars.$primary-500;
-  border-radius: vars.$radius-xs;
+  color: vars.$white;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-decoration: none;
+  padding: 0.625rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
+  box-shadow: 1px 4px 16px rgba(0, 0, 0, 0.25);
+  transition:
+    box-shadow 0.3s,
+    background-color 0.3s;
 
-  // hover
   &:hover {
-    color: vars.$primary-500;
-    background-color: vars.$white;
+    box-shadow: 1px 3px 9px rgba(0, 0, 0, 0.25);
+    background-color: vars.$primary-400;
   }
 
-  // btn--secondary
-  &--secondary {
-    color: vars.$primary-500;
-    background-color: vars.$white;
+  //btn__icon
+  &__icon {
+    font-size: 1.125rem;
+    margin-left: 0.5rem;
+    color: vars.$white;
+  }
+}
 
-    // hover
-    &:hover {
-      color: vars.$white;
-      background-color: vars.$primary-500;
-    }
+.btn-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  &--left {
+    justify-content: flex-start;
+  }
+
+  &--center {
+    justify-content: center;
+  }
+
+  &--right {
+    justify-content: flex-end;
+  }
+
+  &--space-between {
+    justify-content: space-between;
   }
 }
 
@@ -61,7 +85,7 @@
 .menu-btn__bar {
   height: 4px;
   width: 100%;
-  background-color: vars.$neurtral-800;
+  background-color: vars.$neutral-800;
   border-radius: vars.$border-sm;
   transition:
     transform 0.3s,
@@ -75,10 +99,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: vars.$white;
   background-color: vars.$primary-500;
+  color: vars.$white;
   font-size: vars.$font-size-2;
   border: none;
+  border-radius: vars.$radius-sm;
+  box-shadow: 1px 4px 16px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   position: fixed;
   bottom: 1rem;
@@ -88,9 +114,24 @@
   visibility: visible;
   opacity: 1;
 
+  transition:
+    box-shadow 0.3s,
+    background-color 0.3s;
+
+  &:hover {
+    box-shadow: 1px 3px 9px rgba(0, 0, 0, 0.25);
+    background-color: vars.$primary-400;
+  }
+
   // hidden
   &.hidden {
     visibility: hidden;
     opacity: 0;
+  }
+
+  // back-btn__icon
+  &__icon {
+    font-size: 1.125rem;
+    color: vars.$white;
   }
 }

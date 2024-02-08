@@ -6,7 +6,7 @@
 // 05-animations
 @use "./abstracts/variables";
 @use "./abstracts/mixins";
-// @use "./abstracts/helpers";
+@use "./abstracts/helpers";
 
 // <vendors>
 
@@ -23,29 +23,26 @@
 // <components>
 @use "./components/header";
 @use "./components/footer";
+@use "./components/hero";
 @use "./components/social";
 @use "./components/link-list";
 @use "./components/button";
 @use "./components/skill-card";
+@use "./components/education";
+@use "./components/experience";
 @use "./components/cert-card";
 @use "./components/project-card";
 
 // <layout>
-@use "./layout/hero";
 @use "./layout/container";
-@use "./layout/layout";
-@use "./layout/grid";
-@use "./layout/flex";
-@use "./layout/alignment";
 @use "./layout/image";
 @use "./layout/list";
-@use "./layout/position";
 @use "./layout/section";
-@use "./layout/size";
-@use "./layout/space";
 
 // <pages>
 @use "./pages/home-page";
+@use "./pages/project-page";
+@use "./pages/blog-page";
 
 // <themes>
 // @use "./themes/theme-values";

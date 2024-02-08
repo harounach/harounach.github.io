@@ -1,0 +1,31 @@
+---
+import SkillCard from "./SkillCard.astro";
+
+// Skills
+const skills = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Node.js",
+  "SASS",
+  "PHP",
+  "WordPress",
+  "Python",
+  "Git/Github",
+  "CI/CD",
+  "Docker",
+  "Firebase",
+  "AWS",
+  "Google Workspace",
+  "Figma",
+];
+---
+
+<div class="skill-list">
+  {
+    skills.map((skill) => {
+      return <SkillCard label={skill} />;
+    })
+  }
+</div>

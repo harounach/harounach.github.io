@@ -1,0 +1,21 @@
+---
+import Button from "@components/actionable/Button.astro";
+
+const { title, issuer, url } = Astro.props;
+---
+
+<div class="cert-card">
+  <div class="cert-card__icon-wrapper">
+    <i class="cert-card__icon fas fa-award"></i>
+  </div>
+  <div class="cert-card__content">
+    <h5 class="cert-card__name">{title}</h5>
+    <h6 class="cert-card__issuer">By {issuer}</h6>
+    <Button
+      label="View"
+      url={url}
+      icon="fas fa-chevron-right"
+      customClasses="cert-card__btn"
+    />
+  </div>
+</div>

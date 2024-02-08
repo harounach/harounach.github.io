@@ -1,5 +1,17 @@
 [
   {
+    "title": "Sunny Coffee Shop",
+    "description": "Ecommerce website",
+    "url": "https://github.com/harounach/sunnycoffeeshop",
+    "img": {
+      "src": "/images/Sunny-Coffee-Shop.png",
+      "alt": "Sunny Coffee Shop"
+    },
+    "tag": "Ecommerce",
+    "featured": true
+  },
+
+  {
     "title": "Acme Financial Dashboard",
     "description": "Financial dashboard Full-Stack website",
     "url": "https://nextjs-dashboard-harounach.vercel.app/",

@@ -2,38 +2,20 @@
 import { getEntry } from "astro:content";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Button from "@components/actionable/Button.astro";
-import SkillCard from "@components/section/SkillCard.astro";
-import Heading from "@components/section/Heading.astro";
-import CertCard from "@components/section/CertCard.astro";
-import ProjectCard from "@components/section/ProjectCard.astro";
+import ProjectCard from "@components/section/projects/ProjectCard.astro";
+import Hero from "@components/section/Hero.astro";
+import SkillList from "@components/section/skills/SkillList.astro";
+import ExperienceCard from "@components/section/experience/ExperienceCard.astro";
+import CertList from "@components/section/certifications/CertList.astro";
+import FeaturedProjectList from "@components/section/projects/FeaturedProjectList.astro";
 
 // Get certifications, and projects collection entries
-const certCollection = await getEntry("certifications", "certifications");
+
 const projectCollection = await getEntry("projects", "projects");
 
 const feauturedProjects = projectCollection.data.filter(
   (proj) => proj.featured === true,
 );
-
-// Skills
-const skills = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "React",
-  "Node.js",
-  "SASS",
-  "PHP",
-  "WordPress",
-  "Python",
-  "Git/Github",
-  "CI/CD",
-  "Docker",
-  "Firebase",
-  "AWS",
-  "Google Workspace",
-  "Figma",
-];
 
 const pageTitle = "Haroun Achouche Portfolio";
 const metaDescription =
@@ -43,181 +25,70 @@ const metaKeyWords = "Haroun Achouche,Haroun Ach, Haroun Ach Portfolio";
 
 <BaseLayout
   pageTitle={pageTitle}
-  mainClass="page__main"
   metaDescription={metaDescription}
   metaKeyWords={metaKeyWords}
 >
-  <!-- About section -->
-  <section id="About" class="py-12">
-    <div class="container">
-      <div
-        class="flex flex-column justify-content-center align-items-center gap-6 | md:flex-row-reverse"
-      >
-        <div>
-          <img
-            src="/images/harounach.jpg"
-            alt="Haroun Achouche"
-            class="responsive aspect-portrait"
-            style="max-width: 300px;"
+  <main id="content" class="home-page">
+    <!-- About section -->
+    <section id="about" class="home-page__about">
+      <div class="container">
+        <Hero />
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="Skills" class="home-page__skills section">
+      <div class="container">
+        <h2 class="subtitle title-medium">skills</h2>
+        <SkillList />
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="Education" class="section">
+      <div class="container">
+        <h2 class="subtitle title-medium">Education</h2>
+        <article class="education home-page__education">
+          <h4 class="education__title">
+            Bachelor Degree of Software Engineering
+          </h4>
+          <h5 class="education__years">SEPTEMBER 2012 - JUNE 2015</h5>
+          <h5 class="education__univ">
+            University of Constantine, Constantine, Algeria
+          </h5>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="Experience" class="section">
+      <div class="container">
+        <h2 class="subtitle title-medium">Experience</h2>
+        <ExperienceCard customClasses="home-page__experience" />
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="Certifications" class="home-page__certs section">
+      <div class="container">
+        <h2 class="subtitle title-medium">Certifications</h2>
+        <CertList />
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="Projects" class="home-page__projects section">
+      <div class="container">
+        <h2 class="subtitle title-medium">Projects</h2>
+        <FeaturedProjectList />
+        <div class="home-page__project-btn">
+          <Button
+            label="More Projects"
+            url="/projects"
+            icon="fas fa-chevron-right"
           />
         </div>
-        <div
-          class="flex flex-column align-items-center gap-4 | md:align-items-flex-start"
-        >
-          <h1 class="flex flex-column">
-            <span class="display-large text-black">Haroun Achouche</span>
-            <span class="display-large text-secondary-500"
-              >Software Engineer</span
-            >
-          </h1>
-          <p class="text-md">
-            I am a Software Engineer, I have a degree in software engineering
-            and over 6 years of web developement experience. I have extensive
-            experience with web technology including HTML, CSS , and
-            JavaScript., as well as ReactJS and NodeJS Since I have started web
-            development, I have been spending every spare minute writing code
-            for the web, and learning everything on web application development.
-          </p>
-          <div>
-            <Button
-              label="Download Resume"
-              url="/assets/Haroun-Achouche-Resume.pdf"
-            />
-          </div>
-        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="Skills" class="bg-neutral-900 py-12">
-    <div class="container">
-      <Heading
-        title="Skills"
-        description="I have experience with these technologies"
-        center
-        centerDescription
-        dark
-      />
-
-      <div class="flex flex-wrap gap-3 | md:w-75 md:mx-auto">
-        {
-          skills.map((skill) => {
-            return <SkillCard label={skill} />;
-          })
-        }
-      </div>
-    </div>
-  </section>
-
-  <!-- Education -->
-  <section id="Education" class="bg-neutral-100 py-12">
-    <div class="container">
-      <Heading
-        title="Education"
-        description="Formal educations I had"
-        center
-        centerDescription
-      />
-
-      <article class="flex flex-column align-items-center gap-3">
-        <h3>Bachelor Degree of Software Engineering</h3>
-        <h4>SEPTEMBER 2012 - JUNE 2015</h4>
-        <h3>University of Constantine, Constantine, Algeria</h3>
-      </article>
-    </div>
-  </section>
-
-  <!-- Experience -->
-  <section id="Experience" class="bg-neutral-50 py-12">
-    <Heading
-      title="Experience"
-      description="I worked in several positions"
-      center
-      centerDescription
-    />
-    <article class="flex flex-column align-items-center gap-5">
-      <h4>Freelance Web Developer</h4>
-      <h5>SEPTEMBER 2015 - PRESENT</h5>
-      <ul
-        class="flex flex-column align-items-center gap-3 list-none text-md text-center"
-      >
-        <li class="experience__item">Design the front end of the website.</li>
-        <li class="experience__item">Develop search friendly web pages</li>
-        <li class="experience__item">Maintain and improve clients codebase.</li>
-        <li class="experience__item">
-          Built online web solutions for individuals
-        </li>
-        <li class="experience__item">
-          Develop HTML/CSS templates for landing pages
-        </li>
-        <li class="experience__item">
-          Perform browsers testing and catch bugs
-        </li>
-        <li class="experience__item">
-          Create websites that engage customers in order to enhance my clients’
-          online present
-        </li>
-      </ul>
-    </article>
-  </section>
-
-  <!-- Certifications -->
-  <section id="Certifications" class="py-12">
-    <div class="container">
-      <Heading
-        title="Certifications"
-        description="Certifications I've earned"
-        center
-        centerDescription
-      />
-
-      <article class="grid grid-col-1 gap-6 | md:grid-col-2">
-        {
-          certCollection.data.map((cert) => {
-            return (
-              <CertCard
-                title={cert.title}
-                issuer={cert.issuer}
-                url={cert.url}
-              />
-            );
-          })
-        }
-      </article>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="Projects" class="py-12">
-    <div class="container">
-      <Heading
-        title="Projects"
-        description="Projects I created"
-        center
-        centerDescription
-      />
-      <article
-        class="grid grid-col-1 gap-6 mb-6 | md:grid-col-2 | lg:grid-col-3"
-      >
-        {
-          feauturedProjects.map((proj) => {
-            return (
-              <ProjectCard
-                imgUrl={proj.img.src}
-                imgAlt={proj.img.alt}
-                title={proj.title}
-                descrition={proj.description}
-                url={proj.url}
-                tag={proj.tag}
-              />
-            );
-          })
-        }
-      </article>
-      <div class="flex justify-content-center">
-        <Button label="View All Projects" url="/projects" />
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 </BaseLayout>

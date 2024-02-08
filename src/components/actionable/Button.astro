@@ -1,16 +1,16 @@
 ---
-const { label, type, url, customClasses } = Astro.props;
+const { label, type, url, icon, customClasses } = Astro.props;
 const buttonType = type ? type : "button";
 ---
 
 {
   url ? (
     <a href={url} class:list={["btn", customClasses]}>
-      {label}
+      {label} {icon && <i class:list={["btn__icon", icon]} />}
     </a>
   ) : (
     <button type={buttonType} class:list={["btn", customClasses]}>
-      {label}
+      {label} {icon && <i class:list={["btn__icon", icon]} />}
     </button>
   )
 }

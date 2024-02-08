@@ -3,7 +3,7 @@ import "../styles/main.scss";
 import Header from "@components/header/Header.astro";
 import Footer from "@components/footer/Footer.astro";
 import BackButton from "@components/actionable/BackButton.astro";
-const { pageTitle, mainClass, metaDescription, metaKeyWords } = Astro.props;
+const { pageTitle, metaDescription, metaKeyWords } = Astro.props;
 ---
 
 <!doctype html>
@@ -12,9 +12,8 @@ const { pageTitle, mainClass, metaDescription, metaKeyWords } = Astro.props;
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Haroun Achouche Portfolio</title>
-    <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
     <meta name="description" content={metaDescription} />
     <meta name="keywords" content={metaKeyWords} />
@@ -40,22 +39,27 @@ const { pageTitle, mainClass, metaDescription, metaKeyWords } = Astro.props;
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4H0Y22DZQ1"
     ></script>
     <script>
+      //@ts-ignore
       window.dataLayer = window.dataLayer || [];
       function gtag() {
+        //@ts-ignore
         dataLayer.push(arguments);
       }
+      //@ts-ignore
       gtag("js", new Date());
-
+      //@ts-ignore
       gtag("config", "G-4H0Y22DZQ1");
     </script>
     <!-- Pinterest Verification -->
     <meta name="p:domain_verify" content="ab57ae76b4053f945710fea74a3337ca" />
+    <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -66,9 +70,9 @@ const { pageTitle, mainClass, metaDescription, metaKeyWords } = Astro.props;
   </head>
   <body>
     <Header />
-    <main id="content" class:list={[mainClass]}>
+    <>
       <slot />
-    </main>
+    </>
     <Footer />
     <BackButton />
 

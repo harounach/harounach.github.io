@@ -1,4 +1,5 @@
 @use "sass:map";
+@use "sass:list";
 @use "./variables" as vars;
 
 // Apply light theme
@@ -14,57 +15,65 @@
 // Display large
 @mixin displayLargeText {
   font-family: vars.$font-sans; // Poppins
-  font-weight: vars.$font-weight-5;
-  font-size: vars.$font-size-8; // 56px
+  font-weight: 700;
+  font-size: vars.$font-size-7; // 48px
+  line-height: 1.4;
 }
 
 // Display base
 @mixin displayBaseText {
   font-family: vars.$font-sans; // Poppins
-  font-weight: vars.$font-weight-5;
-  font-size: vars.$font-size-7; // 48px
+  font-weight: 700;
+  font-size: vars.$font-size-6; // 40px
+  line-height: 1.4;
 }
 
 // Title large
 @mixin titleLargeText {
   font-family: vars.$font-sans; // Poppins
-  font-weight: vars.$font-weight-5;
+  font-weight: 700;
   font-size: vars.$font-size-5; // 32px
+  line-height: 1.7;
 }
 
 // Title medium
 @mixin titleMediumText {
   font-family: vars.$font-sans; // Poppins
-  font-weight: vars.$font-weight-5;
+  font-weight: 700;
   font-size: vars.$font-size-4; // 24px
+  line-height: 1.7;
 }
 
 // Title base
 @mixin titleBaseText {
   font-family: vars.$font-sans; // Poppins
-  font-weight: vars.$font-weight-5;
+  font-weight: 700;
   font-size: vars.$font-size-2; // 18px
+  line-height: 1.7;
 }
 
 // button
 @mixin buttonText {
   font-family: vars.$font-sans; // Poppins
-  font-weight: vars.$font-weight-5;
+  font-weight: 400;
   font-size: vars.$font-size-2; // 18px
+  line-height: 1.7;
 }
 
 // Body large
 @mixin bodyLargeText {
   font-family: vars.$font-sans; // Poppins
-  font-weight: vars.$font-weight-4;
+  font-weight: 400;
   font-size: vars.$font-size-2; // 18px
+  line-height: 1.7;
 }
 
 // Body base
 @mixin bodyBaseText {
   font-family: vars.$font-sans; // Poppins
-  font-weight: vars.$font-weight-4;
+  font-weight: 400;
   font-size: vars.$font-size-1; // 16px
+  line-height: 1.7;
 }
 
 @mixin z-index($key, $ns: false) {
@@ -115,4 +124,42 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+@mixin surface-shadow {
+  box-shadow:
+    0 0.9px 1.3px -6px rgba(0, 0, 0, 0.045),
+    0 2.5px 3.6px -6px rgba(0, 0, 0, 0.065),
+    0 6px 8.7px -6px rgba(0, 0, 0, 0.085),
+    0 20px 29px -6px rgba(0, 0, 0, 0.13);
+}
+
+// Apply decor shapes
+@mixin applyDecors($decors) {
+  // We will fill each variable with its values in the loup
+  $urls: ();
+  $repetitions: ();
+  $postions: ();
+  $sizes: ();
+
+  @each $decor in $decors {
+    // append each variable to its list
+    $urls: list.append($urls, map.get($decor, "url"), $separator: comma);
+    $repetitions: list.append(
+      $repetitions,
+      map.get($decor, "repeat"),
+      $separator: comma
+    );
+    $postions: list.append(
+      $postions,
+      map.get($decor, "position"),
+      $separator: comma
+    );
+    $sizes: list.append($sizes, map.get($decor, "size"), $separator: comma);
+  }
+
+  background-image: $urls;
+  background-repeat: $repetitions;
+  background-position: $postions;
+  background-size: $sizes;
 }

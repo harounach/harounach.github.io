@@ -1,58 +1,13 @@
-@use "sass:map";
 @use "../abstracts/variables" as vars;
-
-// ----- Generate text colors ----------------------------
-// primary
-@each $color in map.keys(vars.$primary) {
-  .text-primary-#{$color} {
-    color: map.get(vars.$primary, $color);
-  }
+// bg-primary
+.bg-primary-100 {
+  background-color: vars.$primary-100;
 }
 
-// secondary
-@each $color in map.keys(vars.$secondary) {
-  .text-secondary-#{$color} {
-    color: map.get(vars.$secondary, $color);
-  }
+.bg-primary-50 {
+  background-color: vars.$primary-50;
 }
 
-// neutral
-@each $color in map.keys(vars.$neutral) {
-  @if $color == "white" or $color == "black" {
-    .text-#{$color} {
-      color: map.get(vars.$neutral, $color);
-    }
-  } @else {
-    .text-neutral-#{$color} {
-      color: map.get(vars.$neutral, $color);
-    }
-  }
-}
-
-// ----- Generate background colors ----------------------------
-// primary
-@each $color in map.keys(vars.$primary) {
-  .bg-primary-#{$color} {
-    background-color: map.get(vars.$primary, $color);
-  }
-}
-
-// secondary
-@each $color in map.keys(vars.$secondary) {
-  .bg-secondary-#{$color} {
-    background-color: map.get(vars.$secondary, $color);
-  }
-}
-
-// neutral
-@each $color in map.keys(vars.$neutral) {
-  @if $color == "white" or $color == "black" {
-    .bg-#{$color} {
-      background-color: map.get(vars.$neutral, $color);
-    }
-  } @else {
-    .bg-neutral-#{$color} {
-      background-color: map.get(vars.$neutral, $color);
-    }
-  }
+.bg-neutral-50 {
+  background-color: vars.$neutral-50;
 }

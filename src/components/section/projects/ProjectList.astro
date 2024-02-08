@@ -1,0 +1,22 @@
+---
+import { getEntry } from "astro:content";
+import ProjectCard from "./ProjectCard.astro";
+const projectCollection = await getEntry("projects", "projects");
+---
+
+<article class="project-list">
+  {
+    projectCollection.data.map((proj) => {
+      return (
+        <ProjectCard
+          imgUrl={proj.img.src}
+          imgAlt={proj.img.alt}
+          title={proj.title}
+          descrition={proj.description}
+          url={proj.url}
+          tag={proj.tag}
+        />
+      );
+    })
+  }
+</article>

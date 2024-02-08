@@ -1,20 +1,14 @@
 ---
-import Heading from "@components/section/Heading.astro";
 import Social from "@components/actionable/Social.astro";
 ---
 
 <footer id="contact" class="footer">
-  <div class="container py-12">
-    <Heading
-      title="Let's Chat"
-      description="Find me online on"
-      center
-      centerDescription
-      dark
-    />
-    <div class="flex justify-content-center align-items-center">
+  <div class="container section">
+    <h2 class="footer__title subtitle title-medium">Let's Chat</h2>
+    <p class="footer__desc body-base">Find me online on</p>
+    <div class="footer__social">
       <Social />
     </div>
   </div>
-  <p class="footer__notice">© Copyright Haroun Achouche 2022</p>
+  <p class="footer__notice body-base">© Copyright Haroun Achouche 2024</p>
 </footer>

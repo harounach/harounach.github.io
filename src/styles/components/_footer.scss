@@ -1,27 +1,50 @@
 @use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mixins;
 
 // footer
 .footer {
-  background-color: vars.$gray;
-}
+  background-color: vars.$tertiary-950;
 
-// footer__logo
+  @include mixins.breakpoint(xl) {
+    background-image: url("/images/Dots-Yellow-Mini-V.svg"),
+      url("/images/Dots-Pink-V.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-size:
+      16px 109px,
+      26px 109px;
+    background-position:
+      2% 45%,
+      98% 50%;
+    background-origin: border-box;
+  }
 
-// footer__location
+  // footer__title
+  &__title {
+    color: vars.$secondary-500;
+    text-align: center;
+  }
 
-// footer__tel
+  // footer__desc
+  &__desc {
+    color: vars.$white;
+    text-align: center;
+    margin-bottom: vars.$space-5;
+  }
 
-// footer__links
-.footer__links a {
-  color: vars.$white;
-}
+  // footer__social
+  &__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-// footer__notice
-.footer__notice {
-  background-color: vars.$white;
-  padding: vars.$space-2;
-  text-align: center;
-  p {
-    color: vars.$neurtral-500;
+  // footer__notice
+  &__notice {
+    background-color: vars.$white;
+    padding: vars.$space-2;
+    text-align: center;
+    p {
+      color: vars.$neutral-500;
+    }
   }
 }
