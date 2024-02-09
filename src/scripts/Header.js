@@ -15,9 +15,11 @@ const Header = function () {
     init: function () {
       this.header = document.querySelector(".header");
       this.menuButton = document.querySelector(".menu-btn");
+      this.navLinks = document.querySelectorAll(".nav__link");
 
       // set up listeners
       this.listen();
+      this.updateActiveLink();
     },
 
     /**
@@ -62,6 +64,20 @@ const Header = function () {
 
       // Listen to menu button click
       self.onMenuButtonClicked();
+    },
+
+    /**
+     * Update active link
+     */
+    updateActiveLink: function () {
+      const self = this;
+      const currentHref = window.location.href;
+      self.navLinks.forEach((link) => {
+        link.classList.remove("nav__link--active");
+        if (link.href === currentHref) {
+          link.classList.add("nav__link--active");
+        }
+      });
     },
   };
 

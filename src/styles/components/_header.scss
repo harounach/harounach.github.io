@@ -98,8 +98,25 @@
   text-decoration: none;
   @include mixins.titleBaseText();
   color: vars.$black;
+  position: relative;
 
   &:hover {
     color: vars.$primary-500;
+  }
+
+  // nav__link--active
+  &--active {
+    &::before {
+      content: "";
+      display: block;
+      width: 56px;
+      height: 56px;
+      position: absolute;
+      background-image: url("/images/Decor-Appbar-Link.svg");
+      background-repeat: no-repeat;
+      background-size: 32px 48px;
+      top: -10px;
+      z-index: -1;
+    }
   }
 }
