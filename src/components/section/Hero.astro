@@ -1,21 +1,37 @@
 ---
+import { Image } from "astro:assets";
 import Button from "@components/actionable/Button.astro";
 ---
 
-<div class="hero">
-  <div class="hero__graphic">
-    <img
-      src="./images/harounach.jpg"
-      alt="Haroun Achouche Photo"
-      class="hero__img"
+<style>
+  @media screen and (width >= 40rem) {
+    #hero {
+      background-image: url("/images/shape-hero.svg");
+      background-repeat: no-repeat;
+      background-position: left 15% center;
+      background-size: 200px;
+    }
+  }
+</style>
+
+<div
+  id="hero"
+  class="flex flex-col items-center gap-6 sm:flex-row-reverse sm:items-start sm:justify-center"
+>
+  <div class="shrink-0">
+    <Image
+      src={"/images/harounach-photo-square.jpg"}
+      alt="Haroun Achouche"
+      width={500}
+      height={500}
+      class="border-tango-500 block h-[350px] w-[350px] rounded-full border-4"
     />
   </div>
-  <div class="hero__content">
-    <h1 class="hero__title">
-      Haroun Achouche <br />
-      <span class="hero__title--position">Software Engineer</span>
+  <div class="flex flex-col gap-4 sm:pt-6">
+    <h1 class="font-title text-center text-4xl font-medium sm:text-left">
+      Haroun Achouche
     </h1>
-    <p class="hero__description body-base">
+    <p class="max-w-[500px] font-sans text-base/8 font-normal">
       I am a Software Engineer, I have a degree in software engineering and over
       6 years of web developement experience. I have extensive experience with
       web technology including HTML, CSS , and JavaScript., as well as ReactJS
@@ -23,12 +39,8 @@ import Button from "@components/actionable/Button.astro";
       every spare minute writing code for the web, and learning everything on
       web application development.
     </p>
-
-    <Button
-      label="Download Resume (PDF)"
-      url="./assets/Haroun-Achouche-Resume.pdf"
-      icon="fas fa-chevron-right"
-      customClasses="hero__btn"
-    />
+    <div class="flex justify-center sm:justify-start">
+      <Button url="#contact">Contact Me</Button>
+    </div>
   </div>
 </div>

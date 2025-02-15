@@ -1,71 +1,59 @@
 ---
-const { mini, wide, customClasses } = Astro.props;
+interface Props {
+  className?: string;
+}
+
+import FacebookIcon from "@components/icons/FacebookIcon.astro";
+import SocialIcon from "./SocialIcon.astro";
+import InstagramIcon from "@components/icons/InstagramIcon.astro";
+import TwitterXIcon from "@components/icons/TwitterXIcon.astro";
+import LinkedInIcon from "@components/icons/LinkedInIcon.astro";
+import PinterestIcon from "@components/icons/PinterestIcon.astro";
+import GithubIcon from "@components/icons/GithubIcon.astro";
+import YouTubeIcon from "@components/icons/YouTubeIcon.astro";
+
+const { className } = Astro.props;
 ---
 
-<ul class:list={["social", { "social--wide": wide }, customClasses]}>
+<ul class:list={["flex flex-wrap gap-3", className]}>
   <!-- Facebook -->
-  <li>
-    <a
-      href="https://www.facebook.com/harounachouche"
-      title="Facebook"
-      class:list={["social__link", { "social__link--sm": mini }]}
-    >
-      <i class="fa-brands fa-facebook-f"></i>
-    </a>
-  </li>
+  <SocialIcon
+    url="https://www.facebook.com/haroun.achouche.me"
+    title="Facebook"
+  >
+    <FacebookIcon />
+  </SocialIcon>
 
   <!-- Instagram -->
-  <li>
-    <a
-      href="https://www.instagram.com/harounachouche/"
-      title="Instagram"
-      class:list={["social__link", { "social__link--sm": mini }]}
-    >
-      <i class="fa-brands fa-instagram"></i>
-    </a>
-  </li>
+  <SocialIcon url="https://www.instagram.com/harounachouche/" title="Instagram">
+    <InstagramIcon />
+  </SocialIcon>
 
-  <!-- Twitter -->
-  <li>
-    <a
-      href="https://twitter.com/harounachouche"
-      title="Twitter"
-      class:list={["social__link", { "social__link--sm": mini }]}
-    >
-      <i class="fa-brands fa-twitter"></i>
-    </a>
-  </li>
+  <!-- Twitter-X -->
+  <SocialIcon url="https://x.com/harounachouche" title="Twitter-X">
+    <TwitterXIcon />
+  </SocialIcon>
 
   <!-- LinkedIn -->
-  <li>
-    <a
-      href="https://www.linkedin.com/in/haroun-achouche/"
-      title="LinkedIn"
-      class:list={["social__link", { "social__link--sm": mini }]}
-    >
-      <i class="fa-brands fa-linkedin-in"></i>
-    </a>
-  </li>
+  <SocialIcon
+    url="https://www.linkedin.com/in/haroun-achouche/"
+    title="LinkedIn"
+  >
+    <LinkedInIcon />
+  </SocialIcon>
 
   <!-- Pinterest -->
-  <li>
-    <a
-      href="https://www.pinterest.com/harounachouche/"
-      title="Pinterest"
-      class:list={["social__link", { "social__link--sm": mini }]}
-    >
-      <i class="fa-brands fa-pinterest"></i>
-    </a>
-  </li>
+  <SocialIcon url="https://www.pinterest.com/harounachouche/" title="Pinterest">
+    <PinterestIcon />
+  </SocialIcon>
 
   <!-- Github -->
-  <li>
-    <a
-      href="https://github.com/harounach"
-      title="Github"
-      class:list={["social__link", { "social__link--sm": mini }]}
-    >
-      <i class="fa-brands fa-github"></i>
-    </a>
-  </li>
+  <SocialIcon url="https://github.com/harounach" title="Github">
+    <GithubIcon />
+  </SocialIcon>
+
+  <!-- YouTube -->
+  <SocialIcon url="https://www.youtube.com/@harounach" title="YouTube">
+    <YouTubeIcon />
+  </SocialIcon>
 </ul>

@@ -1,16 +1,34 @@
 ---
-const { label, type, url, icon, customClasses } = Astro.props;
-const buttonType = type ? type : "button";
+interface Props {
+  url: string;
+  theme?: "christi" | "confetti" | "grapefruit" | "outline";
+  className?: string;
+}
+const { url, theme, className } = Astro.props;
 ---
 
-{
-  url ? (
-    <a href={url} class:list={["btn", customClasses]}>
-      {label} {icon && <i class:list={["btn__icon", icon]} />}
-    </a>
-  ) : (
-    <button type={buttonType} class:list={["btn", customClasses]}>
-      {label} {icon && <i class:list={["btn__icon", icon]} />}
-    </button>
-  )
-}
+<a
+  href={url}
+  class:list={[
+    "font-title inline-flex rounded-sm border-2 px-4 py-3 text-lg font-medium transition",
+    {
+      "border-christi-600 bg-christi-600 hover:border-christi-700 hover:bg-christi-700 text-white":
+        theme === "christi" || !theme,
+    },
+    {
+      "border-grapefruit-400 bg-grapefruit-400 hover:border-grapefruit-500 hover:bg-grapefruit-500 text-black":
+        theme === "grapefruit",
+    },
+    {
+      "border-confetti-300 hover:border-confetti-400 bg-confetti-300 hover:bg-confetti-400 text-black":
+        theme === "confetti",
+    },
+    {
+      "border-christi-600 hover:bg-christi-600 text-christi-600 bg-white hover:text-white":
+        theme === "outline",
+    },
+    className,
+  ]}
+>
+  <slot />
+</a>

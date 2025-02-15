@@ -1,0 +1,23 @@
+---
+import Tick1Icon from "@components/icons/Tick1Icon.astro";
+
+const list = [
+  "Custom website designs tailored to your brand.",
+  "Responsive layouts for all devices.",
+  "SEO optimization for better visibility.",
+  "Secure e-commerce solutions.",
+  "User-friendly content management systems.",
+  "Performance optimization for fast loading times.",
+];
+---
+
+<ul role="list" class="mb-4">
+  {
+    list.map((item) => (
+      <li class="mb-3 flex items-start gap-4">
+        <Tick1Icon className="shrink-0" />
+        <p class="font-sans text-lg font-normal">{item}</p>
+      </li>
+    ))
+  }
+</ul>

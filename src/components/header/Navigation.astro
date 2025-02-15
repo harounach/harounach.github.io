@@ -1,16 +1,9 @@
 ---
-import Button from "../actionable/Button.astro";
+import NavLink from "./NavLink.astro";
 ---
 
-<nav class="nav">
-  <ul>
-    <li><a class="nav__link" href="/">About</a></li>
-    <li><a class="nav__link" href="/projects">Projects</a></li>
-    <li>
-      <a class="nav__link" href="/blog">Blog</a>
-    </li>
-    <li>
-      <Button url="#contact" label="Contact" customClasses="nav__btn" />
-    </li>
-  </ul>
+<nav class="flex items-center justify-center gap-4">
+  <NavLink url="/">Home</NavLink>
+  <NavLink url="/projects">Projects</NavLink>
+  <NavLink url="/blog">Blog</NavLink>
 </nav>

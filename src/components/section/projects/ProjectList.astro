@@ -4,9 +4,11 @@ import ProjectCard from "./ProjectCard.astro";
 const projectCollection = await getEntry("projects", "projects");
 ---
 
-<article class="project-list">
+<article
+  class="mb-6 grid grid-cols-1 gap-4 bg-white sm:grid-cols-2 md:grid-cols-3"
+>
   {
-    projectCollection.data.map((proj) => {
+    projectCollection?.data.map((proj) => {
       return (
         <ProjectCard
           imgUrl={proj.img.src}

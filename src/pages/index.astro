@@ -1,19 +1,18 @@
 ---
 import { getEntry } from "astro:content";
+import { Image } from "astro:assets";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Button from "@components/actionable/Button.astro";
-import ProjectCard from "@components/section/projects/ProjectCard.astro";
 import Hero from "@components/section/Hero.astro";
-import SkillList from "@components/section/skills/SkillList.astro";
-import ExperienceCard from "@components/section/experience/ExperienceCard.astro";
-import CertList from "@components/section/certifications/CertList.astro";
 import FeaturedProjectList from "@components/section/projects/FeaturedProjectList.astro";
+import WebDesignList from "@components/section/WebDesignList.astro";
+import SocialMediaList from "@components/section/SocialMediaList.astro";
 
 // Get certifications, and projects collection entries
 
 const projectCollection = await getEntry("projects", "projects");
 
-const feauturedProjects = projectCollection.data.filter(
+const feauturedProjects = projectCollection?.data.filter(
   (proj) => proj.featured === true,
 );
 
@@ -28,65 +27,69 @@ const metaKeyWords = "Haroun Achouche,Haroun Ach, Haroun Ach Portfolio";
   metaDescription={metaDescription}
   metaKeyWords={metaKeyWords}
 >
-  <main id="content" class="home-page">
+  <main id="content">
     <!-- About section -->
-    <section id="about" class="home-page__about">
+    <section class="px-4 pt-4 pb-24">
       <div class="container">
         <Hero />
       </div>
     </section>
-
-    <!-- Skills -->
-    <section id="Skills" class="home-page__skills section">
+    <section class="bg-grapefruit-100 px-4 py-24">
       <div class="container">
-        <h2 class="subtitle title-medium">skills</h2>
-        <SkillList />
+        <div class="flex flex-col gap-6 sm:flex-row sm:justify-center">
+          <div class="flex justify-center">
+            <Image
+              src={"/images/Shape-WebDesign.svg"}
+              alt=""
+              width={240}
+              height={360}
+            />
+          </div>
+          <div>
+            <h2 class="font-title mb-4 text-2xl font-medium">
+              Create your dream website
+            </h2>
+            <WebDesignList />
+            <div class="flex justify-center sm:justify-start">
+              <Button url="#contact" theme="grapefruit">Contact Me</Button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-
-    <!-- Education -->
-    <section id="Education" class="section">
+    <section class="bg-confetti-100 px-4 py-24">
       <div class="container">
-        <h2 class="subtitle title-medium">Education</h2>
-        <article class="education home-page__education">
-          <h4 class="education__title">
-            Bachelor Degree of Software Engineering
-          </h4>
-          <h5 class="education__years">SEPTEMBER 2012 - JUNE 2015</h5>
-          <h5 class="education__univ">
-            University of Constantine, Constantine, Algeria
-          </h5>
-        </article>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section id="Experience" class="section">
-      <div class="container">
-        <h2 class="subtitle title-medium">Experience</h2>
-        <ExperienceCard customClasses="home-page__experience" />
-      </div>
-    </section>
-
-    <!-- Certifications -->
-    <section id="Certifications" class="home-page__certs section">
-      <div class="container">
-        <h2 class="subtitle title-medium">Certifications</h2>
-        <CertList />
+        <div class="flex flex-col gap-6 sm:flex-row sm:justify-center">
+          <div>
+            <h2 class="font-title mb-4 text-2xl font-medium">
+              Manage your social media
+            </h2>
+            <SocialMediaList />
+            <div class="flex justify-center sm:justify-start">
+              <Button url="#contact" theme="confetti">Contact Me</Button>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <Image
+              src={"/images/Shape-SocialMedia.svg"}
+              alt=""
+              width={241}
+              height={360}
+            />
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Projects -->
-    <section id="Projects" class="home-page__projects section">
+    <section class="bg-tango-50 px-4 py-24">
       <div class="container">
-        <h2 class="subtitle title-medium">Projects</h2>
+        <h2 class="font-title mb-14 text-center text-2xl font-medium">
+          Just a taste of what I have done
+        </h2>
         <FeaturedProjectList />
-        <div class="home-page__project-btn">
-          <Button
-            label="More Projects"
-            url="/projects"
-            icon="fas fa-chevron-right"
-          />
+        <div class="flex justify-center sm:justify-end">
+          <Button url="/projects">See more</Button>
         </div>
       </div>
     </section>

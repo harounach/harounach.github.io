@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --font-title: "Rubik Variable", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --color-christi-50: #f4fee7;
+  --color-christi-100: #e5fdca;
+  --color-christi-200: #ccfb9b;
+  --color-christi-300: #abf462;
+  --color-christi-400: #8be932;
+  --color-christi-500: #6ccf13;
+  --color-christi-600: #4d9e0a; /* base */
+  --color-christi-700: #3e7e0d;
+  --color-christi-800: #346311;
+  --color-christi-900: #2d5413;
+  --color-christi-950: #142f04;
+
+  --color-celery-50: #f7faeb;
+  --color-celery-100: #ecf4d3;
+  --color-celery-200: #daeaac;
+  --color-celery-300: #c0db7b;
+  --color-celery-400: #a5c94f; /* base */
+  --color-celery-500: #88af33;
+  --color-celery-600: #6a8b25;
+  --color-celery-700: #516b20;
+  --color-celery-800: #42551f;
+  --color-celery-900: #39491e;
+  --color-celery-950: #1c270c;
+
+  --color-confetti-50: #fcfbee;
+  --color-confetti-100: #f6f3cf;
+  --color-confetti-200: #ede79a;
+  --color-confetti-300: #e4d86c; /* base */
+  --color-confetti-400: #dcc643;
+  --color-confetti-500: #d3ab2d;
+  --color-confetti-600: #bb8924;
+  --color-confetti-700: #9b6622;
+  --color-confetti-800: #7f5221;
+  --color-confetti-900: #69431e;
+  --color-confetti-950: #3c230c;
+
+  --color-grapefruit-50: #fffbeb;
+  --color-grapefruit-100: #fef3c7;
+  --color-grapefruit-200: #fde58a;
+  --color-grapefruit-300: #fcd24d;
+  --color-grapefruit-400: #fbc02d; /* base */
+  --color-grapefruit-500: #f59c0b;
+  --color-grapefruit-600: #d97506;
+  --color-grapefruit-700: #b45209;
+  --color-grapefruit-800: #923f0e;
+  --color-grapefruit-900: #78340f;
+  --color-grapefruit-950: #451a03;
+
+  --color-tango-50: #fff7ed;
+  --color-tango-100: #feeed6;
+  --color-tango-200: #fcd9ac;
+  --color-tango-300: #fabd77;
+  --color-tango-400: #f79640;
+  --color-tango-500: #f47b1f; /* base */
+  --color-tango-600: #e55f11;
+  --color-tango-700: #be4710;
+  --color-tango-800: #973915;
+  --color-tango-900: #7a3014;
+  --color-tango-950: #421608;
+
+  --aspect-landscape: 4 / 3;
+}

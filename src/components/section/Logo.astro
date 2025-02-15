@@ -1,7 +1,19 @@
 ---
-const { customClasses } = Astro.props;
+interface Props {
+  className?: string;
+}
+
+import { Image } from "astro:assets";
+
+const { className } = Astro.props;
 ---
 
-<a href="/" class:list={[customClasses]}>
-  <img src="/images/Logo.svg" alt="Haroun Achouche" />
+<a href="/" class:list={[className]}>
+  <Image
+    src={"/images/logo.svg"}
+    alt={"Haroun Achouche"}
+    class="h-14 w-14"
+    width={72}
+    height={72}
+  />
 </a>

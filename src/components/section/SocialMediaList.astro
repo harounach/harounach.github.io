@@ -1,0 +1,23 @@
+---
+import Tick2Icon from "@components/icons/Tick2Icon.astro";
+
+const list = [
+  "Engaging content creation for various platforms.",
+  "Customized social media strategies.",
+  "Active community engagement and management.",
+  "Regular analytics and performance reporting.",
+  "Targeted ad campaign management.",
+  "Consistent brand voice across channels.",
+];
+---
+
+<ul role="list" class="mb-4">
+  {
+    list.map((item) => (
+      <li class="mb-3 flex items-start gap-4">
+        <Tick2Icon className="shrink-0" />
+        <p class="font-sans text-lg font-normal">{item}</p>
+      </li>
+    ))
+  }
+</ul>

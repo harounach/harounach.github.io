@@ -1,0 +1,19 @@
+---
+interface Props {
+  url: string;
+  title: string;
+}
+
+const { url, title } = Astro.props;
+---
+
+<li>
+  <a
+    href={url}
+    title={title}
+    class="bg-confetti-200 hover:bg-confetti-400 flex h-10 w-10 items-center justify-center rounded-full text-black no-underline transition will-change-auto"
+  >
+    <slot />
+    <span class="sr-only">{title}</span>
+  </a>
+</li>

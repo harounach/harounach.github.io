@@ -1,21 +1,17 @@
 ---
 import Logo from "@components/section/Logo.astro";
 import Navigation from "./Navigation.astro";
-import MenuButton from "./MenuButton.astro";
 
-const { customClasses } = Astro.props;
+const { className } = Astro.props;
 ---
 
-<header class:list={["header", customClasses]}>
-  <a href="#content" class="skip">Skip to content</a>
+<header class:list={["flex px-4 py-6 sm:px-14", className]}>
+  <a href="#content" class="sr-only">Skip to content</a>
   <div class="container">
-    <div class="header__content">
-      <Logo customClasses="header__logo" />
-      <div class="header__nav">
+    <div class="flex items-center justify-between">
+      <Logo />
+      <div>
         <Navigation />
-      </div>
-      <div class="header__menu-btn">
-        <MenuButton />
       </div>
     </div>
   </div>

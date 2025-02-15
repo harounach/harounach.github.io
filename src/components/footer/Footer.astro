@@ -1,14 +1,45 @@
 ---
 import Social from "@components/actionable/Social.astro";
+import EmailIcon from "@components/icons/EmailIcon.astro";
 ---
 
-<footer id="contact" class="footer">
-  <div class="container section">
-    <h2 class="footer__title subtitle title-medium">Let's Chat</h2>
-    <p class="footer__desc body-base">Find me online on</p>
-    <div class="footer__social">
-      <Social />
+<style>
+  @media screen and (width >= 40rem) {
+    #footer-inner {
+      background-image: url("/images/Shape-footer-left.svg"),
+        url("/images/Shape-footer-right.svg");
+      background-position:
+        left bottom,
+        right bottom;
+      background-size: 350px, 350px;
+      background-repeat: no-repeat, no-repeat;
+    }
+  }
+</style>
+
+<footer id="contact" class="border-t-christi-600 border-t-4">
+  <div
+    id="footer-inner"
+    class="border-b-christi-600 container border-b-4 px-4 py-24"
+  >
+    <div class="flex flex-col items-center">
+      <h2 class="font-title mb-4 text-2xl font-medium">Contact me</h2>
+      <p class="mb-4 font-sans text-base font-normal">Let’s work together</p>
+      <a
+        href="mailto:harounach7@gmail.com"
+        class="mb-6 flex items-center justify-center gap-4 font-sans text-base font-normal"
+      >
+        <EmailIcon />
+        <span>harounach7@gmail.com</span>
+      </a>
+      <div class="flex justify-center">
+        <Social />
+      </div>
     </div>
   </div>
-  <p class="footer__notice body-base">© Copyright Haroun Achouche 2024</p>
+  <div class="bg-christi-600 py-2.5 text-white">
+    <p class="text-center font-sans text-sm font-normal">
+      © Copyright Haroun Achouche 2025
+    </p>
+  </div>
 </footer>

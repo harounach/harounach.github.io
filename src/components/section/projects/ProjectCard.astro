@@ -1,24 +1,41 @@
 ---
+interface Props {
+  imgUrl: string;
+  imgAlt: string;
+  title: string;
+  descrition: string;
+  url: string;
+  tag: string;
+}
+
+import { Image } from "astro:assets";
 import Button from "@components/actionable/Button.astro";
 
 const { imgUrl, imgAlt, title, descrition, url, tag } = Astro.props;
 ---
 
-<div class="project-card">
-  <img src={imgUrl} alt={imgAlt} class="project-card__thumbnail" />
+<div
+  class="border-confetti-300 relative flex flex-col items-center overflow-hidden rounded-sm border-2 bg-white pb-4"
+>
+  <Image
+    src={imgUrl}
+    alt={imgAlt}
+    width={512}
+    height={384}
+    class="aspect-landscape mb-6 w-full object-cover"
+  />
 
-  <div class="project-card__content">
-    <h5 class="project-card__title title-base">{title}</h5>
-    <h6 class="project-card__desc body-base">
+  <div class="flex flex-col gap-4">
+    <h5 class="font-title text-center text-lg font-medium">{title}</h5>
+    <h6 class="text-center font-sans text-base font-normal">
       {descrition}
     </h6>
-
-    <Button
-      label="View"
-      url={url}
-      icon="fas fa-chevron-right"
-      customClasses="project-card__btn"
-    />
+    <div class="flex justify-center">
+      <Button theme="outline" url={url}>View</Button>
+    </div>
   </div>
-  <span class="project-card__tag">{tag}</span>
+  <span
+    class="bg-tango-400 absolute top-3 left-3 rounded-full px-4 py-2.5 font-sans text-sm font-normal text-black"
+    >{tag}</span
+  >
 </div>

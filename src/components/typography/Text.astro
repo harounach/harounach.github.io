@@ -1,0 +1,56 @@
+---
+interface Props {
+  type:
+    | "display"
+    | "title-base"
+    | "title-medium"
+    | "title-large"
+    | "body-large"
+    | "body-base"
+    | "body-small";
+  tag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "p" | "span" | "div";
+  className?: string;
+}
+
+const { type, tag, className } = Astro.props;
+
+const Element = tag;
+
+// display        48     Bold         text-5xl
+// title-large    36     SemiBold     text-4xl
+// title-medium   28     SemiBold     text-3xl
+// title-base     22     SemiBold     text-2xl
+// body-large     18     Regular      text-lg
+// body-base      16     Regular      text-base
+// body-small     14     Regular      text-sm
+// button         18     Medium       text-lg
+---
+
+<Element
+  class:list={[
+    /* display */
+    { "font-title text-5xl font-bold": type === "display" },
+
+    /* title-large */
+    { "font-title text-4xl font-semibold": type === "title-large" },
+
+    /* title-medium */
+    { "font-title text-3xl font-semibold": type === "title-medium" },
+
+    /* title-base */
+    { "font-title text-2xl font-semibold": type === "title-base" },
+
+    /* body-large */
+    { "font-sans text-lg font-normal": type === "body-large" },
+
+    /* body-base */
+    { "font-sans text-base font-normal": type === "body-base" },
+
+    /* body-small */
+    { "font-sans text-sm font-normal": type === "body-small" },
+
+    className,
+  ]}
+>
+  <slot />
+</Element>
