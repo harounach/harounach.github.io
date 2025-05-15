@@ -4,29 +4,59 @@ interface Props {
 }
 
 import SocialIcon from "./SocialIcon.astro";
+import FacebookIcon from "@components/icons/facebook.svg";
 import InstagramIcon from "@components/icons/instagram.svg";
-import TwitterXIcon from "@components/icons/twitter-x.svg";
-import YouTubeIcon from "@components/icons/youtube.svg";
 import Threads from "@components/icons/threads.svg";
+import TwitterXIcon from "@components/icons/twitter-x.svg";
+import LinkedInIcon from "@components/icons/linkedin.svg";
+import PinterestIcon from "@components/icons/pinterest.svg";
+import GithubIcon from "@components/icons/github.svg";
+import YouTubeIcon from "@components/icons/youtube.svg";
 import LinktreeIcon from "@components/icons/LinktreeIcon.astro";
 
 const { className } = Astro.props;
 ---
 
 <ul class:list={["flex flex-wrap gap-3", className]}>
+  <!-- Facebook -->
+  <SocialIcon
+    url="https://www.facebook.com/haroun.achouche.me"
+    title="Facebook"
+  >
+    <FacebookIcon width={24} height={24} />
+  </SocialIcon>
+
   <!-- Instagram -->
   <SocialIcon url="https://www.instagram.com/harounachouche/" title="Instagram">
     <InstagramIcon width={24} height={24} />
   </SocialIcon>
 
   <!-- Threads -->
-  <SocialIcon url="https://www.threads.net/@harounachouche" title="Threads">
+  <SocialIcon url="https://www.threads.com/@harounachouche" title="Threads">
     <Threads width={24} height={24} />
   </SocialIcon>
 
   <!-- Twitter-X -->
   <SocialIcon url="https://x.com/harounachouche" title="Twitter-X">
     <TwitterXIcon width={24} height={24} />
+  </SocialIcon>
+
+  <!-- LinkedIn -->
+  <SocialIcon
+    url="https://www.linkedin.com/in/haroun-achouche/"
+    title="LinkedIn"
+  >
+    <LinkedInIcon width={24} height={24} />
+  </SocialIcon>
+
+  <!-- Pinterest -->
+  <SocialIcon url="https://www.pinterest.com/harounachouche/" title="Pinterest">
+    <PinterestIcon width={24} height={24} />
+  </SocialIcon>
+
+  <!-- Github -->
+  <SocialIcon url="https://github.com/harounach" title="Github">
+    <GithubIcon width={24} height={24} />
   </SocialIcon>
 
   <!-- YouTube -->
