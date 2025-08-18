@@ -1,17 +1,37 @@
 ---
-import Logo from "@components/section/Logo.astro";
-import Navigation from "./Navigation.astro";
+import { Image } from "astro:assets";
 
 const { className } = Astro.props;
 ---
 
 <header class:list={["flex px-4 py-6 sm:px-14", className]}>
-  <a href="#content" class="sr-only">Skip to content</a>
+  <a href="#content" class="sr-only focus:not-sr-only">Skip to content</a>
   <div class="container">
     <div class="flex items-center justify-between">
-      <Logo />
+      <a href="/">
+        <Image
+          src={"/images/logo.svg"}
+          alt={"Haroun Achouche"}
+          class="h-14 w-14"
+          width={72}
+          height={72}
+        />
+      </a>
       <div>
-        <Navigation />
+        <nav class="flex items-center justify-center gap-4">
+          <a
+            class="hover:text-christi-600 font-sans text-base font-medium transition"
+            href="/">Home</a
+          >
+          <a
+            class="hover:text-christi-600 font-sans text-base font-medium transition"
+            href="/projects">Projects</a
+          >
+          <a
+            class="hover:text-christi-600 font-sans text-base font-medium transition"
+            href="/blog">Blog</a
+          >
+        </nav>
       </div>
     </div>
   </div>

@@ -1,0 +1,134 @@
+@use "sass:map";
+
+@use "./variables" as vars;
+@use "./mixins" as mixins;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: vars.$font-sans;
+  font-size: 16px;
+}
+
+body {
+  background-color: #f9f9f9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+}
+
+button {
+  font-family: vars.$font-serif;
+}
+
+// display-large
+.display-large {
+  @include mixins.displayLargeText();
+  color: vars.$color-neutral-900;
+}
+
+// display-base
+.display-base {
+  @include mixins.displayBaseText();
+  color: vars.$color-neutral-900;
+}
+
+// title-large
+.title-large {
+  @include mixins.titleLargeText();
+  color: vars.$color-neutral-900;
+}
+
+// title-medium
+.title-medium {
+  @include mixins.titleMediumText();
+  color: #000;
+}
+
+// title-base
+.title-base {
+  @include mixins.titleBaseText();
+  color: #000;
+}
+
+// button
+.button {
+  @include mixins.buttonText();
+  color: #000;
+}
+
+// body-large
+.body-large {
+  @include mixins.bodyLargeText();
+  color: #000;
+}
+
+// body-base
+.body-base {
+  @include mixins.bodyBaseText();
+  color: #000;
+}
+
+.title {
+  color: vars.$color-neutral-900;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: vars.$color-neutral-900;
+  margin-bottom: 1rem;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 56px;
+    left: -1.25rem;
+    top: -2px;
+    position: absolute;
+    background-image: url("/images/Decor-Subtitle.svg");
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-start {
+  text-align: start;
+}
+
+.text-end {
+  text-align: end;
+}
+
+.text-confined {
+  max-width: 768px;
+}
+
+.text-lg {
+  max-width: 768px;
+}
+
+.text-md {
+  max-width: 576px;
+}
+
+.text-sm {
+  max-width: 448px;
+}

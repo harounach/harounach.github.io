@@ -3,10 +3,10 @@ import { getEntry } from "astro:content";
 import { Image } from "astro:assets";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Button from "@components/actionable/Button.astro";
-import Hero from "@components/section/Hero.astro";
+
 import FeaturedProjectList from "@components/section/projects/FeaturedProjectList.astro";
-import WebDesignList from "@components/section/WebDesignList.astro";
-import SocialMediaList from "@components/section/SocialMediaList.astro";
+import Tick1Icon from "@components/icons/Tick1Icon.astro";
+import Tick2Icon from "@components/icons/Tick2Icon.astro";
 
 // Get certifications, and projects collection entries
 
@@ -15,6 +15,24 @@ const projectCollection = await getEntry("projects", "projects");
 const feauturedProjects = projectCollection?.data.filter(
   (proj) => proj.featured === true,
 );
+
+const webDesignList = [
+  "Custom website designs tailored to your brand.",
+  "Responsive layouts for all devices.",
+  "SEO optimization for better visibility.",
+  "Secure e-commerce solutions.",
+  "User-friendly content management systems.",
+  "Performance optimization for fast loading times.",
+];
+
+const socialMediaList = [
+  "Engaging content creation for various platforms.",
+  "Customized social media strategies.",
+  "Active community engagement and management.",
+  "Regular analytics and performance reporting.",
+  "Targeted ad campaign management.",
+  "Consistent brand voice across channels.",
+];
 
 const pageTitle = "Haroun Achouche Portfolio";
 const metaDescription =
@@ -31,7 +49,40 @@ const metaKeyWords = "Haroun Achouche,Haroun Ach, Haroun Ach Portfolio";
     <!-- About section -->
     <section class="px-4 pt-4 pb-24">
       <div class="container">
-        <Hero />
+        <!-- Hero -->
+        <div
+          id="hero"
+          class="flex flex-col items-center gap-6 sm:flex-row-reverse sm:items-start sm:justify-center"
+        >
+          <div class="shrink-0">
+            <Image
+              src={"/images/harounach-photo-square.jpg"}
+              alt="Haroun Achouche"
+              width={500}
+              height={500}
+              class="border-tango-500 block h-[350px] w-[350px] rounded-full border-4"
+            />
+          </div>
+          <div class="flex flex-col gap-4 sm:pt-6">
+            <h1
+              class="font-title text-center text-4xl font-medium sm:text-left"
+            >
+              Haroun Achouche
+            </h1>
+            <p class="max-w-[500px] font-sans text-base/8 font-normal">
+              I am a Software Engineer, I have a degree in software engineering
+              and over 6 years of web developement experience. I have extensive
+              experience with web technology including HTML, CSS , and
+              JavaScript., as well as ReactJS and NodeJS Since I have started
+              web development, I have been spending every spare minute writing
+              code for the web, and learning everything on web application
+              development.
+            </p>
+            <div class="flex justify-center sm:justify-start">
+              <Button url="#contact">Contact Me</Button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section class="bg-grapefruit-100 px-4 py-24">
@@ -49,7 +100,16 @@ const metaKeyWords = "Haroun Achouche,Haroun Ach, Haroun Ach Portfolio";
             <h2 class="font-title mb-4 text-2xl font-medium">
               Create your dream website
             </h2>
-            <WebDesignList />
+            <ul role="list" class="mb-4">
+              {
+                webDesignList.map((item) => (
+                  <li class="mb-3 flex items-start gap-4">
+                    <Tick1Icon className="shrink-0" />
+                    <p class="font-sans text-lg font-normal">{item}</p>
+                  </li>
+                ))
+              }
+            </ul>
             <div class="flex justify-center sm:justify-start">
               <Button url="#contact" theme="grapefruit">Contact Me</Button>
             </div>
@@ -64,7 +124,16 @@ const metaKeyWords = "Haroun Achouche,Haroun Ach, Haroun Ach Portfolio";
             <h2 class="font-title mb-4 text-2xl font-medium">
               Manage your social media
             </h2>
-            <SocialMediaList />
+            <ul role="list" class="mb-4">
+              {
+                socialMediaList.map((item) => (
+                  <li class="mb-3 flex items-start gap-4">
+                    <Tick2Icon className="shrink-0" />
+                    <p class="font-sans text-lg font-normal">{item}</p>
+                  </li>
+                ))
+              }
+            </ul>
             <div class="flex justify-center sm:justify-start">
               <Button url="#contact" theme="confetti">Contact Me</Button>
             </div>
@@ -95,3 +164,14 @@ const metaKeyWords = "Haroun Achouche,Haroun Ach, Haroun Ach Portfolio";
     </section>
   </main>
 </BaseLayout>
+
+<style>
+  @media screen and (width >= 40rem) {
+    #hero {
+      background-image: url("/images/shape-hero.svg");
+      background-repeat: no-repeat;
+      background-position: left 15% center;
+      background-size: 200px;
+    }
+  }
+</style>
