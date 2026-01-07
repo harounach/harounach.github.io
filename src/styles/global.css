@@ -1,10 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-  --font-title: "Rubik Variable", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans:
+    "Inter Variable", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --color-pea-50: #ebfef4;
+  --color-pea-100: #cffce3;
+  --color-pea-200: #a4f6cc;
+  --color-pea-300: #69ecb2;
+  --color-pea-400: #2dda93;
+  --color-pea-500: #08c17b;
+  --color-pea-600: #009d63;
+  --color-pea-700: #007d53;
+  --color-pea-800: #026343; /* base */
+  --color-pea-900: #035139;
+  --color-pea-950: #002e21;
 
   --color-christi-50: #f4fee7;
   --color-christi-100: #e5fdca;

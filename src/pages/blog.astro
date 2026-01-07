@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "@layouts/BaseLayout.astro";
+import Layout from "@layouts/Layout.astro";
 
 const pageTitle = "Blog | Haroun Achouche Portfolio";
 const metaDescription =
@@ -7,14 +7,14 @@ const metaDescription =
 const metaKeyWords = "Haroun Achouche,Haroun Ach, Haroun Ach Portfolio";
 ---
 
-<BaseLayout
+<Layout
   pageTitle={pageTitle}
   metaDescription={metaDescription}
   metaKeyWords={metaKeyWords}
 >
   <main id="content">
-    <section class="px-4 pt-4 pb-24">
-      <div class="container">
+    <section class="px-4 py-22 md:px-6 md:py-28">
+      <div class="mx-auto max-w-250">
         <h1
           class="font-title mb-10 text-center text-4xl font-medium sm:text-left"
         >
@@ -28,4 +28,4 @@ const metaKeyWords = "Haroun Achouche,Haroun Ach, Haroun Ach Portfolio";
       </div>
     </section>
   </main>
-</BaseLayout>
+</Layout>

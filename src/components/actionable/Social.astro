@@ -4,28 +4,17 @@ interface Props {
 }
 
 import SocialIcon from "./SocialIcon.astro";
-import FacebookIcon from "@components/icons/facebook.svg";
-import InstagramIcon from "@components/icons/instagram.svg";
-import Threads from "@components/icons/threads.svg";
-import TwitterXIcon from "@components/icons/twitter-x.svg";
-import LinkedInIcon from "@components/icons/linkedin.svg";
-import PinterestIcon from "@components/icons/pinterest.svg";
-import GithubIcon from "@components/icons/github.svg";
-import YouTubeIcon from "@components/icons/youtube.svg";
-import LinktreeIcon from "@components/icons/LinktreeIcon.astro";
+import InstagramIcon from "@assets/icons/instagram.svg";
+import Threads from "@assets/icons/threads.svg";
+import TwitterXIcon from "@assets/icons/twitter-x.svg";
+import GithubIcon from "@assets/icons/github.svg";
+import YouTubeIcon from "@assets/icons/youtube.svg";
+import LinktreeIcon from "@assets/icons/LinktreeIcon.svg";
 
 const { className } = Astro.props;
 ---
 
-<ul class:list={["flex flex-wrap gap-3", className]}>
-  <!-- Facebook -->
-  <SocialIcon
-    url="https://www.facebook.com/haroun.achouche.me"
-    title="Facebook"
-  >
-    <FacebookIcon width={24} height={24} />
-  </SocialIcon>
-
+<ul class:list={["flex flex-wrap gap-2", className]}>
   <!-- Instagram -->
   <SocialIcon url="https://www.instagram.com/harounachouche/" title="Instagram">
     <InstagramIcon width={24} height={24} />
@@ -39,19 +28,6 @@ const { className } = Astro.props;
   <!-- Twitter-X -->
   <SocialIcon url="https://x.com/harounachouche" title="Twitter-X">
     <TwitterXIcon width={24} height={24} />
-  </SocialIcon>
-
-  <!-- LinkedIn -->
-  <SocialIcon
-    url="https://www.linkedin.com/in/haroun-achouche/"
-    title="LinkedIn"
-  >
-    <LinkedInIcon width={24} height={24} />
-  </SocialIcon>
-
-  <!-- Pinterest -->
-  <SocialIcon url="https://www.pinterest.com/harounachouche/" title="Pinterest">
-    <PinterestIcon width={24} height={24} />
   </SocialIcon>
 
   <!-- Github -->

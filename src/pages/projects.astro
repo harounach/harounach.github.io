@@ -1,6 +1,8 @@
 ---
-import BaseLayout from "@layouts/BaseLayout.astro";
-import ProjectList from "@components/section/projects/ProjectList.astro";
+import ContactSection from "@components/section/ContactSection.astro";
+import ProjectCard from "@components/section/ProjectCard.astro";
+import Layout from "@layouts/Layout.astro";
+import { projectList } from "src/lib/data";
 
 const pageTitle = "Projects | Haroun Achouche Portfolio";
 const metaDescription =
@@ -8,21 +10,27 @@ const metaDescription =
 const metaKeyWords = "Haroun Achouche,Haroun Ach, Haroun Ach Portfolio";
 ---
 
-<BaseLayout
+<Layout
   pageTitle={pageTitle}
   metaDescription={metaDescription}
   metaKeyWords={metaKeyWords}
 >
   <main id="content">
-    <section class="px-4 pt-4 pb-24">
-      <div class="container">
-        <h1
-          class="font-title mb-10 text-center text-4xl font-medium sm:text-left"
-        >
-          Projects
-        </h1>
-        <ProjectList />
+    <!-- Projects section -->
+    <section class="px-4 py-22 md:px-6 md:py-28">
+      <div class="mx-auto max-w-250">
+        <div class="flex flex-col gap-10">
+          <h1 class="font-title text-center text-4xl font-medium sm:text-left">
+            Projects
+          </h1>
+          <div class="grid grid-cols-1 gap-14 md:grid-cols-3">
+            {projectList.map((project) => <ProjectCard project={project} />)}
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- Contact section -->
+    <ContactSection />
   </main>
-</BaseLayout>
+</Layout>

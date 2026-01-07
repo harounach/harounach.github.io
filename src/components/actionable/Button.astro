@@ -1,34 +1,19 @@
 ---
-interface Props {
-  url: string;
-  theme?: "christi" | "confetti" | "grapefruit" | "outline";
+import type { HTMLAttributes } from "astro/types";
+
+interface Props extends HTMLAttributes<"a"> {
   className?: string;
 }
-const { url, theme, className } = Astro.props;
+
+const { className, ...attrs } = Astro.props;
 ---
 
 <a
-  href={url}
   class:list={[
-    "font-title inline-flex rounded-sm border-2 px-4 py-3 text-lg font-medium transition",
-    {
-      "border-christi-600 bg-christi-600 hover:border-christi-700 hover:bg-christi-700 text-white":
-        theme === "christi" || !theme,
-    },
-    {
-      "border-grapefruit-400 bg-grapefruit-400 hover:border-grapefruit-500 hover:bg-grapefruit-500 text-black":
-        theme === "grapefruit",
-    },
-    {
-      "border-confetti-300 hover:border-confetti-400 bg-confetti-300 hover:bg-confetti-400 text-black":
-        theme === "confetti",
-    },
-    {
-      "border-christi-600 hover:bg-christi-600 text-christi-600 bg-white hover:text-white":
-        theme === "outline",
-    },
+    "font-title border-pea-800 bg-pea-800 hover:border-pea-900 hover:bg-pea-900 inline-flex shrink-0 cursor-pointer items-center justify-center rounded-lg border px-4 py-2.5 text-base font-medium text-white transition",
     className,
   ]}
+  {...attrs}
 >
   <slot />
 </a>

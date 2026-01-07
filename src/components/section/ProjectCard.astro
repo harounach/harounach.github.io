@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+import Button from "@components/actionable/Button.astro";
+import type { TProject } from "src/types/types";
+
+interface Props {
+  project: TProject;
+}
+
+const { project } = Astro.props;
+---
+
+<div class="flex flex-col gap-5">
+  <Image
+    src={project.imageUrl}
+    alt={project.imageAlt}
+    width={370}
+    height={278}
+    class="block h-auto w-full max-w-92.5 rounded-lg"
+  />
+  <span class="font-sans text-xl font-semibold">{project.title}</span>
+  <p class="font-sans text-base leading-relaxed font-normal text-neutral-700">
+    {project.description}
+  </p>
+  <div>
+    <Button href={project.url}>View</Button>
+  </div>
+</div>

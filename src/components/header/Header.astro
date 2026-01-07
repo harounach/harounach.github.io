@@ -1,38 +1,31 @@
 ---
-import { Image } from "astro:assets";
+import Logo from "./Logo.astro";
+import NavLink from "./NavLink.astro";
+import Button from "@components/actionable/Button.astro";
+import MenuButton from "./MenuButton.astro";
 
 const { className } = Astro.props;
 ---
 
-<header class:list={["flex px-4 py-6 sm:px-14", className]}>
+<header class:list={["px-4 py-3 md:px-6", className]}>
   <a href="#content" class="sr-only focus:not-sr-only">Skip to content</a>
-  <div class="container">
+  <div class="mx-auto max-w-300">
     <div class="flex items-center justify-between">
-      <a href="/">
-        <Image
-          src={"/images/logo.svg"}
-          alt={"Haroun Achouche"}
-          class="h-14 w-14"
-          width={72}
-          height={72}
-        />
-      </a>
+      <!-- Logo -->
+      <Logo />
       <div>
-        <nav class="flex items-center justify-center gap-4">
-          <a
-            class="hover:text-christi-600 font-sans text-base font-medium transition"
-            href="/">Home</a
-          >
-          <a
-            class="hover:text-christi-600 font-sans text-base font-medium transition"
-            href="/projects">Projects</a
-          >
-          <a
-            class="hover:text-christi-600 font-sans text-base font-medium transition"
-            href="/blog">Blog</a
-          >
+        <nav class="flex items-center gap-10">
+          <ul class="flex items-center justify-center gap-6">
+            <NavLink href="/">Home</NavLink>
+            <NavLink href="/projects">Projects</NavLink>
+            <NavLink href="/blog">Blog</NavLink>
+          </ul>
+          <Button href="#contact-section">Contact</Button>
         </nav>
       </div>
+
+      <!-- Menu button (Mobile only) -->
+      <MenuButton />
     </div>
   </div>
 </header>
