@@ -13,7 +13,7 @@ const BackButton = function () {
   // MVC view
   const view = {
     init: function () {
-      this.backButton = document.querySelector(".back-btn");
+      this.backButton = document.querySelector("#back-btn");
 
       // set up listeners
       this.listen();
@@ -26,10 +26,12 @@ const BackButton = function () {
       const self = this;
       // show back button when scrolling
       const backButtonListener = () => {
-        if (window.scrollY > 100) {
+        if (window.scrollY > 150) {
           self.backButton.classList.remove("hidden");
+          self.backButton.classList.add("inline-flex");
         } else {
           self.backButton.classList.add("hidden");
+          self.backButton.classList.remove("inline-flex");
         }
       };
 

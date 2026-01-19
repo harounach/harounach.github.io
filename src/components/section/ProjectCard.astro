@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import Button from "@components/actionable/Button.astro";
 import type { TProject } from "src/types/types";
 
 interface Props {
@@ -10,7 +9,9 @@ interface Props {
 const { project } = Astro.props;
 ---
 
-<div class="flex flex-col gap-5">
+<div
+  class="relative isolate flex flex-col gap-5 rounded-lg px-2 pt-1 pb-4 hover:bg-zinc-50"
+>
   <Image
     src={project.imageUrl}
     alt={project.imageAlt}
@@ -18,11 +19,11 @@ const { project } = Astro.props;
     height={278}
     class="block h-auto w-full max-w-92.5 rounded-lg"
   />
-  <span class="font-sans text-xl font-semibold">{project.title}</span>
+  <a href={project.url} class="font-sans text-xl font-semibold">
+    <span class="absolute inset-0 z-10"></span>
+    {project.title}
+  </a>
   <p class="font-sans text-base leading-relaxed font-normal text-neutral-700">
     {project.description}
   </p>
-  <div>
-    <Button href={project.url}>View</Button>
-  </div>
 </div>

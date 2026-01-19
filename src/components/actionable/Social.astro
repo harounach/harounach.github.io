@@ -10,11 +10,17 @@ import TwitterXIcon from "@assets/icons/twitter-x.svg";
 import GithubIcon from "@assets/icons/github.svg";
 import YouTubeIcon from "@assets/icons/youtube.svg";
 import LinktreeIcon from "@assets/icons/LinktreeIcon.svg";
+import FacebookIcon from "@assets/icons/facebook.svg";
 
 const { className } = Astro.props;
 ---
 
 <ul class:list={["flex flex-wrap gap-2", className]}>
+  <!-- Facebook -->
+  <SocialIcon url="https://www.facebook.com/harounachouche" title="Facebook">
+    <FacebookIcon width={24} height={24} />
+  </SocialIcon>
+
   <!-- Instagram -->
   <SocialIcon url="https://www.instagram.com/harounachouche/" title="Instagram">
     <InstagramIcon width={24} height={24} />

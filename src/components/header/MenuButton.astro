@@ -4,17 +4,34 @@
 
 <button
   id="menu-btn"
-  class="group relative z-40 flex h-10 w-10 shrink-0 cursor-pointer flex-col justify-between border-0 bg-transparent p-2 md:hidden"
+  class="group relative z-40 flex h-10 w-10 shrink-0 cursor-pointer flex-col items-center justify-center gap-1.5 rounded-full border border-black bg-transparent px-2.5 py-2 md:hidden"
   aria-label="Menu button"
   role="menubar"
 >
+  <!-- Bar 1 -->
   <span
-    class="h-1 w-full rounded-sm bg-black transition group-[.menu-open]:translate-y-2.5 group-[.menu-open]:rotate-45"
-  ></span>
+    class:list={[
+      // Default
+      "h-px w-full rounded-xs bg-black transition",
+      // Menu button open
+      "group-[.menu-open]:translate-y-1.75 group-[.menu-open]:rotate-45",
+    ]}></span>
+
+  <!-- Bar 2 -->
   <span
-    class="h-1 w-full rounded-sm bg-black transition group-[.menu-open]:opacity-0"
-  ></span>
+    class:list={[
+      // Default
+      "h-px w-full rounded-xs bg-black transition",
+      // Menu button open
+      "group-[.menu-open]:opacity-0",
+    ]}></span>
+
+  <!-- Bar 3 -->
   <span
-    class="h-1 w-full rounded-sm bg-black transition group-[.menu-open]:-translate-y-2.5 group-[.menu-open]:-rotate-45"
-  ></span>
+    class:list={[
+      // Default
+      "h-px w-full rounded-xs bg-black transition",
+      // Menu button open
+      "group-[.menu-open]:-translate-y-1.75 group-[.menu-open]:-rotate-45",
+    ]}></span>
 </button>
