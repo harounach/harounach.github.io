@@ -228,7 +228,7 @@ export const latestProjects: TProject[] = [
     description: "French-cuisine New York based restaurant",
     imageUrl: thumbnail_Aube,
     imageAlt: "L'Aube restaurant and Bistro",
-    url: "#",
+    url: "https://haron-aube-bistro.netlify.app/",
   },
 
   /* # 1 */
