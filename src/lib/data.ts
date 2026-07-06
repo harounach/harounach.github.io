@@ -3,6 +3,7 @@ import type { TAward, TPhoto, TProject } from "src/types/types";
 // import heroPhoto from "../assets/images/harounach-photo-square.jpg";
 import heroPhoto from "../assets/images/Haroun-Achouche-Square.png";
 
+import thumbnail_Aube from "@/assets/images/aube-bistro.png";
 import thumbnail_SunnyCoffeeShop from "../assets/images/sunny-coffee-shop.png";
 import thumbnail_Travvall from "../assets/images/travvall.png";
 import thumbnail_LittleTableRestaurant from "../assets/images/little-table-restaurant.png";
@@ -30,6 +31,15 @@ export const heroPhotoData: TPhoto = {
 };
 
 export const projectList: Array<TProject> = [
+  /* # latest */
+  {
+    title: "L'Aube restaurant",
+    description: "French-cuisine New York based restaurant",
+    imageUrl: thumbnail_Aube,
+    imageAlt: "L'Aube restaurant and Bistro",
+    url: "#",
+  },
+
   /* # 1 */
   {
     title: "Evergreen dental clinic",
@@ -208,6 +218,71 @@ export const projectList: Array<TProject> = [
     imageUrl: thumbnail_TechDocsPage,
     imageAlt: "Technical Documentation Page",
     url: "https://codepen.io/harounachouche/full/RwraBaR",
+  },
+];
+
+export const latestProjects: TProject[] = [
+  /* # latest */
+  {
+    title: "L'Aube restaurant",
+    description: "French-cuisine New York based restaurant",
+    imageUrl: thumbnail_Aube,
+    imageAlt: "L'Aube restaurant and Bistro",
+    url: "#",
+  },
+
+  /* # 1 */
+  {
+    title: "Evergreen dental clinic",
+    description: "dental clinic website",
+    imageUrl: thumbnail_EvergreenDentalClinic,
+    imageAlt: "Evergreen dental clinic",
+    url: "https://evergreen-dental.netlify.app/",
+  },
+
+  /* # 2 */
+  {
+    title: "Newva Restaurant",
+    description: "Newva restaurant website",
+    imageUrl: thumbnail_NewvaRestaurant,
+    imageAlt: "Newva Restaurant",
+    url: "https://haron-newva.netlify.app/",
+  },
+
+  /* # 3 */
+  {
+    title: "Little Table",
+    description: "Restaurant Website",
+    imageUrl: thumbnail_LittleTableRestaurant,
+    imageAlt: "Little Table Restaurant",
+    url: "https://littletable.netlify.app",
+  },
+
+  /* # 4 */
+  {
+    title: "Sunny Coffee Shop",
+    description: "Ecommerce website",
+    imageUrl: thumbnail_SunnyCoffeeShop,
+    imageAlt: "Sunny Coffee Shop",
+    url: "https://github.com/harounach/sunnycoffeeshop",
+  },
+
+  /* # 5 */
+  {
+    title: "VegeFru",
+    description: "A Online Grocery Store Web App",
+    imageUrl: thumbnail_VegeFru,
+    imageAlt: "VegeFru",
+    url: "https://github.com/harounach/vegefru",
+  },
+
+  /* # 6 */
+  {
+    title: "Travvall",
+    description: "Travel agency website",
+    imageUrl: thumbnail_Travvall,
+    imageAlt: "Travvall",
+    url: "https://github.com/harounach/vegefru",
   },
 ];
 

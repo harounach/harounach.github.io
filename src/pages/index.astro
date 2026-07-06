@@ -1,11 +1,8 @@
 ---
-import { Image } from "astro:assets";
-import Layout from "@layouts/Layout.astro";
-import Button from "@components/actionable/Button.astro";
-import ProjectCard from "@components/section/ProjectCard.astro";
-import ContactSection from "@components/section/ContactSection.astro";
-import Divider from "@components/section/Divider.astro";
-import { heroPhotoData, featuredProjectList } from "src/lib/data";
+import Layout from "@/layouts/Layout.astro";
+import ContactSection from "@/components/section/ContactSection.astro";
+import HeroSection from "@/components/section/HeroSection.astro";
+import ProjectSection from "@/components/section/ProjectSection.astro";
 
 const pageTitle = "Haroun Achouche Portfolio";
 const metaDescription =
@@ -20,78 +17,12 @@ const metaKeyWords = "Haroun Achouche,Haroun Ach, Haroun Ach Portfolio";
 >
   <main id="content">
     <!-- Hero section -->
-    <section
-      class="bg-[#FAFAFA] px-4 pt-14 pb-22 md:px-6 md:pb-28"
-      id="hero-section"
-      aria-labelledby="hero-heading"
-    >
-      <div class="mx-auto max-w-180">
-        <div class="flex flex-col items-center gap-6 md:items-start">
-          <Image
-            src={heroPhotoData.imageUrl}
-            alt={heroPhotoData.imageAlt}
-            width="90"
-            height="90"
-            class="block h-22.5 w-22.5 shrink-0 rounded-full"
-          />
-          <h1
-            id="hero-heading"
-            class="text-center font-sans text-[36px] font-black text-black md:text-left md:text-[40px]"
-          >
-            Hi, I’m Haroun Achouche!
-          </h1>
-          <p class="font-sans text-xl/7 font-normal text-neutral-700">
-            I am a Software Engineer, I have a degree in software engineering
-            and over 6 years of web developement experience. I have extensive
-            experience with web technology including HTML, CSS , and
-            JavaScript., as well as ReactJS and NodeJS Since I have started web
-            development, I have been spending every spare minute writing code
-            for the web, and learning everything on web application development.
-          </p>
-          <div class="flex justify-center md:justify-start">
-            <Button href="#contact-section" data-scroller
-              >Let's work together</Button
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <Divider />
+    <HeroSection />
 
     <!-- Projects -->
-    <section
-      class="px-4 py-22 md:px-6 md:py-28"
-      aria-labelledby="projects-heading"
-      id="projects-section"
-    >
-      <div class="mx-auto max-w-250">
-        <div class="flex flex-col gap-14">
-          <h2
-            id="projects-heading"
-            class="text-center font-sans text-[28px] font-semibold md:text-[32px]"
-          >
-            Just a taste of what I have done
-          </h2>
-          <div class="grid grid-cols-1 gap-14 md:grid-cols-3">
-            {
-              featuredProjectList.map((project) => (
-                <ProjectCard project={project} />
-              ))
-            }
-          </div>
-          <div class="flex justify-center sm:justify-end">
-            <Button href="/projects">See more</Button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <Divider />
+    <ProjectSection />
 
     <!-- Contact section -->
     <ContactSection />
-
-    <Divider />
   </main>
 </Layout>

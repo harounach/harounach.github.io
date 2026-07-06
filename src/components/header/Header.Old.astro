@@ -1,0 +1,69 @@
+---
+import Logo from "./Logo.astro";
+import NavLink from "./NavLink.astro";
+import Button from "@/components/actionable/Button.astro";
+import MenuButton from "./MenuButton.astro";
+import Social from "@/components/actionable/Social.astro";
+
+const { className } = Astro.props;
+---
+
+<header
+  id="header"
+  class:list={[
+    // Default
+    "group top-0 right-0 left-0 z-20 bg-white px-4 py-3 md:px-6",
+
+    // Header normal
+    "data-[header-fixed='no']:relative",
+
+    // Header fixed
+    "data-[header-fixed='yes']:fixed",
+
+    // Others
+    className,
+  ]}
+  data-header-fixed="no"
+>
+  <a href="#content" class="sr-only focus:not-sr-only">Skip to content</a>
+  <div class="mx-auto max-w-300">
+    <div class="flex items-center justify-between">
+      <!-- Logo -->
+      <Logo />
+
+      <!-- Navigation (On mobile this becomes a drawer) -->
+      <div
+        class:list={[
+          // Normal
+          "transition md:static md:translate-y-0 md:bg-transparent md:p-0",
+          // Mobile + Drawer closed
+          "fixed inset-0 -translate-y-full overflow-y-auto bg-amber-100 px-6 pt-14 pb-6",
+          // Mobile + Drawer open
+          "group-[.header-open]:translate-y-0",
+        ]}
+      >
+        <nav class="flex flex-col items-center gap-10 md:flex-row">
+          <ul
+            class="flex flex-col items-center gap-6 md:flex-row md:justify-center"
+          >
+            <NavLink href="/">Home</NavLink>
+            <NavLink href="/projects">Projects</NavLink>
+            <NavLink href="/blog">Blog</NavLink>
+          </ul>
+          <Button href="#contact-section" data-scroller>Contact</Button>
+
+          <!-- Social (Mobile only) -->
+          <div class="flex flex-col gap-6 md:hidden">
+            <span>Follow me</span>
+            <div>
+              <Social />
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Menu button (Mobile only) -->
+      <MenuButton />
+    </div>
+  </div>
+</header>

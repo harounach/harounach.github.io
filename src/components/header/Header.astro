@@ -1,69 +1,48 @@
 ---
 import Logo from "./Logo.astro";
 import NavLink from "./NavLink.astro";
-import Button from "@components/actionable/Button.astro";
-import MenuButton from "./MenuButton.astro";
-import Social from "@components/actionable/Social.astro";
-
-const { className } = Astro.props;
 ---
 
 <header
-  id="header"
-  class:list={[
-    // Default
-    "group top-0 right-0 left-0 z-20 bg-white px-4 py-3 md:px-6",
-
-    // Header normal
-    "data-[header-fixed='no']:relative",
-
-    // Header fixed
-    "data-[header-fixed='yes']:fixed",
-
-    // Others
-    className,
-  ]}
-  data-header-fixed="no"
+  class="bg-chalk-canvas fixed top-0 left-0 z-50 flex h-20 w-full items-center border-b border-b-[#1A2421]/10"
 >
   <a href="#content" class="sr-only focus:not-sr-only">Skip to content</a>
-  <div class="mx-auto max-w-300">
-    <div class="flex items-center justify-between">
-      <!-- Logo -->
-      <Logo />
+  <div class="mx-auto flex w-full max-w-7xl items-center justify-between px-4">
+    <!-- Logo Left -->
+    <Logo />
 
-      <!-- Navigation (On mobile this becomes a drawer) -->
-      <div
-        class:list={[
-          // Normal
-          "transition md:static md:translate-y-0 md:bg-transparent md:p-0",
-          // Mobile + Drawer closed
-          "fixed inset-0 -translate-y-full overflow-y-auto bg-amber-100 px-6 pt-14 pb-6",
-          // Mobile + Drawer open
-          "group-[.header-open]:translate-y-0",
-        ]}
+    <!-- Hamburger Button (Mobile Only) -->
+    <button
+      id="menu-toggle"
+      class="flex flex-col gap-1.5 p-2 md:hidden"
+      aria-label="Toggle Menu"
+      aria-expanded="false"
+    >
+      <span
+        class="bg-deep-charcoal line-1 h-0.5 w-6 origin-left transition-all duration-300"
+      ></span>
+      <span
+        class="bg-deep-charcoal line-2 h-0.5 w-6 transition-all duration-300"
+      ></span>
+      <span
+        class="bg-deep-charcoal line-3 h-0.5 w-6 origin-left transition-all duration-300"
+      ></span>
+    </button>
+
+    <!-- Nav Links & CTA Panel -->
+    <nav
+      id="nav-menu"
+      class="bg-chalk-canvas absolute top-20 left-0 hidden w-full flex-col gap-6 border-b border-b-[#1A2421]/10 p-6 shadow-md transition-all duration-300 md:static md:flex md:w-auto md:flex-row md:items-center md:border-none md:p-0 md:shadow-none"
+    >
+      <ul class="flex flex-col gap-4 md:flex-row md:items-center md:gap-4">
+        <NavLink href="#hero-section">Home</NavLink>
+        <NavLink href="#projects-section">Projects</NavLink>
+      </ul>
+      <a
+        href="#contact-section"
+        class="font-title border-pea bg-pea hover:border-pea/75 hover:bg-pea/75 inline-flex shrink-0 cursor-pointer items-center justify-center rounded-lg border px-4 py-2.5 text-base font-medium text-white transition"
+        >Contact</a
       >
-        <nav class="flex flex-col items-center gap-10 md:flex-row">
-          <ul
-            class="flex flex-col items-center gap-6 md:flex-row md:justify-center"
-          >
-            <NavLink href="/">Home</NavLink>
-            <NavLink href="/projects">Projects</NavLink>
-            <NavLink href="/blog">Blog</NavLink>
-          </ul>
-          <Button href="#contact-section" data-scroller>Contact</Button>
-
-          <!-- Social (Mobile only) -->
-          <div class="flex flex-col gap-6 md:hidden">
-            <span>Follow me</span>
-            <div>
-              <Social />
-            </div>
-          </div>
-        </nav>
-      </div>
-
-      <!-- Menu button (Mobile only) -->
-      <MenuButton />
-    </div>
+    </nav>
   </div>
 </header>

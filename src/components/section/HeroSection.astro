@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+import { heroPhotoData } from "@/lib/data";
+---
+
+<section
+  class="bg-chalk-canvas scroll-mt-20 px-4 pt-14 pb-22 md:px-6 md:pb-28"
+  id="hero-section"
+  aria-labelledby="hero-heading"
+>
+  <div class="mx-auto max-w-180">
+    <div class="flex flex-col items-center gap-6 md:items-start">
+      <Image
+        src={heroPhotoData.imageUrl}
+        alt={heroPhotoData.imageAlt}
+        width="90"
+        height="90"
+        class="block h-22.5 w-22.5 shrink-0 rounded-full"
+      />
+      <h1
+        id="hero-heading"
+        class="text-deep-charcoal text-center font-sans text-4xl font-black md:text-left md:text-5xl"
+      >
+        Hi, I’m Haroun Achouche!
+      </h1>
+      <p class="text-muted-charcoal font-sans text-xl/7 font-normal">
+        I am a Software Engineer, I have a degree in software engineering and
+        over 6 years of web developement experience. I have extensive experience
+        with web technology including HTML, CSS , and JavaScript., as well as
+        ReactJS and NodeJS Since I have started web development, I have been
+        spending every spare minute writing code for the web, and learning
+        everything on web application development.
+      </p>
+      <div class="flex justify-center md:justify-start">
+        <a
+          href="#contact-section"
+          class="font-title border-pea-800 bg-pea-800 hover:border-pea-900 hover:bg-pea-900 inline-flex shrink-0 cursor-pointer items-center justify-center rounded-lg border px-4 py-2.5 text-base font-medium text-white transition"
+          >Let's work together</a
+        >
+      </div>
+    </div>
+  </div>
+</section>

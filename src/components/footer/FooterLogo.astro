@@ -1,9 +1,8 @@
 ---
-import { Image } from "astro:assets";
-import logoPhoto from "../../assets/icons/logo.svg";
+import LogoIcon from "@/assets/icons/logo.svg";
 ---
 
-<a href="/" class="flex shrink-0 items-center gap-2">
-  <Image src={logoPhoto} alt={""} class="h-14 w-14" width={72} height={72} />
-  <span class="font-sans text-2xl font-bold">Haroun</span>
+<a href="#hero-section" class="flex shrink-0 items-center gap-2">
+  <LogoIcon class="h-14 w-14" />
+  <span class="text-chalk-canvas font-sans text-2xl font-bold">Haroun</span>
 </a>
