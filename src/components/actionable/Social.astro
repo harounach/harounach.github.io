@@ -17,37 +17,40 @@ const { className } = Astro.props;
 
 <ul class:list={["flex flex-wrap gap-2", className]}>
   <!-- Facebook -->
-  <SocialIcon url="https://www.facebook.com/harounachouche" title="Facebook">
+  <SocialIcon href="https://www.facebook.com/harounachouche" title="Facebook">
     <FacebookIcon width={24} height={24} />
   </SocialIcon>
 
   <!-- Instagram -->
-  <SocialIcon url="https://www.instagram.com/harounachouche/" title="Instagram">
+  <SocialIcon
+    href="https://www.instagram.com/harounachouche/"
+    title="Instagram"
+  >
     <InstagramIcon width={24} height={24} />
   </SocialIcon>
 
   <!-- Threads -->
-  <SocialIcon url="https://www.threads.com/@harounachouche" title="Threads">
+  <SocialIcon href="https://www.threads.com/@harounachouche" title="Threads">
     <Threads width={24} height={24} />
   </SocialIcon>
 
   <!-- Twitter-X -->
-  <SocialIcon url="https://x.com/harounachouche" title="Twitter-X">
+  <SocialIcon href="https://x.com/harounachouche" title="Twitter-X">
     <TwitterXIcon width={24} height={24} />
   </SocialIcon>
 
   <!-- Github -->
-  <SocialIcon url="https://github.com/harounach" title="Github">
+  <SocialIcon href="https://github.com/harounach" title="Github">
     <GithubIcon width={24} height={24} />
   </SocialIcon>
 
   <!-- YouTube -->
-  <SocialIcon url="https://www.youtube.com/@harounach" title="YouTube">
+  <SocialIcon href="https://www.youtube.com/@harounach" title="YouTube">
     <YouTubeIcon width={24} height={24} />
   </SocialIcon>
 
   <!-- LinkTree -->
-  <SocialIcon url="https://linktr.ee/harounachouche" title="LinkTree">
+  <SocialIcon href="https://linktr.ee/harounachouche" title="LinkTree">
     <LinktreeIcon />
   </SocialIcon>
 </ul>
