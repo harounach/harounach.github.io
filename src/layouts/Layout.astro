@@ -30,6 +30,12 @@ const { pageTitle, metaDescription, metaKeyWords, className } = Astro.props;
     <Meta />
   </head>
   <body class:list={["pt-20 font-sans", className]}>
+    <!-- The Sentinel: When this leaves the top, the header is "scrolled" -->
+    <div
+      id="header-sentinel"
+      class="pointer-events-none absolute top-0 h-px w-full"
+    >
+    </div>
     <Header />
     <slot />
     <Footer />

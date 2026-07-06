@@ -4,9 +4,54 @@ import ArrowUpIcon from "@/assets/icons/arrow-up.svg";
 
 <a
   href="#hero-section"
-  class="bg-pea hover:bg-pea/75 fixed right-6 bottom-6 hidden shrink-0 cursor-pointer rounded-lg p-3 text-white"
+  class:list={[
+    "fixed right-8 bottom-8 z-30 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-xl transition-all duration-300",
+    "group hover:scale-110 hover:cursor-pointer active:scale-95",
+    "pointer-events-none translate-y-10 opacity-0",
+    "data-[visible='yes']:pointer-events-auto data-[visible='yes']:translate-y-0 data-[visible='yes']:opacity-100",
+  ]}
   id="back-btn"
   aria-label="Back to top"
+  data-visible="no"
 >
-  <ArrowUpIcon class="h-6 w-6" />
+  <!-- Progress Ring SVG -->
+  <svg class="absolute inset-0 h-full w-full -rotate-90" viewBox="0 0 100 100">
+    <!-- Background Track -->
+    <circle
+      cx="50"
+      cy="50"
+      r="45"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="6"
+      class="text-gray-100"></circle>
+    <!-- Progress Circle -->
+    <circle
+      id="progress-circle"
+      cx="50"
+      cy="50"
+      r="45"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="6"
+      stroke-linecap="round"
+      class="text-pea transition-[stroke-dashoffset] duration-150"
+      stroke-dasharray="283"
+      stroke-dashoffset="283"></circle>
+  </svg>
+
+  <!-- Arrow Icon -->
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="group-hover:text-rose relative z-10 h-6 w-6 text-black transition-colors"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2.5"
+      d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+  </svg>
 </a>
