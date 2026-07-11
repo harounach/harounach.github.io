@@ -2,18 +2,20 @@
 interface Props {
   href: string;
   title: string;
+  ariaLabel: string;
 }
 
-const { href, title } = Astro.props;
+const { href, title, ariaLabel } = Astro.props;
 ---
 
 <li>
   <a
     href={href}
     title={title}
-    class="hover:bg-pea bg-confetti flex h-10 w-10 items-center justify-center rounded-full text-black no-underline transition will-change-auto hover:text-white"
+    rel="index, follow"
+    class="hover:bg-pea bg-confetti flex h-10 w-10 items-center justify-center rounded-full text-black no-underline transition duration-200 ease-in-out hover:text-white"
   >
     <slot />
-    <span class="sr-only">{title}</span>
+    <span class="sr-only">{ariaLabel}</span>
   </a>
 </li>

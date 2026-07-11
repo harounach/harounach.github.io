@@ -17,40 +17,65 @@ const { className } = Astro.props;
 
 <ul class:list={["flex flex-wrap gap-2", className]}>
   <!-- Facebook -->
-  <SocialIcon href="https://www.facebook.com/harounachouche" title="Facebook">
-    <FacebookIcon width={24} height={24} />
+  <SocialIcon
+    href="https://www.facebook.com/harounachouche"
+    title="Haroun Achouche on Facebook"
+    ariaLabel="Haroun Achouche on Facebook"
+  >
+    <FacebookIcon class="size-6" />
   </SocialIcon>
 
   <!-- Instagram -->
   <SocialIcon
     href="https://www.instagram.com/harounachouche/"
-    title="Instagram"
+    title="Haroun Achouche Instagram Portfolio"
+    ariaLabel="Haroun Achouche on Instagram"
   >
-    <InstagramIcon width={24} height={24} />
+    <InstagramIcon class="size-6" />
   </SocialIcon>
 
   <!-- Threads -->
-  <SocialIcon href="https://www.threads.com/@harounachouche" title="Threads">
-    <Threads width={24} height={24} />
+  <SocialIcon
+    href="https://www.threads.com/@harounachouche"
+    title="Haroun Achouche on Threads"
+    ariaLabel="Haroun Achouche on Threads"
+  >
+    <Threads class="size-6" />
   </SocialIcon>
 
   <!-- Twitter-X -->
-  <SocialIcon href="https://x.com/harounachouche" title="Twitter-X">
-    <TwitterXIcon width={24} height={24} />
+  <SocialIcon
+    href="https://x.com/harounachouche"
+    title="Haroun Achouche on X (Twitter)"
+    ariaLabel="Haroun Achouche on X"
+  >
+    <TwitterXIcon class="size-6" />
   </SocialIcon>
 
   <!-- Github -->
-  <SocialIcon href="https://github.com/harounach" title="Github">
-    <GithubIcon width={24} height={24} />
+  <SocialIcon
+    href="https://github.com/harounach"
+    title="Haroun Achouche GitHub Profile"
+    ariaLabel="Haroun Achouche on GitHub"
+  >
+    <GithubIcon class="size-6" />
   </SocialIcon>
 
   <!-- YouTube -->
-  <SocialIcon href="https://www.youtube.com/@harounach" title="YouTube">
-    <YouTubeIcon width={24} height={24} />
+  <SocialIcon
+    href="https://www.youtube.com/@harounach"
+    title="Haroun Achouche YouTube Channel"
+    ariaLabel="Haroun Achouche on YouTube"
+  >
+    <YouTubeIcon class="size-6" />
   </SocialIcon>
 
   <!-- LinkTree -->
-  <SocialIcon href="https://linktr.ee/harounachouche" title="LinkTree">
-    <LinktreeIcon />
+  <SocialIcon
+    href="https://linktr.ee/harounachouche"
+    title="Haroun Achouche Links on Linktree"
+    ariaLabel="Haroun Achouche on Linktree"
+  >
+    <LinktreeIcon class="size-6" />
   </SocialIcon>
 </ul>
