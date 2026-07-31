@@ -3,6 +3,7 @@ import type { TAward, TPhoto, TProject } from "src/types/types";
 // import heroPhoto from "../assets/images/harounach-photo-square.jpg";
 import heroPhoto from "../assets/images/Haroun-Achouche-Square.png";
 
+import thumbnail_Nadi_Alquwa from "@/assets/images/Nadi-Alquwa.png";
 import thumbnail_Aube from "@/assets/images/aube-bistro.png";
 import thumbnail_SunnyCoffeeShop from "../assets/images/sunny-coffee-shop.png";
 import thumbnail_Travvall from "../assets/images/travvall.png";
@@ -222,6 +223,14 @@ export const projectList: Array<TProject> = [
 ];
 
 export const latestProjects: TProject[] = [
+  {
+    title: 'Nadi Alquwa "نادي القوة"',
+    description: "Gym in Algiers, Algeria",
+    imageUrl: thumbnail_Nadi_Alquwa,
+    imageAlt: 'Nadi Alquwa "نادي القوة" Gym',
+    url: "https://nadialquwa.netlify.app/",
+  },
+
   /* # latest */
   {
     title: "L'Aube restaurant",
